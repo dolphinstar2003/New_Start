@@ -21,7 +21,9 @@ from config.settings import SACRED_SYMBOLS, DATA_DIR
 from core.algolab_api import AlgoLabAPI
 from core.algolab_socket import AlgoLabSocket
 from utils.algolab_auth import AlgoLabAuth
-from telegram_integration import TelegramBot
+from utils.telegram_utils import escape_markdown_v1, format_currency, format_percentage
+# Telegram imports will be done dynamically in initialize()
+from telegram_integration import TELEGRAM_CONFIG
 
 logger.info("Paper Trading Module - Dynamic Portfolio Optimizer")
 logger.info("="*80)
@@ -83,6 +85,7 @@ class PaperTradingModule:
         self.auto_trade_enabled = False
         self.telegram_notifications = True
         self.require_confirmation = True
+        self._force_check_flag = False  # For telegram force check command
         
         # Telegram bot
         self.telegram_bot = None
@@ -126,9 +129,10 @@ class PaperTradingModule:
             
             # Initialize Telegram bot
             try:
-                self.telegram_bot = TelegramBot(self)
-                telegram_task = asyncio.create_task(self.telegram_bot.start())
-                logger.info("Telegram bot initialized")
+                from telegram_bot_integrated import IntegratedTelegramBot
+                self.telegram_bot = IntegratedTelegramBot(self)
+                self.telegram_bot.start()
+                logger.info("Integrated Telegram bot initialized with full system access")
             except Exception as e:
                 logger.warning(f"Telegram bot initialization failed: {e}")
                 self.telegram_bot = None
@@ -325,8 +329,9 @@ class PaperTradingModule:
                 del self.telegram_bot.pending_confirmations[trade_id]
                 logger.warning(f"Trade confirmation timeout for {symbol}")
                 if self.telegram_bot:
+                    timeout_msg = f"⏰ Trade timeout: {action} {shares} {escape_markdown_v1(symbol)}"
                     await self.telegram_bot.send_notification(
-                        f"⏰ Trade timeout: {action} {shares} {symbol}",
+                        timeout_msg,
                         "warning"
                     )
                 return False
@@ -777,8 +782,12 @@ class PaperTradingModule:
                         await self.update_market_data_via_api()
                         last_api_update = current_time
                     
-                    # Check positions every interval
-                    if (current_time - last_check).seconds >= check_interval:
+                    # Check positions every interval or if force check requested
+                    if ((current_time - last_check).seconds >= check_interval) or self._force_check_flag:
+                        if self._force_check_flag:
+                            logger.info("Force check requested via Telegram")
+                            self._force_check_flag = False
+                        
                         if self.auto_trade_enabled:
                             # Check exit conditions
                             await self.check_positions_for_exit()
@@ -795,11 +804,14 @@ class PaperTradingModule:
                         # Send hourly updates via Telegram
                         if self.telegram_bot and current_time.minute == 0:
                             status = self.get_portfolio_status()
-                            await self.telegram_bot.send_notification(
+                            hourly_msg = (
                                 f"📊 Hourly Update\n"
-                                f"Value: ${status['portfolio_value']:,.2f}\n"
-                                f"Return: {status['total_return_pct']:+.2f}%\n"
-                                f"Positions: {status['num_positions']}",
+                                f"Value: {format_currency(status['portfolio_value'])}\n"
+                                f"Return: {format_percentage(status['total_return_pct'])}\n"
+                                f"Positions: {status['num_positions']}"
+                            )
+                            await self.telegram_bot.send_notification(
+                                hourly_msg,
                                 "info"
                             )
                         
@@ -1010,7 +1022,7 @@ class PaperTradingModule:
             self.algolab_socket.disconnect()
         
         if self.telegram_bot:
-            await self.telegram_bot.stop()
+            self.telegram_bot.stop()
         
         logger.info("Paper trading stopped")
 
@@ -1111,8 +1123,9 @@ async def main():
                 status = "enabled" if paper_trader.telegram_notifications else "disabled"
                 print(f"Telegram notifications {status}")
                 if paper_trader.telegram_bot:
+                    telegram_msg = f"Telegram notifications {escape_markdown_v1(status)}"
                     await paper_trader.telegram_bot.send_notification(
-                        f"Telegram notifications {status}",
+                        telegram_msg,
                         "info"
                     )
                 
@@ -1121,8 +1134,9 @@ async def main():
                 status = "enabled" if paper_trader.require_confirmation else "disabled"
                 print(f"Trade confirmations {status}")
                 if paper_trader.telegram_bot:
+                    confirm_msg = f"Trade confirmations {escape_markdown_v1(status)}"
                     await paper_trader.telegram_bot.send_notification(
-                        f"Trade confirmations {status}",
+                        confirm_msg,
                         "info"
                     )
                 

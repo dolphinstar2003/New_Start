@@ -1,0 +1,43 @@
+{
+  "analysis_date": "2025-07-06T18:42:18.960463",
+  "windows": [
+    {
+      "window": "Window 1: Jan-Mar 2024",
+      "return": 6.665221947707751,
+      "sharpe_ratio": 0.9992750943317112,
+      "win_rate": 59.3792911981467
+    },
+    {
+      "window": "Window 2: Feb-Apr 2024",
+      "return": 9.375273668941563,
+      "sharpe_ratio": 2.1188583301373356,
+      "win_rate": 53.262101030809504
+    },
+    {
+      "window": "Window 3: Mar-May 2024",
+      "return": 11.14582852333178,
+      "sharpe_ratio": 0.8179124218154241,
+      "win_rate": 55.681805754185284
+    },
+    {
+      "window": "Window 4: Apr-Jun 2024",
+      "return": 9.747738300576101,
+      "sharpe_ratio": 0.839456885921833,
+      "win_rate": 50.809891796232606
+    },
+    {
+      "window": "Window 5: May-Jul 2024",
+      "return": 6.612850516171386,
+      "sharpe_ratio": 1.3917384784305173,
+      "win_rate": 42.160642583165625
+    }
+  ],
+  "total_return": 43.54691295672858,
+  "avg_return": 8.709382591345717,
+  "sharpe_ratio": 1.2334482421273643,
+  "win_rate": 52.25874647250795,
+  "max_drawdown": 10.192734924027432,
+  "best_period_return": 11.14582852333178,
+  "worst_period_return": 6.612850516171386,
+  "consistency_score": 0.6601120401122094
+}

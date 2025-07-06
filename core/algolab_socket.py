@@ -136,6 +136,10 @@ class AlgoLabSocket:
         """Run WebSocket connection"""
         while self.running:
             try:
+                if self.ws and self.ws.sock and self.ws.sock.connected:
+                    logger.warning("WebSocket already connected, skipping run_forever")
+                    time.sleep(5)
+                    continue
                 self.ws.run_forever()
             except Exception as e:
                 logger.error(f"WebSocket run error: {e}")

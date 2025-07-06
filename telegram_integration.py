@@ -14,6 +14,15 @@ from pathlib import Path
 import pandas as pd
 from loguru import logger
 
+# Import telegram utilities
+import sys
+sys.path.append(str(Path(__file__).parent))
+from utils.telegram_utils import (
+    escape_markdown_v1, format_currency, format_percentage, format_symbol,
+    format_trade_message, format_portfolio_status, format_position_list,
+    format_trade_history, format_performance_metrics, format_opportunities
+)
+
 # Telegram bot configuration
 TELEGRAM_CONFIG = {
     'bot_token': os.getenv('TELEGRAM_BOT_TOKEN', ''),  # Set your bot token
@@ -48,30 +57,30 @@ class TelegramBot:
                 return
             
             welcome_text = """
-🚀 *Dynamic Portfolio Optimizer - Paper Trading Bot*
+🚀 *Dynamic Portfolio Optimizer \\- Paper Trading Bot*
 
-Welcome! I'm your trading assistant. Here are the available commands:
+Welcome! I'm your trading assistant\\. Here are the available commands:
 
 📊 *Portfolio Commands:*
-/status - Show portfolio status
-/positions - Show current positions
-/trades - Show recent trades
-/performance - Show performance metrics
+/status \\- Show portfolio status
+/positions \\- Show current positions
+/trades \\- Show recent trades
+/performance \\- Show performance metrics
 
 💼 *Trading Commands:*
-/start_trading - Enable auto trading
-/stop_trading - Disable auto trading
-/force_check - Force position check
+/start\\_trading \\- Enable auto trading
+/stop\\_trading \\- Disable auto trading
+/force\\_check \\- Force position check
 
 📈 *Market Commands:*
-/opportunities - Show top opportunities
-/analyze [SYMBOL] - Analyze specific symbol
+/opportunities \\- Show top opportunities
+/analyze \\[SYMBOL\\] \\- Analyze specific symbol
 
 ⚙️ *System Commands:*
-/settings - Show current settings
-/help - Show this help message
+/settings \\- Show current settings
+/help \\- Show this help message
 
-All trades require confirmation before execution.
+All trades require confirmation before execution\\.
             """
             
             await self.bot.send_message(
@@ -92,20 +101,11 @@ All trades require confirmation before execution.
             
             status = self.paper_trader.get_portfolio_status()
             
-            status_text = f"""
-📊 *Portfolio Status*
-━━━━━━━━━━━━━━━━━━━━
-
-💰 *Value:* ${status['portfolio_value']:,.2f}
-📈 *Return:* ${status['total_return']:,.2f} ({status['total_return_pct']:+.2f}%)
-💵 *Cash:* ${status['cash']:,.2f}
-📍 *Positions:* {status['num_positions']}/{self.paper_trader.PORTFOLIO_PARAMS['max_positions']}
-🎯 *Win Rate:* {status['win_rate']:.1f}%
-📊 *Total Trades:* {status['total_trades']}
-
-🔄 *Auto Trading:* {'✅ Enabled' if self.paper_trader.auto_trade_enabled else '❌ Disabled'}
-⏰ *Last Update:* {status['last_update'].strftime('%Y-%m-%d %H:%M:%S') if status['last_update'] else 'N/A'}
-            """
+            # Use the proper formatting function
+            status_text = format_portfolio_status(status)
+            
+            # Add trading status
+            status_text += f"\n\n🔄 *Auto Trading:* {'✅ Enabled' if self.paper_trader.auto_trade_enabled else '❌ Disabled'}"
             
             # Add inline keyboard for quick actions
             keyboard = InlineKeyboardMarkup()
@@ -153,14 +153,9 @@ All trades require confirmation before execution.
             # Get last 10 trades
             recent_trades = trades_df.tail(10)
             
-            trades_text = "📈 *Recent Trades*\n━━━━━━━━━━━━━━━━━━━━\n\n"
-            
-            for _, trade in recent_trades.iterrows():
-                emoji = "✅" if trade['profit'] > 0 else "❌"
-                trades_text += f"{emoji} *{trade['symbol']}*\n"
-                trades_text += f"   Entry: ${trade['entry_price']:.2f} → Exit: ${trade['exit_price']:.2f}\n"
-                trades_text += f"   P&L: ${trade['profit']:.2f} ({trade['profit_pct']:+.2f}%)\n"
-                trades_text += f"   Reason: {trade['reason']}\n\n"
+            # Convert DataFrame to list of dictionaries for the formatting function
+            trades_list = recent_trades.to_dict('records')
+            trades_text = format_trade_history(trades_list, 10)
             
             await self.bot.send_message(
                 message.chat.id,
@@ -243,16 +238,8 @@ All trades require confirmation before execution.
             # Get top 10 opportunities
             top_opps = opportunities[:10]
             
-            opps_text = "🎯 *Top Market Opportunities*\n━━━━━━━━━━━━━━━━━━━━\n\n"
-            
-            for i, opp in enumerate(top_opps, 1):
-                emoji = "🟢" if opp['score'] >= 60 else "🟡" if opp['score'] >= 40 else "🔴"
-                position_emoji = "📍" if opp['in_position'] else ""
-                
-                opps_text += f"{i}. {emoji} *{opp['symbol']}* {position_emoji}\n"
-                opps_text += f"   Score: {opp['score']:.1f}\n"
-                opps_text += f"   Price: ${opp['price']:.2f}\n"
-                opps_text += f"   Momentum: {opp['momentum_1h']:+.1f}% (1h), {opp['momentum_day']:+.1f}% (day)\n\n"
+            # Use the proper formatting function
+            opps_text = format_opportunities(top_opps, 10)
             
             await self.bot.send_message(
                 message.chat.id,
@@ -302,24 +289,33 @@ All trades require confirmation before execution.
                 position_info = f"""
 📍 *Current Position:*
    Shares: {pos['shares']}
-   Entry: ${pos['entry_price']:.2f}
-   Current: ${current_price:.2f}
-   P&L: {profit_pct:+.2f}%
+   Entry: {format_currency(pos['entry_price'])}
+   Current: {format_currency(current_price)}
+   P&L: {format_percentage(profit_pct)}
 """
             
+            # Escape all the dynamic content
+            symbol_escaped = escape_markdown_v1(symbol)
+            last_price = format_currency(market_data.get('last_price', 0))
+            price_change_1h = format_percentage(market_data.get('price_change_1h', 0)*100)
+            price_change_day = format_percentage(market_data.get('price_change_day', 0)*100)
+            volume_ratio = escape_markdown_v1(f"{market_data.get('volume_ratio', 1):.2f}x")
+            last_update = escape_markdown_v1(market_data.get('last_update', datetime.now()).strftime('%H:%M:%S'))
+            recommendation = escape_markdown_v1("BUY" if score >= 40 and not in_position else "HOLD" if in_position else "WAIT")
+            
             analysis_text = f"""
-📊 *Analysis: {symbol}*
+📊 *Analysis: {symbol_escaped}*
 ━━━━━━━━━━━━━━━━━━━━
 
 🎯 *Opportunity Score:* {score:.1f}/100
-💰 *Last Price:* ${market_data.get('last_price', 0):.2f}
+💰 *Last Price:* {last_price}
 📈 *Price Change:*
-   1h: {market_data.get('price_change_1h', 0)*100:+.2f}%
-   Day: {market_data.get('price_change_day', 0)*100:+.2f}%
-📊 *Volume Ratio:* {market_data.get('volume_ratio', 1):.2f}x
-🔄 *Last Update:* {market_data.get('last_update', datetime.now()).strftime('%H:%M:%S')}
+   1h: {price_change_1h}
+   Day: {price_change_day}
+📊 *Volume Ratio:* {volume_ratio}
+🔄 *Last Update:* {last_update}
 {position_info}
-📌 *Recommendation:* {"BUY" if score >= 40 and not in_position else "HOLD" if in_position else "WAIT"}
+📌 *Recommendation:* {recommendation}
             """
             
             await self.bot.send_message(
@@ -488,16 +484,8 @@ All trades require confirmation before execution.
             await self.bot.send_message(chat_id, "📊 No active positions")
             return
         
-        positions_text = "💼 *Current Positions*\n━━━━━━━━━━━━━━━━━━━━\n\n"
-        
-        for pos in status['positions']:
-            emoji = "🟢" if pos['profit_pct'] > 0 else "🔴"
-            positions_text += f"{emoji} *{pos['symbol']}*\n"
-            positions_text += f"   Shares: {pos['shares']}\n"
-            positions_text += f"   Entry: ${pos['entry_price']:.2f} → Current: ${pos['current_price']:.2f}\n"
-            positions_text += f"   Value: ${pos['value']:,.2f}\n"
-            positions_text += f"   P&L: ${pos['profit']:,.2f} ({pos['profit_pct']:+.2f}%)\n"
-            positions_text += f"   Days: {pos['holding_days']}\n\n"
+        # Use the proper formatting function
+        positions_text = format_position_list(status['positions'])
         
         await self.bot.send_message(
             chat_id,
@@ -517,27 +505,8 @@ All trades require confirmation before execution.
             await self.bot.send_message(chat_id, "📊 No performance data available")
             return
         
-        perf_text = f"""
-📈 *Performance Metrics*
-━━━━━━━━━━━━━━━━━━━━
-
-📊 *Returns:*
-• Total Profit: ${metrics['total_profit']:,.2f}
-• Avg Return: {metrics['avg_profit_pct']:.2f}%
-• Best Trade: {metrics['max_win']:.2f}%
-• Worst Trade: {metrics['max_loss']:.2f}%
-
-🎯 *Win/Loss:*
-• Total Trades: {metrics['total_trades']}
-• Win Rate: {metrics['win_rate']:.1f}%
-• Avg Win: {metrics['avg_win']:.2f}%
-• Avg Loss: {metrics['avg_loss']:.2f}%
-
-📉 *Risk Metrics:*
-• Sharpe Ratio: {metrics['sharpe_ratio']:.2f}
-• Max Drawdown: {metrics['max_drawdown']:.2f}%
-• Profit Factor: {metrics['profit_factor']:.2f}
-        """
+        # Use the proper formatting function
+        perf_text = format_performance_metrics(metrics)
         
         await self.bot.send_message(
             chat_id,
@@ -548,43 +517,14 @@ All trades require confirmation before execution.
     async def send_trade_notification(self, action: str, symbol: str, shares: int, 
                                      price: float, reason: str, profit: Optional[float] = None):
         """Send trade execution notification"""
-        if action == "BUY":
-            emoji = "🟢"
-            notification_text = f"""
-{emoji} *BUY SIGNAL*
-━━━━━━━━━━━━━━━━━━━━
-
-📊 *Symbol:* {symbol}
-📈 *Shares:* {shares}
-💰 *Price:* ${price:.2f}
-💵 *Total:* ${shares * price:,.2f}
-📍 *Reason:* {reason}
-
-⏰ *Time:* {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}
-            """
-        else:  # SELL
-            emoji = "🔴" if profit and profit < 0 else "🟢"
-            profit_text = f"${profit:,.2f} ({(profit/(shares*price-profit)*100):+.2f}%)" if profit else "N/A"
-            
-            notification_text = f"""
-{emoji} *SELL SIGNAL*
-━━━━━━━━━━━━━━━━━━━━
-
-📊 *Symbol:* {symbol}
-📈 *Shares:* {shares}
-💰 *Price:* ${price:.2f}
-💵 *Total:* ${shares * price:,.2f}
-💸 *Profit:* {profit_text}
-📍 *Reason:* {reason}
-
-⏰ *Time:* {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}
-            """
+        # Use the proper formatting function
+        notification_text = format_trade_message(action, symbol, shares, price, reason, profit)
         
         # Send notification
         await self.send_notification(notification_text, "trade")
     
     async def send_notification(self, message: str, notification_type: str = "info"):
-        """Send notification to Telegram"""
+        """Send notification to Telegram with proper escaping"""
         try:
             # Choose emoji based on type
             type_emojis = {
@@ -597,8 +537,13 @@ All trades require confirmation before execution.
             
             emoji = type_emojis.get(notification_type, "📢")
             
-            # Format message
-            formatted_message = f"{emoji} {message}"
+            # For trade messages, the message is already formatted
+            if notification_type == "trade":
+                formatted_message = message
+            else:
+                # Escape special characters for other notifications
+                escaped_message = escape_markdown_v1(message)
+                formatted_message = f"{emoji} {escaped_message}"
             
             # Send to configured chat
             if self.chat_id:
@@ -629,19 +574,23 @@ All trades require confirmation before execution.
             'timestamp': datetime.now()
         }
         
-        # Create confirmation message
+        # Create confirmation message with proper escaping
         emoji = "🟢" if action == "BUY" else "🔴"
+        symbol_escaped = escape_markdown_v1(symbol)
+        reason_escaped = escape_markdown_v1(reason)
+        price_formatted = format_currency(price)
+        total_formatted = format_currency(shares * price)
         
         confirmation_text = f"""
 {emoji} *Trade Confirmation Required*
 ━━━━━━━━━━━━━━━━━━━━
 
 📊 *Action:* {action}
-📈 *Symbol:* {symbol}
+📈 *Symbol:* {symbol_escaped}
 💼 *Shares:* {shares}
-💰 *Price:* ${price:.2f}
-💵 *Total:* ${shares * price:,.2f}
-📍 *Reason:* {reason}
+💰 *Price:* {price_formatted}
+💵 *Total:* {total_formatted}
+📍 *Reason:* {reason_escaped}
 
 ⚠️ *Please confirm this trade:*
         """
@@ -683,25 +632,33 @@ All trades require confirmation before execution.
             today_profit = 0
             today_trades_count = 0
         
+        # Format the daily summary with proper escaping
+        current_date = escape_markdown_v1(datetime.now().strftime('%Y-%m-%d'))
+        portfolio_value = format_currency(status['portfolio_value'])
+        total_return = format_currency(status['total_return'])
+        total_return_pct = format_percentage(status['total_return_pct'])
+        today_profit_formatted = format_currency(today_profit)
+        win_rate = format_percentage(status['win_rate'], False)
+        
         summary_text = f"""
 📊 *Daily Trading Summary*
-{datetime.now().strftime('%Y-%m-%d')}
+{current_date}
 ━━━━━━━━━━━━━━━━━━━━
 
 💰 *Portfolio Status:*
-• Value: ${status['portfolio_value']:,.2f}
-• Return: ${status['total_return']:,.2f} ({status['total_return_pct']:+.2f}%)
+• Value: {portfolio_value}
+• Return: {total_return} ({total_return_pct})
 • Positions: {status['num_positions']}/{self.paper_trader.PORTFOLIO_PARAMS['max_positions']}
 
 📈 *Today's Activity:*
 • Trades: {today_trades_count}
-• P&L: ${today_profit:,.2f}
+• P&L: {today_profit_formatted}
 
 🎯 *Overall Performance:*
 • Total Trades: {status['total_trades']}
-• Win Rate: {status['win_rate']:.1f}%
+• Win Rate: {win_rate}
 • Sharpe: {metrics.get('sharpe_ratio', 0):.2f}
-• Max DD: {metrics.get('max_drawdown', 0):.2f}%
+• Max DD: {format_percentage(metrics.get('max_drawdown', 0), False)}
 
 Have a great trading day! 🚀
         """

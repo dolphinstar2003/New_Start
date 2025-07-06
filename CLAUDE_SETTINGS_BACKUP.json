@@ -278,5 +278,12 @@
     "Basit, hızlı, karlı bir sistem",
     "Karmaşıklık düşmandır",
     "Risk yönetimi > Kar maksimizasyonu"
-  ]
+  ],
+  "pythonEnvironment": {
+    "alwaysUseVenv": true,
+    "venvPath": "/home/yunus/Belgeler/New_Start/venv",
+    "pythonInterpreter": "/home/yunus/Belgeler/New_Start/venv/bin/python",
+    "pipPath": "/home/yunus/Belgeler/New_Start/venv/bin/pip",
+    "defaultActivation": "source venv/bin/activate"
+  }
 }

@@ -123,6 +123,18 @@ RISK_MANAGEMENT = {
     'target_sharpe_ratio': 1.5
 }
 
+# Backtest Configuration
+BACKTEST_CONFIG = {
+    'initial_capital': 100000,
+    'commission': 0.001,  # %0.1 komisyon
+    'slippage': 0.0005,  # %0.05 slippage
+    'max_position_size': 0.2,  # Max %20 pozisyon
+    'min_position_size': 0.05,  # Min %5 pozisyon
+    'use_intraday': False,
+    'rebalance_frequency': 'daily',
+    'risk_free_rate': 0.02  # %2 risksiz getiri
+}
+
 # Trading Time Zones
 TRADING_HOURS = {
     '09:30-10:00': 'gap_trading',
