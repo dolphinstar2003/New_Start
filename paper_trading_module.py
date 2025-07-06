@@ -106,17 +106,23 @@ class PaperTradingModule:
                 hash_token=self.algolab_api.hash
             )
             
-            # Connect WebSocket
-            self.algolab_socket.connect()
-            
-            # Subscribe to all sacred symbols
-            for symbol in SACRED_SYMBOLS:
-                # Remove .IS suffix for AlgoLab
-                clean_symbol = symbol.replace('.IS', '')
-                self.algolab_socket.subscribe(
-                    clean_symbol,
-                    ["price", "depth", "trade"]
-                )
+            # Try to connect WebSocket (optional - continue if fails)
+            try:
+                self.algolab_socket.connect()
+                
+                # Subscribe to all sacred symbols
+                for symbol in SACRED_SYMBOLS:
+                    # Remove .IS suffix for AlgoLab
+                    clean_symbol = symbol.replace('.IS', '')
+                    self.algolab_socket.subscribe(
+                        clean_symbol,
+                        ["price", "depth", "trade"]
+                    )
+                logger.info("WebSocket connected and subscribed to symbols")
+            except Exception as e:
+                logger.warning(f"WebSocket connection failed: {e}")
+                logger.warning("Continuing without real-time data - will use polling")
+                self.algolab_socket = None
             
             # Initialize Telegram bot
             try:
@@ -692,21 +698,72 @@ class PaperTradingModule:
         self.portfolio['current_prices'][clean_symbol] = market_data['last_price']
         self.portfolio['last_update'] = datetime.now()
     
+    async def update_market_data_via_api(self):
+        """Update market data using API calls (fallback when WebSocket not available)"""
+        try:
+            for symbol in SACRED_SYMBOLS:
+                clean_symbol = symbol.replace('.IS', '')
+                
+                # Get stock info
+                stock_info = self.algolab_api.get_equity_info(clean_symbol)
+                
+                if stock_info.get('success') and stock_info.get('content'):
+                    data = stock_info['content']
+                    
+                    if symbol not in self.market_data:
+                        self.market_data[symbol] = {
+                            'last_price': 0,
+                            'open_price': 0,
+                            'high_price': 0,
+                            'low_price': 0,
+                            'volume': 0,
+                            'price_history': [],
+                            'last_update': datetime.now()
+                        }
+                    
+                    # Update market data
+                    self.market_data[symbol]['last_price'] = float(data.get('last', 0))
+                    self.market_data[symbol]['open_price'] = float(data.get('open', 0))
+                    self.market_data[symbol]['high_price'] = float(data.get('high', 0))
+                    self.market_data[symbol]['low_price'] = float(data.get('low', 0))
+                    self.market_data[symbol]['volume'] = int(data.get('volume', 0))
+                    self.market_data[symbol]['last_update'] = datetime.now()
+                    
+                    # Calculate price changes
+                    if self.market_data[symbol]['open_price'] > 0:
+                        self.market_data[symbol]['price_change_day'] = (
+                            (self.market_data[symbol]['last_price'] - self.market_data[symbol]['open_price']) / 
+                            self.market_data[symbol]['open_price']
+                        )
+                    
+                    # Update current prices
+                    self.portfolio['current_prices'][symbol] = self.market_data[symbol]['last_price']
+                
+                # Small delay between API calls
+                await asyncio.sleep(0.1)
+                
+        except Exception as e:
+            logger.error(f"Error updating market data via API: {e}")
+    
     async def trading_loop(self):
         """Main trading loop"""
         logger.info("Starting paper trading loop...")
         self.is_running = True
         
-        # Set up WebSocket message handler
-        async def message_handler(message):
-            if 'symbol' in message and 'data' in message:
-                await self.update_market_data(message['symbol'], message['data'])
-        
-        self.algolab_socket.on_message = message_handler
+        # Set up WebSocket message handler if available
+        if self.algolab_socket:
+            async def message_handler(message):
+                if 'symbol' in message and 'data' in message:
+                    await self.update_market_data(message['symbol'], message['data'])
+            
+            self.algolab_socket.on_message = message_handler
+        else:
+            logger.warning("WebSocket not available - using API polling for market data")
         
         # Main loop
         check_interval = 60  # Check every minute
         last_check = datetime.now()
+        last_api_update = datetime.now()
         
         while self.is_running:
             try:
@@ -714,6 +771,11 @@ class PaperTradingModule:
                 
                 # Only trade during market hours (10:00 - 18:00 Istanbul time)
                 if 10 <= current_time.hour < 18 and current_time.weekday() < 5:
+                    
+                    # Update market data via API if WebSocket not available
+                    if not self.algolab_socket and (current_time - last_api_update).seconds >= 60:
+                        await self.update_market_data_via_api()
+                        last_api_update = current_time
                     
                     # Check positions every interval
                     if (current_time - last_check).seconds >= check_interval:
@@ -945,7 +1007,7 @@ class PaperTradingModule:
         self.save_state()
         
         if self.algolab_socket:
-            await self.algolab_socket.disconnect()
+            self.algolab_socket.disconnect()
         
         if self.telegram_bot:
             await self.telegram_bot.stop()
