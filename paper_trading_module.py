@@ -71,7 +71,7 @@ class PaperTradingModule:
         # AlgoLab connections
         self.algolab_api = None
         self.algolab_socket = None
-        self.auth = AlgoLabAuth()
+        self.auth = None
         
         # Market data cache
         self.market_data = {}
@@ -90,26 +90,30 @@ class PaperTradingModule:
     async def initialize(self):
         """Initialize AlgoLab connections"""
         try:
-            # Load session from cache
-            self.auth.load_session_from_cache()
+            # Initialize authentication
+            self.auth = AlgoLabAuth()
             
-            # Initialize API
-            self.algolab_api = AlgoLabAPI()
+            # Authenticate and get API instance
+            self.algolab_api = self.auth.authenticate()
+            
+            if not self.algolab_api:
+                logger.error("Failed to authenticate with AlgoLab")
+                return False
             
             # Initialize WebSocket
             self.algolab_socket = AlgoLabSocket(
                 api_key=self.auth.api_key,
-                hash_value=self.auth.session_hash
+                hash_token=self.algolab_api.hash
             )
             
             # Connect WebSocket
-            await self.algolab_socket.connect()
+            self.algolab_socket.connect()
             
             # Subscribe to all sacred symbols
             for symbol in SACRED_SYMBOLS:
                 # Remove .IS suffix for AlgoLab
                 clean_symbol = symbol.replace('.IS', '')
-                await self.algolab_socket.subscribe(
+                self.algolab_socket.subscribe(
                     clean_symbol,
                     ["price", "depth", "trade"]
                 )

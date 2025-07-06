@@ -17,8 +17,8 @@ logger.info("Quick MTF Technical Backtest")
 logger.info("="*60)
 
 # Test parameters
-START_DATE = "2024-01-01"
-END_DATE = "2024-06-30"
+START_DATE = "2025-01-01"
+END_DATE = "2025-06-30"
 INITIAL_CAPITAL = 100000
 
 # Simple portfolio tracking
@@ -31,7 +31,7 @@ portfolio = {
 
 # Load daily data for all symbols
 symbol_data = {}
-for symbol in SACRED_SYMBOLS[:5]:  # Test with first 5
+for symbol in SACRED_SYMBOLS[:20]:  # Test with first 5
     try:
         # Load 1d raw data and indicators
         raw_file = DATA_DIR / 'raw' / '1d' / f"{symbol}_1d_raw.csv"
