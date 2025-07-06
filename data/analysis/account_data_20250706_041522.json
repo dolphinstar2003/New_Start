@@ -1,0 +1,62 @@
+{
+  "timestamp": "2025-07-06 04:15:22.154700",
+  "session_expires": "2025-07-07 04:02:07.836820",
+  "data": {
+    "subaccounts": {
+      "success": true,
+      "message": "",
+      "content": [
+        {
+          "number": "100",
+          "tradeLimit": "88.18"
+        }
+      ]
+    },
+    "instant_position": {
+      "success": true,
+      "message": "",
+      "content": [
+        {
+          "maliyet": "0",
+          "totalstock": "0",
+          "code": "-",
+          "profit": "-",
+          "cost": "98439",
+          "unitprice": "0",
+          "totalamount": "0",
+          "tlamaount": "0",
+          "explanation": "total",
+          "type": "0",
+          "total": "0"
+        },
+        {
+          "maliyet": "87.4620091961722",
+          "totalstock": "1045.000000",
+          "code": "ASTOR",
+          "profit": "7041.20039000005100000000000",
+          "cost": "87.4620091961722",
+          "unitprice": "94.2",
+          "totalamount": "",
+          "tlamaount": "98439",
+          "explanation": "ASTOR",
+          "type": "CH",
+          "total": "0"
+        }
+      ]
+    },
+    "cash_flow": {
+      "success": true,
+      "message": "",
+      "content": {
+        "t0": "0.00",
+        "t1": "0.00",
+        "t2": "0.00"
+      }
+    },
+    "todays_transactions": {
+      "success": true,
+      "message": "",
+      "content": []
+    }
+  }
+}
