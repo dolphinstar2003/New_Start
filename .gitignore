@@ -1,0 +1,141 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+*.egg
+*.egg-info/
+dist/
+build/
+eggs/
+parts/
+bin/
+var/
+sdist/
+develop-eggs/
+.installed.cfg
+lib/
+lib64/
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Virtual Environment
+venv/
+ENV/
+env/
+.venv
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*.swn
+.project
+.pydevproject
+*.sublime-workspace
+*.sublime-project
+
+# Testing
+.pytest_cache/
+.coverage
+htmlcov/
+.tox/
+.mypy_cache/
+.dmypy.json
+dmypy.json
+
+# Logs
+logs/
+*.log
+log.txt
+
+# Data Files
+data/raw/*.csv
+data/indicators/*.csv
+data/analysis/*.csv
+data/predictions/*.csv
+!data/raw/.gitkeep
+!data/indicators/.gitkeep
+!data/analysis/.gitkeep
+!data/predictions/.gitkeep
+
+# Cache
+data/cache/
+*.pkl
+*.pickle
+*.cache
+
+# Model Files
+ml_models/*.pkl
+ml_models/*.h5
+ml_models/*.pth
+ml_models/*.onnx
+!ml_models/.gitkeep
+
+# Environment Variables
+.env
+.env.local
+.env.*.local
+
+# OS
+.DS_Store
+Thumbs.db
+*.bak
+*.tmp
+*.temp
+
+# Jupyter
+.ipynb_checkpoints/
+*.ipynb
+
+# Database
+*.db
+*.sqlite
+*.sqlite3
+
+# Backup
+backup*/
+*.backup
+
+# Secrets
+secrets/
+credentials/
+*.key
+*.pem
+api_keys.json
+
+# Trading Specific
+trading_history/
+positions/
+orders/
+*.position
+*.order
+
+# Redis
+dump.rdb
+
+# Documentation
+docs/_build/
+site/
+
+# Temporary
+tmp/
+temp/
+*.tmp
+*.temp
+
+# Claude Settings (Yedek hariç)
+.claude/
+!CLAUDE_SETTINGS_BACKUP.json
+!CLAUDE.md
+
+# Scripts klasörü
+!scripts/
+scripts/__pycache__/
