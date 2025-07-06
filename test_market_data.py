@@ -40,13 +40,13 @@ def test_market_data():
         print(f"\n{symbol}:")
         
         try:
-            # Get equity info
-            result = api.get_equity_info(clean_symbol)
+            # Get symbol info
+            result = api.get_symbol_info(clean_symbol)
             
             if result.get('success') and result.get('content'):
                 data = result['content']
                 
-                print(f"  Last Price: {data.get('last', 'N/A')}")
+                print(f"  Last Price: {data.get('lastPrice', 'N/A')}")
                 print(f"  Open: {data.get('open', 'N/A')}")
                 print(f"  High: {data.get('high', 'N/A')}")
                 print(f"  Low: {data.get('low', 'N/A')}")

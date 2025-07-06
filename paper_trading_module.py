@@ -704,8 +704,8 @@ class PaperTradingModule:
             for symbol in SACRED_SYMBOLS:
                 clean_symbol = symbol.replace('.IS', '')
                 
-                # Get stock info
-                stock_info = self.algolab_api.get_equity_info(clean_symbol)
+                # Get symbol info
+                stock_info = self.algolab_api.get_symbol_info(clean_symbol)
                 
                 if stock_info.get('success') and stock_info.get('content'):
                     data = stock_info['content']
@@ -722,7 +722,7 @@ class PaperTradingModule:
                         }
                     
                     # Update market data
-                    self.market_data[symbol]['last_price'] = float(data.get('last', 0))
+                    self.market_data[symbol]['last_price'] = float(data.get('lastPrice', 0))
                     self.market_data[symbol]['open_price'] = float(data.get('open', 0))
                     self.market_data[symbol]['high_price'] = float(data.get('high', 0))
                     self.market_data[symbol]['low_price'] = float(data.get('low', 0))
