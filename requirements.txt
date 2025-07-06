@@ -17,6 +17,7 @@ pandas-ta==0.3.14b0
 # Machine Learning
 xgboost==2.0.3
 lightgbm==4.3.0
+tensorflow==2.18.0  # CPU-only for LSTM models
 
 # Visualization
 matplotlib==3.8.2
