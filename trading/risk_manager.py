@@ -495,3 +495,62 @@ class RiskManager:
             })
         
         return pd.DataFrame(positions_data)
+    
+    def can_open_position(self, portfolio_value: float) -> bool:
+        """
+        Check if we can open a new position based on risk limits
+        
+        Args:
+            portfolio_value: Current portfolio value
+            
+        Returns:
+            True if position can be opened
+        """
+        # Check max open positions
+        if len(self.open_positions) >= self.max_open_positions:
+            logger.debug(f"Cannot open position: max positions reached ({self.max_open_positions})")
+            return False
+        
+        # Check daily loss limit
+        daily_loss_limit = (self.max_daily_loss_percent / 100.0) * self.initial_capital
+        if abs(self.daily_pnl) >= daily_loss_limit:
+            logger.debug(f"Cannot open position: daily loss limit reached")
+            return False
+        
+        # Check drawdown limit
+        current_drawdown = (self.max_capital_achieved - portfolio_value) / self.max_capital_achieved
+        if current_drawdown >= (self.max_drawdown_percent / 100.0):
+            logger.debug(f"Cannot open position: max drawdown reached ({current_drawdown:.1%})")
+            return False
+        
+        return True
+    
+    def calculate_position_size(self, portfolio_value: float, current_price: float, 
+                               volatility: float = 0.02) -> float:
+        """
+        Calculate position size based on portfolio value and volatility
+        
+        Args:
+            portfolio_value: Current portfolio value
+            current_price: Current asset price
+            volatility: Asset volatility (default 2%)
+            
+        Returns:
+            Position size in currency
+        """
+        # Base position size as percentage of portfolio
+        base_size = portfolio_value * (self.max_position_percent / 100.0)
+        
+        # Adjust for volatility (lower size for higher volatility)
+        volatility_adjustment = 1.0 / (1.0 + volatility * 10)
+        
+        # Final position size
+        position_size = base_size * volatility_adjustment
+        
+        return min(position_size, portfolio_value * 0.1)  # Max 10% per position
+    
+    def set_stop_loss(self, symbol: str, stop_price: float) -> None:
+        """Set stop loss for a position"""
+        if symbol in self.open_positions:
+            self.open_positions[symbol]['stop_loss_price'] = stop_price
+            logger.debug(f"Stop loss set for {symbol} at ${stop_price:.2f}")
