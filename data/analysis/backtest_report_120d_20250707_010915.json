@@ -1,0 +1,101 @@
+{
+  "summary": {
+    "overall_ranking": [
+      [
+        "hier_4h_sl_trailing",
+        25.524091622537735
+      ],
+      [
+        "realistic",
+        24.7688692187781
+      ],
+      [
+        "priority_core",
+        23.323950777675286
+      ],
+      [
+        "hierarchical_4h",
+        22.964131755934094
+      ],
+      [
+        "hier_4h_sl_only",
+        22.964131755934094
+      ],
+      [
+        "hierarchical_hybrid",
+        21.963868015050394
+      ],
+      [
+        "hierarchical_1d",
+        21.061724183699138
+      ],
+      [
+        "ml_xgboost",
+        20.0
+      ],
+      [
+        "hier_4h_signals_only",
+        19.77099941052845
+      ],
+      [
+        "dl_lstm",
+        0
+      ]
+    ]
+  },
+  "rankings": {
+    "total_return": {
+      "best_strategy": "hier_4h_sl_trailing",
+      "value": 3.313868963914996
+    },
+    "sharpe_ratio": {
+      "best_strategy": "hier_4h_sl_trailing",
+      "value": 1.4184339824055667
+    },
+    "win_rate": {
+      "best_strategy": "hier_4h_sl_trailing",
+      "value": 38.70967741935484
+    },
+    "max_drawdown": {
+      "best_strategy": "ml_xgboost",
+      "value": 0.0
+    },
+    "total_trades": {
+      "best_strategy": "hier_4h_sl_trailing",
+      "value": 62.0
+    },
+    "profit_factor": {
+      "best_strategy": "realistic",
+      "value": 1.1851851851851851
+    },
+    "best_trade": {
+      "best_strategy": "priority_core",
+      "value": 18.107304704627452
+    },
+    "worst_trade": {
+      "best_strategy": "hier_4h_sl_trailing",
+      "value": -12.242188144824686
+    },
+    "avg_trade": {
+      "best_strategy": "hier_4h_sl_trailing",
+      "value": 0.053449499417983805
+    },
+    "calmar_ratio": {
+      "best_strategy": "hier_4h_sl_trailing",
+      "value": 0.1798672294493128
+    },
+    "sortino_ratio": {
+      "best_strategy": "hier_4h_sl_trailing",
+      "value": 1.7021207788866801
+    },
+    "avg_win_loss_ratio": {
+      "best_strategy": "hier_4h_sl_trailing",
+      "value": 0.631578947368421
+    }
+  },
+  "recommendations": [
+    "Best overall strategy: hier_4h_sl_trailing (Score: 25.52)",
+    "Best risk-adjusted: hier_4h_sl_trailing (Sharpe: 1.42)",
+    "Most conservative: ml_xgboost (Max DD: 0.00%)"
+  ]
+}

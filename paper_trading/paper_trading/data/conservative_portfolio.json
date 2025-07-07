@@ -1,0 +1,25 @@
+{
+  "name": "conservative",
+  "initial_capital": 50000,
+  "cash": 50000,
+  "created_date": "2025-07-07T05:38:33.866986",
+  "positions": {},
+  "performance": {
+    "portfolio_value": 50000,
+    "total_return": 0.0,
+    "total_pnl": 0,
+    "cash": 50000,
+    "positions_value": 0,
+    "num_positions": 0,
+    "total_trades": 0,
+    "winning_trades": 0,
+    "win_rate": 0,
+    "sharpe_ratio": 0,
+    "max_drawdown": 0,
+    "portfolio_heat": 0
+  },
+  "transaction_history": [],
+  "daily_values": [
+    50000
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "date": "2025-07-07",
+  "time": "05:38:35",
+  "portfolios": [
+    {
+      "name": "balanced",
+      "value": 50000,
+      "return": 0.0,
+      "pnl": 0,
+      "positions": 0,
+      "win_rate": 0,
+      "sharpe": 0,
+      "max_dd": 0
+    },
+    {
+      "name": "aggressive",
+      "value": 50000,
+      "return": 0.0,
+      "pnl": 0,
+      "positions": 0,
+      "win_rate": 0,
+      "sharpe": 0,
+      "max_dd": 0
+    },
+    {
+      "name": "conservative",
+      "value": 50000,
+      "return": 0.0,
+      "pnl": 0,
+      "positions": 0,
+      "win_rate": 0,
+      "sharpe": 0,
+      "max_dd": 0
+    }
+  ]
+}

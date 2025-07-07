@@ -1,0 +1,93 @@
+{
+  "summary": {
+    "overall_ranking": [
+      [
+        "hierarchical_1d",
+        38.67758707959604
+      ],
+      [
+        "realistic",
+        33.71365343884248
+      ],
+      [
+        "hier_4h_sl_trailing",
+        33.090666059045645
+      ],
+      [
+        "priority_core",
+        33.00063741690637
+      ],
+      [
+        "hierarchical_hybrid",
+        31.21125058060192
+      ],
+      [
+        "hierarchical_4h",
+        30.273388515367948
+      ],
+      [
+        "hier_4h_sl_only",
+        30.273388515367948
+      ],
+      [
+        "hier_4h_signals_only",
+        23.26022649559569
+      ]
+    ]
+  },
+  "rankings": {
+    "total_return": {
+      "best_strategy": "hierarchical_1d",
+      "value": 7.631475442385345
+    },
+    "sharpe_ratio": {
+      "best_strategy": "hierarchical_1d",
+      "value": 17.464414285798192
+    },
+    "win_rate": {
+      "best_strategy": "hierarchical_1d",
+      "value": 77.77777777777779
+    },
+    "max_drawdown": {
+      "best_strategy": "realistic",
+      "value": 0.3200000000000045
+    },
+    "total_trades": {
+      "best_strategy": "hier_4h_sl_trailing",
+      "value": "20"
+    },
+    "profit_factor": {
+      "best_strategy": "hierarchical_1d",
+      "value": 13.881244476186746
+    },
+    "best_trade": {
+      "best_strategy": "priority_core",
+      "value": 18.107304704627452
+    },
+    "worst_trade": {
+      "best_strategy": "hier_4h_signals_only",
+      "value": -8.003368310229696
+    },
+    "avg_trade": {
+      "best_strategy": "hierarchical_1d",
+      "value": 0.847941715820594
+    },
+    "calmar_ratio": {
+      "best_strategy": "realistic",
+      "value": 5.305458410804328
+    },
+    "sortino_ratio": {
+      "best_strategy": "hierarchical_1d",
+      "value": 20.95729714295783
+    },
+    "avg_win_loss_ratio": {
+      "best_strategy": "hierarchical_1d",
+      "value": 3.5
+    }
+  },
+  "recommendations": [
+    "Best overall strategy: hierarchical_1d (Score: 38.68)",
+    "Best risk-adjusted: hierarchical_1d (Sharpe: 17.46)",
+    "Most conservative: realistic (Max DD: 0.32%)"
+  ]
+}

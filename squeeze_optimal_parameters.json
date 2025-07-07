@@ -1,0 +1,13 @@
+{
+  "Squeeze": {
+    "params": {
+      "sq_bb_length": 17,
+      "sq_bb_mult": 2.0,
+      "sq_kc_length": 15,
+      "sq_kc_mult": 1.5,
+      "sq_mom_length": 10
+    },
+    "avg_return": 254.06380140545383,
+    "strategy": "momentum_crossover"
+  }
+}

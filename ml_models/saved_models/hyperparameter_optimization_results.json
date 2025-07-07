@@ -1,0 +1,68 @@
+{
+  "timestamp": "2025-07-07T03:53:04.437143",
+  "optimization_settings": {
+    "n_trials": 20,
+    "cv_folds": 3,
+    "test_size": 0.2
+  },
+  "optimization_results": {
+    "random_forest": {
+      "best_params": {
+        "n_estimators": 250,
+        "max_depth": 18,
+        "min_samples_split": 10,
+        "min_samples_leaf": 1,
+        "max_features": null
+      },
+      "best_score": 0.36913188133571984
+    },
+    "xgboost": {
+      "best_params": {
+        "n_estimators": 300,
+        "max_depth": 7,
+        "learning_rate": 0.0832572904699324,
+        "subsample": 0.6284621059608634,
+        "colsample_bytree": 0.8286397361262223,
+        "reg_alpha": 0.4757705938553059,
+        "reg_lambda": 0.0011976260758203472
+      },
+      "best_score": 0.41423158196914556
+    },
+    "lstm": {
+      "best_params": {
+        "lstm_units": 96,
+        "dense_units": 64,
+        "dropout_rate": 0.2760371646692395,
+        "learning_rate": 0.006095053691836633,
+        "batch_size": 32
+      },
+      "best_score": 0.0
+    }
+  },
+  "trained_models": {
+    "random_forest": {
+      "test_score": 0.35802303652596207,
+      "params": {
+        "n_estimators": 250,
+        "max_depth": 18,
+        "min_samples_split": 10,
+        "min_samples_leaf": 1,
+        "max_features": null
+      },
+      "model_path": "ml_models/saved_models/random_forest_optimized.pkl"
+    },
+    "xgboost": {
+      "test_score": 0.4034371601653932,
+      "params": {
+        "n_estimators": 300,
+        "max_depth": 7,
+        "learning_rate": 0.0832572904699324,
+        "subsample": 0.6284621059608634,
+        "colsample_bytree": 0.8286397361262223,
+        "reg_alpha": 0.4757705938553059,
+        "reg_lambda": 0.0011976260758203472
+      },
+      "model_path": "ml_models/saved_models/xgboost_optimized_v2.pkl"
+    }
+  }
+}

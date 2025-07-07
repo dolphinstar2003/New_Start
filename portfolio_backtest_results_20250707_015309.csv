@@ -1,0 +1,2 @@
+period_days,total_return,sharpe_ratio,win_rate,max_drawdown,total_trades,final_value,realistic_trades,realistic_win_rate,realistic_avg_return,hier_4h_sl_trailing_trades,hier_4h_sl_trailing_win_rate,hier_4h_sl_trailing_avg_return
+90,0.0,0,0,0.0,0,100000.0,0,0,0,0,0,0

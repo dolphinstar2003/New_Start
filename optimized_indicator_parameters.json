@@ -1,0 +1,113 @@
+{
+  "GARAN": {
+    "MACD": {
+      "best_params": {
+        "macd_fast": 14,
+        "macd_slow": 28,
+        "macd_signal": 7
+      },
+      "best_score": -100.0,
+      "trials": 50
+    },
+    "ADX": {
+      "best_params": {
+        "adx_period": 10,
+        "adx_threshold": 21.845171235245605
+      },
+      "best_score": 584.5142306150376,
+      "trials": 50
+    },
+    "Supertrend": {
+      "best_params": {
+        "st_period": 13,
+        "st_multiplier": 3.978535418346709
+      },
+      "best_score": 0.0,
+      "trials": 50
+    },
+    "WaveTrend": {
+      "best_params": {
+        "wt_channel_length": 9,
+        "wt_average_length": 20,
+        "wt_overbought": 64.86787651558122,
+        "wt_oversold": -50.08085476193535
+      },
+      "best_score": 194.85958567614085,
+      "trials": 50
+    }
+  },
+  "AKBNK": {
+    "MACD": {
+      "best_params": {
+        "macd_fast": 11,
+        "macd_slow": 21,
+        "macd_signal": 10
+      },
+      "best_score": -100.0,
+      "trials": 50
+    },
+    "ADX": {
+      "best_params": {
+        "adx_period": 10,
+        "adx_threshold": 20.077542488842255
+      },
+      "best_score": 625.8413787264707,
+      "trials": 50
+    },
+    "Supertrend": {
+      "best_params": {
+        "st_period": 8,
+        "st_multiplier": 3.9251288952416123
+      },
+      "best_score": 0.0,
+      "trials": 50
+    },
+    "WaveTrend": {
+      "best_params": {
+        "wt_channel_length": 9,
+        "wt_average_length": 19,
+        "wt_overbought": 58.38648622742953,
+        "wt_oversold": -51.02049921886528
+      },
+      "best_score": 48.752014168631774,
+      "trials": 50
+    }
+  },
+  "ISCTR": {
+    "MACD": {
+      "best_params": {
+        "macd_fast": 16,
+        "macd_slow": 24,
+        "macd_signal": 11
+      },
+      "best_score": -100.0,
+      "trials": 50
+    },
+    "ADX": {
+      "best_params": {
+        "adx_period": 10,
+        "adx_threshold": 22.488618306080465
+      },
+      "best_score": 435.2267885763613,
+      "trials": 50
+    },
+    "Supertrend": {
+      "best_params": {
+        "st_period": 13,
+        "st_multiplier": 3.180247885311464
+      },
+      "best_score": 0.0,
+      "trials": 50
+    },
+    "WaveTrend": {
+      "best_params": {
+        "wt_channel_length": 11,
+        "wt_average_length": 19,
+        "wt_overbought": 53.91133512616097,
+        "wt_oversold": -50.069353128199005
+      },
+      "best_score": 220.620260866461,
+      "trials": 50
+    }
+  }
+}

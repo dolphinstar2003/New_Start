@@ -170,6 +170,8 @@ final_signal = (
 3. **Her fonksiyon docstring içerecek**
 4. **Type hints kullanılacak**
 5. **Error handling zorunlu**
+6. **MEVCUT DOSYALAR GÜNCELLENECEK, YENİ DOSYA OLUŞTURULMAYACAK**
+7. **Boş veya kullanılmayan dosyalar varsa ÖNCE ONLAR KULLANILACAK**
 
 ### Test Kuralları
 1. **Her yeni özellik için test yazılacak**

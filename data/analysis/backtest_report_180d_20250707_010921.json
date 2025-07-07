@@ -1,0 +1,101 @@
+{
+  "summary": {
+    "overall_ranking": [
+      [
+        "realistic",
+        28.74422808784641
+      ],
+      [
+        "hier_4h_sl_trailing",
+        25.360046283509213
+      ],
+      [
+        "hierarchical_4h",
+        23.139578344196902
+      ],
+      [
+        "hier_4h_sl_only",
+        23.139578344196902
+      ],
+      [
+        "priority_core",
+        22.911074356750873
+      ],
+      [
+        "hierarchical_hybrid",
+        22.297184901380398
+      ],
+      [
+        "hier_4h_signals_only",
+        20.755252167128933
+      ],
+      [
+        "ml_xgboost",
+        20.0
+      ],
+      [
+        "hierarchical_1d",
+        19.378062372419848
+      ],
+      [
+        "dl_lstm",
+        0
+      ]
+    ]
+  },
+  "rankings": {
+    "total_return": {
+      "best_strategy": "realistic",
+      "value": 6.579757075958333
+    },
+    "sharpe_ratio": {
+      "best_strategy": "realistic",
+      "value": 4.092158563399105
+    },
+    "win_rate": {
+      "best_strategy": "realistic",
+      "value": 41.30434782608695
+    },
+    "max_drawdown": {
+      "best_strategy": "ml_xgboost",
+      "value": 0.0
+    },
+    "total_trades": {
+      "best_strategy": "hier_4h_sl_trailing",
+      "value": 94.0
+    },
+    "profit_factor": {
+      "best_strategy": "realistic",
+      "value": 1.876543209876543
+    },
+    "best_trade": {
+      "best_strategy": "priority_core",
+      "value": 18.107304704627452
+    },
+    "worst_trade": {
+      "best_strategy": "hier_4h_sl_trailing",
+      "value": -12.242188144824686
+    },
+    "avg_trade": {
+      "best_strategy": "realistic",
+      "value": 0.14303819730344203
+    },
+    "calmar_ratio": {
+      "best_strategy": "realistic",
+      "value": 1.8385407099166542
+    },
+    "sortino_ratio": {
+      "best_strategy": "realistic",
+      "value": 4.910590276078925
+    },
+    "avg_win_loss_ratio": {
+      "best_strategy": "realistic",
+      "value": 0.7037037037037037
+    }
+  },
+  "recommendations": [
+    "Best overall strategy: realistic (Score: 28.74)",
+    "Best risk-adjusted: realistic (Sharpe: 4.09)",
+    "Most conservative: ml_xgboost (Max DD: 0.00%)"
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "timestamp": "2025-07-07T03:34:41.835344",
+  "models_trained": [
+    "random_forest"
+  ],
+  "metrics": {
+    "random_forest": {
+      "accuracy": 0.3941018766756032,
+      "precision": 0.374655506690171,
+      "recall": 0.3941018766756032,
+      "f1": 0.289775123252545
+    }
+  }
+}

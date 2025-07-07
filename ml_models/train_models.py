@@ -406,6 +406,103 @@ class ModelTrainer:
             raise
 
 
+def train_xgboost_model(symbols: list = None):
+    """Train XGBoost model specifically for backtesting"""
+    trainer = ModelTrainer()
+    
+    # Prepare data
+    features, targets = trainer.prepare_training_data(
+        start_date="2023-01-01",
+        end_date="2024-12-31",
+        symbols=symbols or SACRED_SYMBOLS[:10]
+    )
+    
+    # Train XGBoost
+    from ml_models.xgboost_model import XGBoostTradingModel
+    xgb_model = XGBoostTradingModel(trainer.model_dir)
+    
+    # Split data
+    split_idx = int(len(features) * 0.8)
+    X_train = features.iloc[:split_idx]
+    y_train = targets.iloc[:split_idx]
+    X_val = features.iloc[split_idx:]
+    y_val = targets.iloc[split_idx:]
+    
+    # Convert targets to 0-based classes for XGBoost
+    # -1 -> 0 (sell), 0 -> 1 (hold), 1 -> 2 (buy), 2 -> 3 (strong buy)
+    y_train_adj = y_train + 1
+    y_val_adj = y_val + 1
+    
+    # Update model params for correct number of classes
+    model = xgb_model._create_model(num_class=4)
+    model.fit(X_train, y_train_adj, eval_set=[(X_val, y_val_adj)], verbose=False)
+    
+    # Save
+    import joblib
+    model_path = trainer.model_dir / 'xgboost_model.pkl'
+    joblib.dump(model, model_path)
+    
+    return model
+
+
+def train_lstm_model(symbols: list = None):
+    """Train LSTM model specifically for backtesting"""
+    trainer = ModelTrainer()
+    
+    # Prepare sequential data for LSTM
+    from ml_models.lstm_model import LSTMModel
+    lstm_model = LSTMModel(
+        sequence_length=20,
+        n_features=50,  # Will be adjusted based on actual features
+        lstm_units=[64, 32],
+        dropout_rate=0.3
+    )
+    
+    # Prepare data with sequences
+    all_sequences = []
+    all_targets = []
+    
+    for symbol in (symbols or SACRED_SYMBOLS[:5]):
+        try:
+            features, targets = trainer.feature_engineer.build_feature_matrix(symbol)
+            if features.empty:
+                continue
+            
+            # Create sequences
+            sequences, seq_targets = lstm_model.create_sequences(features.values, targets.values)
+            all_sequences.append(sequences)
+            all_targets.append(seq_targets)
+        except Exception as e:
+            logger.error(f"Error processing {symbol}: {e}")
+            continue
+    
+    if all_sequences:
+        # Combine all sequences
+        X = np.vstack(all_sequences)
+        y = np.hstack(all_targets)
+        
+        # Update model with correct feature count
+        lstm_model.n_features = X.shape[2]
+        lstm_model.build_model()
+        
+        # Train
+        split_idx = int(len(X) * 0.8)
+        history = lstm_model.train(
+            X[:split_idx], y[:split_idx],
+            X[split_idx:], y[split_idx:],
+            epochs=30,
+            batch_size=32
+        )
+        
+        # Save
+        model_path = trainer.model_dir / 'lstm_model.h5'
+        lstm_model.model.save(model_path)
+        
+        return lstm_model.model
+    
+    return None
+
+
 def main():
     """Run model training"""
     trainer = ModelTrainer()

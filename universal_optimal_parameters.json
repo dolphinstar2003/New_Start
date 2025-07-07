@@ -1,0 +1,26 @@
+{
+  "MACD": {
+    "params": {
+      "macd_fast": 8,
+      "macd_slow": 21,
+      "macd_signal": 5
+    },
+    "avg_return": 3585.1840444335517
+  },
+  "ADX": {
+    "params": {
+      "adx_period": 7,
+      "adx_threshold": 15.031027985021474,
+      "adx_exit_threshold": 11.909229456219547
+    },
+    "avg_return": 3603.584347431022
+  },
+  "Supertrend": {
+    "params": {
+      "st_period": 6,
+      "st_multiplier": 0.500137776222671
+    },
+    "avg_return": 41347.87421103341
+  },
+  "optimization_date": "2025-07-07 04:58:05"
+}

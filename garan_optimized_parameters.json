@@ -1,0 +1,40 @@
+{
+  "GARAN": {
+    "1d": {
+      "MACD": {
+        "fast": 8,
+        "slow": 28,
+        "signal": 5,
+        "return": 6354.39,
+        "signals": {
+          "buy": 50,
+          "sell": 50
+        }
+      },
+      "ADX": {
+        "period": 7,
+        "threshold": 15.39,
+        "exit_threshold": 10.02,
+        "return": 6458.89,
+        "signals": {
+          "buy": "DI cross + ADX>15.39",
+          "sell": "DI cross or ADX<10.02"
+        }
+      },
+      "Supertrend": {
+        "period": 5,
+        "multiplier": 0.74,
+        "return": 48687.59,
+        "signals": {
+          "buy": 55,
+          "sell": 55
+        }
+      }
+    }
+  },
+  "comparison": {
+    "buy_hold": 1083.42,
+    "date_range": "2022-07-04 to 2025-07-04"
+  },
+  "optimization_date": "2025-07-07 04:47:07"
+}

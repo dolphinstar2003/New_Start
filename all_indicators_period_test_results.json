@@ -1,0 +1,2621 @@
+{
+  "test_date": "2025-07-07 05:19:26",
+  "periods": [
+    30,
+    90,
+    180,
+    360
+  ],
+  "results": {
+    "MACD": {
+      "30": {
+        "results": [
+          {
+            "symbol": "GARAN",
+            "return": 22.919849278191972,
+            "buy_hold": 2.6515229673145013,
+            "outperform": 20.26832631087747
+          },
+          {
+            "symbol": "AKBNK",
+            "return": 32.67970714386854,
+            "buy_hold": -2.9885874273321122,
+            "outperform": 35.668294571200654
+          },
+          {
+            "symbol": "ISCTR",
+            "return": 18.17008470112036,
+            "buy_hold": -10.843349898317811,
+            "outperform": 29.01343459943817
+          },
+          {
+            "symbol": "YKBNK",
+            "return": 34.73507202185964,
+            "buy_hold": 1.5832866008758328,
+            "outperform": 33.151785420983806
+          },
+          {
+            "symbol": "SAHOL",
+            "return": 22.554005473266425,
+            "buy_hold": -10.500958854648934,
+            "outperform": 33.05496432791536
+          },
+          {
+            "symbol": "KCHOL",
+            "return": 28.55111655045959,
+            "buy_hold": -0.03163994236135004,
+            "outperform": 28.58275649282094
+          },
+          {
+            "symbol": "SISE",
+            "return": 19.532207642358035,
+            "buy_hold": -3.6694343074016755,
+            "outperform": 23.20164194975971
+          },
+          {
+            "symbol": "EREGL",
+            "return": 34.43635504543163,
+            "buy_hold": 12.397630507450618,
+            "outperform": 22.038724537981015
+          },
+          {
+            "symbol": "KRDMD",
+            "return": 22.031958434067423,
+            "buy_hold": -17.621146194068338,
+            "outperform": 39.653104628135765
+          },
+          {
+            "symbol": "TUPRS",
+            "return": 26.334842484470023,
+            "buy_hold": 13.172531318394597,
+            "outperform": 13.162311166075426
+          },
+          {
+            "symbol": "ASELS",
+            "return": 35.87730965653788,
+            "buy_hold": 34.75935923419915,
+            "outperform": 1.1179504223387298
+          },
+          {
+            "symbol": "THYAO",
+            "return": 19.986674212723976,
+            "buy_hold": -11.719937940597047,
+            "outperform": 31.706612153321025
+          },
+          {
+            "symbol": "TCELL",
+            "return": 27.456325068838126,
+            "buy_hold": -5.937510720176064,
+            "outperform": 33.39383578901419
+          },
+          {
+            "symbol": "BIMAS",
+            "return": 24.495171522729507,
+            "buy_hold": -8.40108401084011,
+            "outperform": 32.896255533569615
+          },
+          {
+            "symbol": "MGROS",
+            "return": 14.533916315781447,
+            "buy_hold": -11.69225723002375,
+            "outperform": 26.226173545805196
+          },
+          {
+            "symbol": "ULKER",
+            "return": 22.26927608084388,
+            "buy_hold": 0.11285404170229274,
+            "outperform": 22.15642203914159
+          },
+          {
+            "symbol": "AKSEN",
+            "return": 18.47175609456282,
+            "buy_hold": -2.572892289763884,
+            "outperform": 21.044648384326706
+          },
+          {
+            "symbol": "ENKAI",
+            "return": 28.642096523210412,
+            "buy_hold": 31.277685087824093,
+            "outperform": -2.6355885646136805
+          },
+          {
+            "symbol": "PETKM",
+            "return": 13.504919103320567,
+            "buy_hold": -0.11395185917050243,
+            "outperform": 13.61887096249107
+          },
+          {
+            "symbol": "KOZAL",
+            "return": 23.769755989228415,
+            "buy_hold": -0.7217333653620872,
+            "outperform": 24.491489354590502
+          }
+        ],
+        "stats": {
+          "positive_count": 20,
+          "outperform_count": 19,
+          "avg_return": 24.547619967143532,
+          "median_return": 23.344802633710195
+        }
+      },
+      "90": {
+        "results": [
+          {
+            "symbol": "GARAN",
+            "return": 51.66753484763278,
+            "buy_hold": 13.079612306911015,
+            "outperform": 38.58792254072176
+          },
+          {
+            "symbol": "AKBNK",
+            "return": 72.78119949894453,
+            "buy_hold": 11.509983448141359,
+            "outperform": 61.271216050803176
+          },
+          {
+            "symbol": "ISCTR",
+            "return": 65.84563106395352,
+            "buy_hold": 4.515023718500566,
+            "outperform": 61.330607345452954
+          },
+          {
+            "symbol": "YKBNK",
+            "return": 80.63812105306916,
+            "buy_hold": 3.9533415313475206,
+            "outperform": 76.68477952172164
+          },
+          {
+            "symbol": "SAHOL",
+            "return": 64.11808774076717,
+            "buy_hold": -1.2392733830905889,
+            "outperform": 65.35736112385776
+          },
+          {
+            "symbol": "KCHOL",
+            "return": 50.690448315431965,
+            "buy_hold": -13.295886247871092,
+            "outperform": 63.98633456330306
+          },
+          {
+            "symbol": "SISE",
+            "return": 34.453108490289644,
+            "buy_hold": -11.187470037945534,
+            "outperform": 45.64057852823518
+          },
+          {
+            "symbol": "EREGL",
+            "return": 56.29702753457791,
+            "buy_hold": 6.4456448699909075,
+            "outperform": 49.851382664587
+          },
+          {
+            "symbol": "KRDMD",
+            "return": 64.47751062926514,
+            "buy_hold": -8.97079243106239,
+            "outperform": 73.44830306032753
+          },
+          {
+            "symbol": "TUPRS",
+            "return": 47.835545734529106,
+            "buy_hold": 1.0547748383441968,
+            "outperform": 46.78077089618491
+          },
+          {
+            "symbol": "ASELS",
+            "return": 171.58734561560357,
+            "buy_hold": 118.18180417007494,
+            "outperform": 53.40554144552863
+          },
+          {
+            "symbol": "THYAO",
+            "return": 48.16841539883112,
+            "buy_hold": -1.536601968932938,
+            "outperform": 49.70501736776406
+          },
+          {
+            "symbol": "TCELL",
+            "return": 53.73935006385573,
+            "buy_hold": 8.861115848818946,
+            "outperform": 44.878234215036784
+          },
+          {
+            "symbol": "BIMAS",
+            "return": 48.19205828272464,
+            "buy_hold": -5.0294223200787584,
+            "outperform": 53.221480602803396
+          },
+          {
+            "symbol": "MGROS",
+            "return": 38.39257565194289,
+            "buy_hold": -3.4970277690322016,
+            "outperform": 41.88960342097509
+          },
+          {
+            "symbol": "ULKER",
+            "return": 78.09587895933919,
+            "buy_hold": 4.908680822352118,
+            "outperform": 73.18719813698706
+          },
+          {
+            "symbol": "AKSEN",
+            "return": 35.20008250331435,
+            "buy_hold": -5.1224844980125805,
+            "outperform": 40.32256700132693
+          },
+          {
+            "symbol": "ENKAI",
+            "return": 89.32877184836923,
+            "buy_hold": 31.894013301363522,
+            "outperform": 57.43475854700571
+          },
+          {
+            "symbol": "PETKM",
+            "return": 27.197478337348645,
+            "buy_hold": -6.7056954097358235,
+            "outperform": 33.903173747084466
+          },
+          {
+            "symbol": "KOZAL",
+            "return": 57.00897874399995,
+            "buy_hold": 6.266098882522897,
+            "outperform": 50.74287986147705
+          }
+        ],
+        "stats": {
+          "positive_count": 20,
+          "outperform_count": 20,
+          "avg_return": 61.78575751568951,
+          "median_return": 55.018188799216816
+        }
+      },
+      "180": {
+        "results": [
+          {
+            "symbol": "GARAN",
+            "return": 105.01419896046383,
+            "buy_hold": 18.83261533881231,
+            "outperform": 86.18158362165153
+          },
+          {
+            "symbol": "AKBNK",
+            "return": 167.0746389548618,
+            "buy_hold": 25.22825459240412,
+            "outperform": 141.84638436245768
+          },
+          {
+            "symbol": "ISCTR",
+            "return": 125.036360631689,
+            "buy_hold": 3.011207338902766,
+            "outperform": 122.02515329278624
+          },
+          {
+            "symbol": "YKBNK",
+            "return": 173.90319432145466,
+            "buy_hold": 9.1156539023737,
+            "outperform": 164.78754041908095
+          },
+          {
+            "symbol": "SAHOL",
+            "return": 147.07380907985805,
+            "buy_hold": 5.460026891430769,
+            "outperform": 141.61378218842728
+          },
+          {
+            "symbol": "KCHOL",
+            "return": 97.52418073300223,
+            "buy_hold": -13.693818102863231,
+            "outperform": 111.21799883586546
+          },
+          {
+            "symbol": "SISE",
+            "return": 65.64875203485599,
+            "buy_hold": -12.947354112404696,
+            "outperform": 78.59610614726068
+          },
+          {
+            "symbol": "EREGL",
+            "return": 86.13678908216906,
+            "buy_hold": 10.737467643297594,
+            "outperform": 75.39932143887147
+          },
+          {
+            "symbol": "KRDMD",
+            "return": 127.08562137799251,
+            "buy_hold": -2.459015810953613,
+            "outperform": 129.54463718894613
+          },
+          {
+            "symbol": "TUPRS",
+            "return": 72.43145602731131,
+            "buy_hold": 8.969281230101767,
+            "outperform": 63.46217479720954
+          },
+          {
+            "symbol": "ASELS",
+            "return": 227.93219508295755,
+            "buy_hold": 166.8674425422131,
+            "outperform": 61.06475254074445
+          },
+          {
+            "symbol": "THYAO",
+            "return": 75.07820928476517,
+            "buy_hold": 7.083389426678011,
+            "outperform": 67.99481985808715
+          },
+          {
+            "symbol": "TCELL",
+            "return": 91.90636327729575,
+            "buy_hold": 3.9723137565821576,
+            "outperform": 87.9340495207136
+          },
+          {
+            "symbol": "BIMAS",
+            "return": 70.44556213705515,
+            "buy_hold": -7.586728168060297,
+            "outperform": 78.03229030511545
+          },
+          {
+            "symbol": "MGROS",
+            "return": 74.46994400359432,
+            "buy_hold": -2.787863502303556,
+            "outperform": 77.25780750589787
+          },
+          {
+            "symbol": "ULKER",
+            "return": 103.72413955266238,
+            "buy_hold": -26.38761198464007,
+            "outperform": 130.11175153730244
+          },
+          {
+            "symbol": "AKSEN",
+            "return": 61.29418545837761,
+            "buy_hold": -7.441602081693366,
+            "outperform": 68.73578754007097
+          },
+          {
+            "symbol": "ENKAI",
+            "return": 169.95052020001208,
+            "buy_hold": 56.074576413684674,
+            "outperform": 113.87594378632741
+          },
+          {
+            "symbol": "PETKM",
+            "return": 54.46183726302935,
+            "buy_hold": -17.311320491599304,
+            "outperform": 71.77315775462866
+          },
+          {
+            "symbol": "KOZAL",
+            "return": 123.63751289018117,
+            "buy_hold": 11.934897330410465,
+            "outperform": 111.7026155597707
+          }
+        ],
+        "stats": {
+          "positive_count": 20,
+          "outperform_count": 20,
+          "avg_return": 110.99147351767947,
+          "median_return": 100.6241601428323
+        }
+      },
+      "360": {
+        "results": [
+          {
+            "symbol": "GARAN",
+            "return": 556.2919517847099,
+            "buy_hold": 211.6717885705756,
+            "outperform": 344.6201632141343
+          },
+          {
+            "symbol": "AKBNK",
+            "return": 591.6644197066938,
+            "buy_hold": 156.57116706553538,
+            "outperform": 435.0932526411584
+          },
+          {
+            "symbol": "ISCTR",
+            "return": 416.69657018732636,
+            "buy_hold": 82.91085940148318,
+            "outperform": 333.7857107858432
+          },
+          {
+            "symbol": "YKBNK",
+            "return": 571.9449212170481,
+            "buy_hold": 97.5970899849457,
+            "outperform": 474.3478312321024
+          },
+          {
+            "symbol": "SAHOL",
+            "return": 415.776206801785,
+            "buy_hold": 74.52254144432304,
+            "outperform": 341.25366535746195
+          },
+          {
+            "symbol": "KCHOL",
+            "return": 310.47108103314275,
+            "buy_hold": 25.09317798121733,
+            "outperform": 285.37790305192544
+          },
+          {
+            "symbol": "SISE",
+            "return": 126.39027150129651,
+            "buy_hold": -20.937505594971284,
+            "outperform": 147.3277770962678
+          },
+          {
+            "symbol": "EREGL",
+            "return": 255.65866851917414,
+            "buy_hold": 50.965143997778625,
+            "outperform": 204.69352452139552
+          },
+          {
+            "symbol": "KRDMD",
+            "return": 327.0035874095762,
+            "buy_hold": 4.096867043677221,
+            "outperform": 322.906720365899
+          },
+          {
+            "symbol": "TUPRS",
+            "return": 212.6486457972393,
+            "buy_hold": 18.82197622340833,
+            "outperform": 193.82666957383097
+          },
+          {
+            "symbol": "ASELS",
+            "return": 668.2392543800825,
+            "buy_hold": 259.8997704009965,
+            "outperform": 408.33948397908597
+          },
+          {
+            "symbol": "THYAO",
+            "return": 183.13804860796705,
+            "buy_hold": 29.472275502608024,
+            "outperform": 153.66577310535902
+          },
+          {
+            "symbol": "TCELL",
+            "return": 355.7891936911158,
+            "buy_hold": 93.05760219792212,
+            "outperform": 262.7315914931937
+          },
+          {
+            "symbol": "BIMAS",
+            "return": 275.3429288336335,
+            "buy_hold": 77.73654376629902,
+            "outperform": 197.6063850673345
+          },
+          {
+            "symbol": "MGROS",
+            "return": 268.8819006264902,
+            "buy_hold": 42.608885739033475,
+            "outperform": 226.27301488745675
+          },
+          {
+            "symbol": "ULKER",
+            "return": 524.7718510541089,
+            "buy_hold": 46.784251893920704,
+            "outperform": 477.98759916018815
+          },
+          {
+            "symbol": "AKSEN",
+            "return": 238.74506527502194,
+            "buy_hold": -4.078650226874414,
+            "outperform": 242.82371550189634
+          },
+          {
+            "symbol": "ENKAI",
+            "return": 446.48433567232786,
+            "buy_hold": 121.35444541800618,
+            "outperform": 325.1298902543217
+          },
+          {
+            "symbol": "PETKM",
+            "return": 230.7530748071979,
+            "buy_hold": -17.233236855234225,
+            "outperform": 247.98631166243212
+          },
+          {
+            "symbol": "KOZAL",
+            "return": 289.568943194067,
+            "buy_hold": 11.934897330410465,
+            "outperform": 277.6340458636565
+          }
+        ],
+        "stats": {
+          "positive_count": 20,
+          "outperform_count": 20,
+          "avg_return": 363.3130460050003,
+          "median_return": 318.73733422135945
+        }
+      }
+    },
+    "ADX": {
+      "30": {
+        "results": [
+          {
+            "symbol": "GARAN",
+            "return": 46.1871017243415,
+            "buy_hold": 2.6515229673145013,
+            "outperform": 43.535578757027004
+          },
+          {
+            "symbol": "AKBNK",
+            "return": 48.03443793707118,
+            "buy_hold": -2.9885874273321122,
+            "outperform": 51.023025364403296
+          },
+          {
+            "symbol": "ISCTR",
+            "return": 41.23800186529969,
+            "buy_hold": -10.843349898317811,
+            "outperform": 52.0813517636175
+          },
+          {
+            "symbol": "YKBNK",
+            "return": 37.28689631092039,
+            "buy_hold": 1.5832866008758328,
+            "outperform": 35.70360971004456
+          },
+          {
+            "symbol": "SAHOL",
+            "return": 35.149030609547374,
+            "buy_hold": -10.500958854648934,
+            "outperform": 45.64998946419631
+          },
+          {
+            "symbol": "KCHOL",
+            "return": 29.205545178375058,
+            "buy_hold": -0.03163994236135004,
+            "outperform": 29.237185120736406
+          },
+          {
+            "symbol": "SISE",
+            "return": 20.221926854167194,
+            "buy_hold": -3.6694343074016755,
+            "outperform": 23.89136116156887
+          },
+          {
+            "symbol": "EREGL",
+            "return": 30.67584898987674,
+            "buy_hold": 12.397630507450618,
+            "outperform": 18.278218482426123
+          },
+          {
+            "symbol": "KRDMD",
+            "return": 19.035478828622267,
+            "buy_hold": -17.621146194068338,
+            "outperform": 36.656625022690605
+          },
+          {
+            "symbol": "TUPRS",
+            "return": 29.441514079830622,
+            "buy_hold": 13.172531318394597,
+            "outperform": 16.268982761436025
+          },
+          {
+            "symbol": "ASELS",
+            "return": 39.36605145943419,
+            "buy_hold": 34.75935923419915,
+            "outperform": 4.606692225235037
+          },
+          {
+            "symbol": "THYAO",
+            "return": 29.156609616733007,
+            "buy_hold": -11.719937940597047,
+            "outperform": 40.876547557330056
+          },
+          {
+            "symbol": "TCELL",
+            "return": 28.615558992941015,
+            "buy_hold": -5.937510720176064,
+            "outperform": 34.55306971311708
+          },
+          {
+            "symbol": "BIMAS",
+            "return": 17.415957112418123,
+            "buy_hold": -8.40108401084011,
+            "outperform": 25.817041123258235
+          },
+          {
+            "symbol": "MGROS",
+            "return": 19.175793102217952,
+            "buy_hold": -11.69225723002375,
+            "outperform": 30.8680503322417
+          },
+          {
+            "symbol": "ULKER",
+            "return": 26.332017955545027,
+            "buy_hold": 0.11285404170229274,
+            "outperform": 26.219163913842735
+          },
+          {
+            "symbol": "AKSEN",
+            "return": 14.671801294938147,
+            "buy_hold": -2.572892289763884,
+            "outperform": 17.24469358470203
+          },
+          {
+            "symbol": "ENKAI",
+            "return": 19.59574678528131,
+            "buy_hold": 31.277685087824093,
+            "outperform": -11.681938302542783
+          },
+          {
+            "symbol": "PETKM",
+            "return": 14.66131199835825,
+            "buy_hold": -0.11395185917050243,
+            "outperform": 14.775263857528753
+          },
+          {
+            "symbol": "KOZAL",
+            "return": 23.70506556867218,
+            "buy_hold": -0.7217333653620872,
+            "outperform": 24.426798934034267
+          }
+        ],
+        "stats": {
+          "positive_count": 20,
+          "outperform_count": 19,
+          "avg_return": 28.458584813229557,
+          "median_return": 28.886084304837013
+        }
+      },
+      "90": {
+        "results": [
+          {
+            "symbol": "GARAN",
+            "return": 64.09342624340408,
+            "buy_hold": 13.079612306911015,
+            "outperform": 51.013813936493065
+          },
+          {
+            "symbol": "AKBNK",
+            "return": 87.2980004646521,
+            "buy_hold": 11.509983448141359,
+            "outperform": 75.78801701651075
+          },
+          {
+            "symbol": "ISCTR",
+            "return": 81.84028928441683,
+            "buy_hold": 4.515023718500566,
+            "outperform": 77.32526556591625
+          },
+          {
+            "symbol": "YKBNK",
+            "return": 78.91607683893336,
+            "buy_hold": 3.9533415313475206,
+            "outperform": 74.96273530758585
+          },
+          {
+            "symbol": "SAHOL",
+            "return": 56.482946109216336,
+            "buy_hold": -1.2392733830905889,
+            "outperform": 57.72221949230693
+          },
+          {
+            "symbol": "KCHOL",
+            "return": 56.174977774191134,
+            "buy_hold": -13.295886247871092,
+            "outperform": 69.47086402206223
+          },
+          {
+            "symbol": "SISE",
+            "return": 40.535606392398705,
+            "buy_hold": -11.187470037945534,
+            "outperform": 51.723076430344236
+          },
+          {
+            "symbol": "EREGL",
+            "return": 61.27272498467615,
+            "buy_hold": 6.4456448699909075,
+            "outperform": 54.827080114685245
+          },
+          {
+            "symbol": "KRDMD",
+            "return": 73.32790199655035,
+            "buy_hold": -8.97079243106239,
+            "outperform": 82.29869442761274
+          },
+          {
+            "symbol": "TUPRS",
+            "return": 46.20597901282648,
+            "buy_hold": 1.0547748383441968,
+            "outperform": 45.15120417448229
+          },
+          {
+            "symbol": "ASELS",
+            "return": 186.35183702329093,
+            "buy_hold": 118.18180417007494,
+            "outperform": 68.17003285321599
+          },
+          {
+            "symbol": "THYAO",
+            "return": 56.23069564565986,
+            "buy_hold": -1.536601968932938,
+            "outperform": 57.76729761459279
+          },
+          {
+            "symbol": "TCELL",
+            "return": 54.986831743584915,
+            "buy_hold": 8.861115848818946,
+            "outperform": 46.12571589476597
+          },
+          {
+            "symbol": "BIMAS",
+            "return": 40.65663571467859,
+            "buy_hold": -5.0294223200787584,
+            "outperform": 45.68605803475735
+          },
+          {
+            "symbol": "MGROS",
+            "return": 39.460272600070276,
+            "buy_hold": -3.4970277690322016,
+            "outperform": 42.95730036910248
+          },
+          {
+            "symbol": "ULKER",
+            "return": 77.76545354873325,
+            "buy_hold": 4.908680822352118,
+            "outperform": 72.85677272638112
+          },
+          {
+            "symbol": "AKSEN",
+            "return": 39.07491995586603,
+            "buy_hold": -5.1224844980125805,
+            "outperform": 44.19740445387861
+          },
+          {
+            "symbol": "ENKAI",
+            "return": 74.5056139158218,
+            "buy_hold": 31.894013301363522,
+            "outperform": 42.611600614458276
+          },
+          {
+            "symbol": "PETKM",
+            "return": 28.035762689847445,
+            "buy_hold": -6.7056954097358235,
+            "outperform": 34.74145809958327
+          },
+          {
+            "symbol": "KOZAL",
+            "return": 74.32280458168282,
+            "buy_hold": 6.266098882522897,
+            "outperform": 68.05670569915992
+          }
+        ],
+        "stats": {
+          "positive_count": 20,
+          "outperform_count": 20,
+          "avg_return": 65.87693782602507,
+          "median_return": 58.877835546946244
+        }
+      },
+      "180": {
+        "results": [
+          {
+            "symbol": "GARAN",
+            "return": 102.71868557998562,
+            "buy_hold": 18.83261533881231,
+            "outperform": 83.88607024117331
+          },
+          {
+            "symbol": "AKBNK",
+            "return": 175.76149662877847,
+            "buy_hold": 25.22825459240412,
+            "outperform": 150.53324203637436
+          },
+          {
+            "symbol": "ISCTR",
+            "return": 146.09174113984616,
+            "buy_hold": 3.011207338902766,
+            "outperform": 143.08053380094339
+          },
+          {
+            "symbol": "YKBNK",
+            "return": 175.62318589686177,
+            "buy_hold": 9.1156539023737,
+            "outperform": 166.50753199448806
+          },
+          {
+            "symbol": "SAHOL",
+            "return": 142.82793034214066,
+            "buy_hold": 5.460026891430769,
+            "outperform": 137.3679034507099
+          },
+          {
+            "symbol": "KCHOL",
+            "return": 121.82873713343709,
+            "buy_hold": -13.693818102863231,
+            "outperform": 135.52255523630032
+          },
+          {
+            "symbol": "SISE",
+            "return": 61.72437444497503,
+            "buy_hold": -12.947354112404696,
+            "outperform": 74.67172855737972
+          },
+          {
+            "symbol": "EREGL",
+            "return": 87.30188348580809,
+            "buy_hold": 10.737467643297594,
+            "outperform": 76.5644158425105
+          },
+          {
+            "symbol": "KRDMD",
+            "return": 153.7899431182295,
+            "buy_hold": -2.459015810953613,
+            "outperform": 156.24895892918312
+          },
+          {
+            "symbol": "TUPRS",
+            "return": 59.62326321753151,
+            "buy_hold": 8.969281230101767,
+            "outperform": 50.653981987429745
+          },
+          {
+            "symbol": "ASELS",
+            "return": 289.15371602483265,
+            "buy_hold": 166.8674425422131,
+            "outperform": 122.28627348261955
+          },
+          {
+            "symbol": "THYAO",
+            "return": 92.99239859074706,
+            "buy_hold": 7.083389426678011,
+            "outperform": 85.90900916406905
+          },
+          {
+            "symbol": "TCELL",
+            "return": 85.54384795694372,
+            "buy_hold": 3.9723137565821576,
+            "outperform": 81.57153420036157
+          },
+          {
+            "symbol": "BIMAS",
+            "return": 88.14608539704145,
+            "buy_hold": -7.586728168060297,
+            "outperform": 95.73281356510174
+          },
+          {
+            "symbol": "MGROS",
+            "return": 96.76756507596649,
+            "buy_hold": -2.787863502303556,
+            "outperform": 99.55542857827004
+          },
+          {
+            "symbol": "ULKER",
+            "return": 109.03322896309997,
+            "buy_hold": -26.38761198464007,
+            "outperform": 135.42084094774003
+          },
+          {
+            "symbol": "AKSEN",
+            "return": 64.39877175782782,
+            "buy_hold": -7.441602081693366,
+            "outperform": 71.84037383952118
+          },
+          {
+            "symbol": "ENKAI",
+            "return": 134.04307169157968,
+            "buy_hold": 56.074576413684674,
+            "outperform": 77.96849527789502
+          },
+          {
+            "symbol": "PETKM",
+            "return": 51.2703909809948,
+            "buy_hold": -17.311320491599304,
+            "outperform": 68.5817114725941
+          },
+          {
+            "symbol": "KOZAL",
+            "return": 132.8270294297841,
+            "buy_hold": 11.934897330410465,
+            "outperform": 120.89213209937363
+          }
+        ],
+        "stats": {
+          "positive_count": 20,
+          "outperform_count": 20,
+          "avg_return": 118.5733673428206,
+          "median_return": 105.8759572715428
+        }
+      },
+      "360": {
+        "results": [
+          {
+            "symbol": "GARAN",
+            "return": 577.263038095397,
+            "buy_hold": 211.6717885705756,
+            "outperform": 365.59124952482136
+          },
+          {
+            "symbol": "AKBNK",
+            "return": 670.1026461141278,
+            "buy_hold": 156.57116706553538,
+            "outperform": 513.5314790485924
+          },
+          {
+            "symbol": "ISCTR",
+            "return": 574.499925194807,
+            "buy_hold": 82.91085940148318,
+            "outperform": 491.5890657933238
+          },
+          {
+            "symbol": "YKBNK",
+            "return": 641.6998454764596,
+            "buy_hold": 97.5970899849457,
+            "outperform": 544.1027554915139
+          },
+          {
+            "symbol": "SAHOL",
+            "return": 458.9553236720014,
+            "buy_hold": 74.52254144432304,
+            "outperform": 384.43278222767833
+          },
+          {
+            "symbol": "KCHOL",
+            "return": 378.984019334497,
+            "buy_hold": 25.09317798121733,
+            "outperform": 353.8908413532797
+          },
+          {
+            "symbol": "SISE",
+            "return": 127.37992334333063,
+            "buy_hold": -20.937505594971284,
+            "outperform": 148.31742893830193
+          },
+          {
+            "symbol": "EREGL",
+            "return": 233.61039073993558,
+            "buy_hold": 50.965143997778625,
+            "outperform": 182.64524674215696
+          },
+          {
+            "symbol": "KRDMD",
+            "return": 417.2861702092968,
+            "buy_hold": 4.096867043677221,
+            "outperform": 413.1893031656196
+          },
+          {
+            "symbol": "TUPRS",
+            "return": 152.2938481129965,
+            "buy_hold": 18.82197622340833,
+            "outperform": 133.47187188958816
+          },
+          {
+            "symbol": "ASELS",
+            "return": 626.1905837659604,
+            "buy_hold": 259.8997704009965,
+            "outperform": 366.29081336496387
+          },
+          {
+            "symbol": "THYAO",
+            "return": 197.5947495392307,
+            "buy_hold": 29.472275502608024,
+            "outperform": 168.12247403662266
+          },
+          {
+            "symbol": "TCELL",
+            "return": 352.62639968535643,
+            "buy_hold": 93.05760219792212,
+            "outperform": 259.5687974874343
+          },
+          {
+            "symbol": "BIMAS",
+            "return": 364.77512187888846,
+            "buy_hold": 77.73654376629902,
+            "outperform": 287.03857811258945
+          },
+          {
+            "symbol": "MGROS",
+            "return": 333.10948808187,
+            "buy_hold": 42.608885739033475,
+            "outperform": 290.5006023428365
+          },
+          {
+            "symbol": "ULKER",
+            "return": 327.141453466821,
+            "buy_hold": 46.784251893920704,
+            "outperform": 280.3572015729003
+          },
+          {
+            "symbol": "AKSEN",
+            "return": 239.1210401157993,
+            "buy_hold": -4.078650226874414,
+            "outperform": 243.1996903426737
+          },
+          {
+            "symbol": "ENKAI",
+            "return": 327.6360607179345,
+            "buy_hold": 121.35444541800618,
+            "outperform": 206.28161529992835
+          },
+          {
+            "symbol": "PETKM",
+            "return": 176.3168514619392,
+            "buy_hold": -17.233236855234225,
+            "outperform": 193.55008831717342
+          },
+          {
+            "symbol": "KOZAL",
+            "return": 384.3453730577077,
+            "buy_hold": 11.934897330410465,
+            "outperform": 372.41047572729724
+          }
+        ],
+        "stats": {
+          "positive_count": 20,
+          "outperform_count": 20,
+          "avg_return": 378.0466126032179,
+          "median_return": 358.7007607821224
+        }
+      }
+    },
+    "Supertrend": {
+      "30": {
+        "results": [
+          {
+            "symbol": "GARAN",
+            "return": 72.2730030657422,
+            "buy_hold": 2.6515229673145013,
+            "outperform": 69.6214800984277
+          },
+          {
+            "symbol": "AKBNK",
+            "return": 63.66129881400076,
+            "buy_hold": -2.9885874273321122,
+            "outperform": 66.64988624133287
+          },
+          {
+            "symbol": "ISCTR",
+            "return": 55.23434870955475,
+            "buy_hold": -10.843349898317811,
+            "outperform": 66.07769860787256
+          },
+          {
+            "symbol": "YKBNK",
+            "return": 70.55881589417994,
+            "buy_hold": 1.5832866008758328,
+            "outperform": 68.9755292933041
+          },
+          {
+            "symbol": "SAHOL",
+            "return": 50.39321652054165,
+            "buy_hold": -10.500958854648934,
+            "outperform": 60.894175375190585
+          },
+          {
+            "symbol": "KCHOL",
+            "return": 56.82950367506756,
+            "buy_hold": -0.03163994236135004,
+            "outperform": 56.861143617428915
+          },
+          {
+            "symbol": "SISE",
+            "return": 41.16825787676313,
+            "buy_hold": -3.6694343074016755,
+            "outperform": 44.8376921841648
+          },
+          {
+            "symbol": "EREGL",
+            "return": 54.88239673357598,
+            "buy_hold": 12.397630507450618,
+            "outperform": 42.48476622612536
+          },
+          {
+            "symbol": "KRDMD",
+            "return": 48.547409939920215,
+            "buy_hold": -17.621146194068338,
+            "outperform": 66.16855613398855
+          },
+          {
+            "symbol": "TUPRS",
+            "return": 62.502856702529044,
+            "buy_hold": 13.172531318394597,
+            "outperform": 49.33032538413445
+          },
+          {
+            "symbol": "ASELS",
+            "return": 88.7986477279531,
+            "buy_hold": 34.75935923419915,
+            "outperform": 54.03928849375394
+          },
+          {
+            "symbol": "THYAO",
+            "return": 51.33709991472388,
+            "buy_hold": -11.719937940597047,
+            "outperform": 63.05703785532093
+          },
+          {
+            "symbol": "TCELL",
+            "return": 55.21572715858556,
+            "buy_hold": -5.937510720176064,
+            "outperform": 61.15323787876162
+          },
+          {
+            "symbol": "BIMAS",
+            "return": 73.13151586263804,
+            "buy_hold": -8.40108401084011,
+            "outperform": 81.53259987347815
+          },
+          {
+            "symbol": "MGROS",
+            "return": 36.80786071612667,
+            "buy_hold": -11.69225723002375,
+            "outperform": 48.50011794615042
+          },
+          {
+            "symbol": "ULKER",
+            "return": 45.798083909382335,
+            "buy_hold": 0.11285404170229274,
+            "outperform": 45.68522986768004
+          },
+          {
+            "symbol": "AKSEN",
+            "return": 40.13186789680287,
+            "buy_hold": -2.572892289763884,
+            "outperform": 42.70476018656676
+          },
+          {
+            "symbol": "ENKAI",
+            "return": 78.54297865848379,
+            "buy_hold": 31.277685087824093,
+            "outperform": 47.26529357065969
+          },
+          {
+            "symbol": "PETKM",
+            "return": 45.92240859983836,
+            "buy_hold": -0.11395185917050243,
+            "outperform": 46.03636045900887
+          },
+          {
+            "symbol": "KOZAL",
+            "return": 50.83440410449451,
+            "buy_hold": -0.7217333653620872,
+            "outperform": 51.556137469856594
+          }
+        ],
+        "stats": {
+          "positive_count": 20,
+          "outperform_count": 20,
+          "avg_return": 57.128585124045216,
+          "median_return": 55.04906194608077
+        }
+      },
+      "90": {
+        "results": [
+          {
+            "symbol": "GARAN",
+            "return": 136.2143336445839,
+            "buy_hold": 13.079612306911015,
+            "outperform": 123.13472133767287
+          },
+          {
+            "symbol": "AKBNK",
+            "return": 129.92258060618877,
+            "buy_hold": 11.509983448141359,
+            "outperform": 118.41259715804742
+          },
+          {
+            "symbol": "ISCTR",
+            "return": 114.40497560140624,
+            "buy_hold": 4.515023718500566,
+            "outperform": 109.88995188290566
+          },
+          {
+            "symbol": "YKBNK",
+            "return": 150.99472769409138,
+            "buy_hold": 3.9533415313475206,
+            "outperform": 147.04138616274386
+          },
+          {
+            "symbol": "SAHOL",
+            "return": 111.37892611405675,
+            "buy_hold": -1.2392733830905889,
+            "outperform": 112.61819949714734
+          },
+          {
+            "symbol": "KCHOL",
+            "return": 113.83235577705153,
+            "buy_hold": -13.295886247871092,
+            "outperform": 127.12824202492263
+          },
+          {
+            "symbol": "SISE",
+            "return": 84.04524457018736,
+            "buy_hold": -11.187470037945534,
+            "outperform": 95.2327146081329
+          },
+          {
+            "symbol": "EREGL",
+            "return": 108.70878295699723,
+            "buy_hold": 6.4456448699909075,
+            "outperform": 102.26313808700633
+          },
+          {
+            "symbol": "KRDMD",
+            "return": 130.57110005063043,
+            "buy_hold": -8.97079243106239,
+            "outperform": 139.54189248169283
+          },
+          {
+            "symbol": "TUPRS",
+            "return": 106.55856773087847,
+            "buy_hold": 1.0547748383441968,
+            "outperform": 105.50379289253426
+          },
+          {
+            "symbol": "ASELS",
+            "return": 294.63868632316996,
+            "buy_hold": 118.18180417007494,
+            "outperform": 176.45688215309502
+          },
+          {
+            "symbol": "THYAO",
+            "return": 101.11895271746118,
+            "buy_hold": -1.536601968932938,
+            "outperform": 102.65555468639413
+          },
+          {
+            "symbol": "TCELL",
+            "return": 108.49121500631225,
+            "buy_hold": 8.861115848818946,
+            "outperform": 99.6300991574933
+          },
+          {
+            "symbol": "BIMAS",
+            "return": 148.211387954245,
+            "buy_hold": -5.0294223200787584,
+            "outperform": 153.24081027432376
+          },
+          {
+            "symbol": "MGROS",
+            "return": 80.86659411642978,
+            "buy_hold": -3.4970277690322016,
+            "outperform": 84.36362188546198
+          },
+          {
+            "symbol": "ULKER",
+            "return": 145.84717647358008,
+            "buy_hold": 4.908680822352118,
+            "outperform": 140.93849565122795
+          },
+          {
+            "symbol": "AKSEN",
+            "return": 107.3281406295246,
+            "buy_hold": -5.1224844980125805,
+            "outperform": 112.45062512753718
+          },
+          {
+            "symbol": "ENKAI",
+            "return": 192.892875468455,
+            "buy_hold": 31.894013301363522,
+            "outperform": 160.9988621670915
+          },
+          {
+            "symbol": "PETKM",
+            "return": 90.01624521852791,
+            "buy_hold": -6.7056954097358235,
+            "outperform": 96.72194062826374
+          },
+          {
+            "symbol": "KOZAL",
+            "return": 147.6665908332294,
+            "buy_hold": 6.266098882522897,
+            "outperform": 141.4004919507065
+          }
+        ],
+        "stats": {
+          "positive_count": 20,
+          "outperform_count": 20,
+          "avg_return": 130.18547297435035,
+          "median_return": 114.11866568922889
+        }
+      },
+      "180": {
+        "results": [
+          {
+            "symbol": "GARAN",
+            "return": 332.3203289759028,
+            "buy_hold": 18.83261533881231,
+            "outperform": 313.48771363709045
+          },
+          {
+            "symbol": "AKBNK",
+            "return": 368.3562106283408,
+            "buy_hold": 25.22825459240412,
+            "outperform": 343.1279560359367
+          },
+          {
+            "symbol": "ISCTR",
+            "return": 240.04415261377326,
+            "buy_hold": 3.011207338902766,
+            "outperform": 237.03294527487049
+          },
+          {
+            "symbol": "YKBNK",
+            "return": 432.6496077615791,
+            "buy_hold": 9.1156539023737,
+            "outperform": 423.5339538592054
+          },
+          {
+            "symbol": "SAHOL",
+            "return": 283.13663492513285,
+            "buy_hold": 5.460026891430769,
+            "outperform": 277.6766080337021
+          },
+          {
+            "symbol": "KCHOL",
+            "return": 227.73849643900178,
+            "buy_hold": -13.693818102863231,
+            "outperform": 241.432314541865
+          },
+          {
+            "symbol": "SISE",
+            "return": 170.9551262311066,
+            "buy_hold": -12.947354112404696,
+            "outperform": 183.9024803435113
+          },
+          {
+            "symbol": "EREGL",
+            "return": 206.88949624919996,
+            "buy_hold": 10.737467643297594,
+            "outperform": 196.15202860590236
+          },
+          {
+            "symbol": "KRDMD",
+            "return": 312.1991353811029,
+            "buy_hold": -2.459015810953613,
+            "outperform": 314.6581511920565
+          },
+          {
+            "symbol": "TUPRS",
+            "return": 183.4402580761541,
+            "buy_hold": 8.969281230101767,
+            "outperform": 174.47097684605234
+          },
+          {
+            "symbol": "ASELS",
+            "return": 561.5541349054345,
+            "buy_hold": 166.8674425422131,
+            "outperform": 394.68669236322137
+          },
+          {
+            "symbol": "THYAO",
+            "return": 198.0449496941312,
+            "buy_hold": 7.083389426678011,
+            "outperform": 190.9615602674532
+          },
+          {
+            "symbol": "TCELL",
+            "return": 229.28152371391087,
+            "buy_hold": 3.9723137565821576,
+            "outperform": 225.3092099573287
+          },
+          {
+            "symbol": "BIMAS",
+            "return": 345.50665859481364,
+            "buy_hold": -7.586728168060297,
+            "outperform": 353.09338676287393
+          },
+          {
+            "symbol": "MGROS",
+            "return": 192.1836448938839,
+            "buy_hold": -2.787863502303556,
+            "outperform": 194.97150839618746
+          },
+          {
+            "symbol": "ULKER",
+            "return": 291.61886726460267,
+            "buy_hold": -26.38761198464007,
+            "outperform": 318.0064792492427
+          },
+          {
+            "symbol": "AKSEN",
+            "return": 189.35591636333763,
+            "buy_hold": -7.441602081693366,
+            "outperform": 196.797518445031
+          },
+          {
+            "symbol": "ENKAI",
+            "return": 410.33322768162054,
+            "buy_hold": 56.074576413684674,
+            "outperform": 354.2586512679359
+          },
+          {
+            "symbol": "PETKM",
+            "return": 193.2088185010821,
+            "buy_hold": -17.311320491599304,
+            "outperform": 210.5201389926814
+          },
+          {
+            "symbol": "KOZAL",
+            "return": 355.3916803622583,
+            "buy_hold": 11.934897330410465,
+            "outperform": 343.4567830318478
+          }
+        ],
+        "stats": {
+          "positive_count": 20,
+          "outperform_count": 20,
+          "avg_return": 286.2104434628185,
+          "median_return": 261.59039376945304
+        }
+      },
+      "360": {
+        "results": [
+          {
+            "symbol": "GARAN",
+            "return": 2426.9413163264185,
+            "buy_hold": 211.6717885705756,
+            "outperform": 2215.269527755843
+          },
+          {
+            "symbol": "AKBNK",
+            "return": 2568.4630965661495,
+            "buy_hold": 156.57116706553538,
+            "outperform": 2411.891929500614
+          },
+          {
+            "symbol": "ISCTR",
+            "return": 1404.6203916819186,
+            "buy_hold": 82.91085940148318,
+            "outperform": 1321.7095322804355
+          },
+          {
+            "symbol": "YKBNK",
+            "return": 2630.4009414866255,
+            "buy_hold": 97.5970899849457,
+            "outperform": 2532.8038515016797
+          },
+          {
+            "symbol": "SAHOL",
+            "return": 1402.8018742521574,
+            "buy_hold": 74.52254144432304,
+            "outperform": 1328.2793328078344
+          },
+          {
+            "symbol": "KCHOL",
+            "return": 951.2795454261926,
+            "buy_hold": 25.09317798121733,
+            "outperform": 926.1863674449753
+          },
+          {
+            "symbol": "SISE",
+            "return": 483.30661870259297,
+            "buy_hold": -20.937505594971284,
+            "outperform": 504.24412429756427
+          },
+          {
+            "symbol": "EREGL",
+            "return": 719.4458353018332,
+            "buy_hold": 50.965143997778625,
+            "outperform": 668.4806913040545
+          },
+          {
+            "symbol": "KRDMD",
+            "return": 1357.9329829826702,
+            "buy_hold": 4.096867043677221,
+            "outperform": 1353.8361159389929
+          },
+          {
+            "symbol": "TUPRS",
+            "return": 650.480439426949,
+            "buy_hold": 18.82197622340833,
+            "outperform": 631.6584632035407
+          },
+          {
+            "symbol": "ASELS",
+            "return": 2493.7520241307207,
+            "buy_hold": 259.8997704009965,
+            "outperform": 2233.852253729724
+          },
+          {
+            "symbol": "THYAO",
+            "return": 681.0106317882222,
+            "buy_hold": 29.472275502608024,
+            "outperform": 651.5383562856142
+          },
+          {
+            "symbol": "TCELL",
+            "return": 1221.635769451139,
+            "buy_hold": 93.05760219792212,
+            "outperform": 1128.5781672532169
+          },
+          {
+            "symbol": "BIMAS",
+            "return": 1698.8665366745186,
+            "buy_hold": 77.73654376629902,
+            "outperform": 1621.1299929082195
+          },
+          {
+            "symbol": "MGROS",
+            "return": 931.8646494870558,
+            "buy_hold": 42.608885739033475,
+            "outperform": 889.2557637480223
+          },
+          {
+            "symbol": "ULKER",
+            "return": 1956.177428980801,
+            "buy_hold": 46.784251893920704,
+            "outperform": 1909.3931770868803
+          },
+          {
+            "symbol": "AKSEN",
+            "return": 822.0219608475796,
+            "buy_hold": -4.078650226874414,
+            "outperform": 826.100611074454
+          },
+          {
+            "symbol": "ENKAI",
+            "return": 1332.305199617407,
+            "buy_hold": 121.35444541800618,
+            "outperform": 1210.9507541994008
+          },
+          {
+            "symbol": "PETKM",
+            "return": 842.4366019220017,
+            "buy_hold": -17.233236855234225,
+            "outperform": 859.669838777236
+          },
+          {
+            "symbol": "KOZAL",
+            "return": 1375.3048790546864,
+            "buy_hold": 11.934897330410465,
+            "outperform": 1363.369981724276
+          }
+        ],
+        "stats": {
+          "positive_count": 20,
+          "outperform_count": 20,
+          "avg_return": 1397.5524362053818,
+          "median_return": 1345.1190913000387
+        }
+      }
+    },
+    "WaveTrend": {
+      "30": {
+        "results": [
+          {
+            "symbol": "GARAN",
+            "return": 28.651676002197313,
+            "buy_hold": 2.6515229673145013,
+            "outperform": 26.00015303488281
+          },
+          {
+            "symbol": "AKBNK",
+            "return": 12.58278470743035,
+            "buy_hold": -2.9885874273321122,
+            "outperform": 15.571372134762461
+          },
+          {
+            "symbol": "ISCTR",
+            "return": 14.715442584348871,
+            "buy_hold": -10.843349898317811,
+            "outperform": 25.558792482666682
+          },
+          {
+            "symbol": "YKBNK",
+            "return": 0.0,
+            "buy_hold": 1.5832866008758328,
+            "outperform": -1.5832866008758328
+          },
+          {
+            "symbol": "SAHOL",
+            "return": 14.682286796318934,
+            "buy_hold": -10.500958854648934,
+            "outperform": 25.18324565096787
+          },
+          {
+            "symbol": "KCHOL",
+            "return": 17.85714325434167,
+            "buy_hold": -0.03163994236135004,
+            "outperform": 17.888783196703017
+          },
+          {
+            "symbol": "SISE",
+            "return": 7.2101285222844425,
+            "buy_hold": -3.6694343074016755,
+            "outperform": 10.879562829686119
+          },
+          {
+            "symbol": "EREGL",
+            "return": 0.0,
+            "buy_hold": 12.397630507450618,
+            "outperform": -12.397630507450618
+          },
+          {
+            "symbol": "KRDMD",
+            "return": 1.2374311186060805,
+            "buy_hold": -17.621146194068338,
+            "outperform": 18.85857731267442
+          },
+          {
+            "symbol": "TUPRS",
+            "return": 17.478047376773056,
+            "buy_hold": 13.172531318394597,
+            "outperform": 4.305516058378458
+          },
+          {
+            "symbol": "ASELS",
+            "return": 0.0,
+            "buy_hold": 34.75935923419915,
+            "outperform": -34.75935923419915
+          },
+          {
+            "symbol": "THYAO",
+            "return": 7.568814746504082,
+            "buy_hold": -11.719937940597047,
+            "outperform": 19.28875268710113
+          },
+          {
+            "symbol": "TCELL",
+            "return": 8.393899822193118,
+            "buy_hold": -5.937510720176064,
+            "outperform": 14.331410542369182
+          },
+          {
+            "symbol": "BIMAS",
+            "return": 11.367380560131778,
+            "buy_hold": -8.40108401084011,
+            "outperform": 19.768464570971886
+          },
+          {
+            "symbol": "MGROS",
+            "return": 7.294353484218763,
+            "buy_hold": -11.69225723002375,
+            "outperform": 18.986610714242513
+          },
+          {
+            "symbol": "ULKER",
+            "return": 0.0,
+            "buy_hold": 0.11285404170229274,
+            "outperform": -0.11285404170229274
+          },
+          {
+            "symbol": "AKSEN",
+            "return": 7.9164088454349635,
+            "buy_hold": -2.572892289763884,
+            "outperform": 10.489301135198847
+          },
+          {
+            "symbol": "ENKAI",
+            "return": 0.0,
+            "buy_hold": 31.277685087824093,
+            "outperform": -31.277685087824093
+          },
+          {
+            "symbol": "PETKM",
+            "return": 0.0,
+            "buy_hold": -0.11395185917050243,
+            "outperform": 0.11395185917050243
+          },
+          {
+            "symbol": "KOZAL",
+            "return": 4.384489652754042,
+            "buy_hold": -0.7217333653620872,
+            "outperform": 5.106223018116129
+          }
+        ],
+        "stats": {
+          "positive_count": 14,
+          "outperform_count": 15,
+          "avg_return": 8.067014373676873,
+          "median_return": 7.431584115361423
+        }
+      },
+      "90": {
+        "results": [
+          {
+            "symbol": "GARAN",
+            "return": 30.236961039321606,
+            "buy_hold": 13.079612306911015,
+            "outperform": 17.15734873241059
+          },
+          {
+            "symbol": "AKBNK",
+            "return": 22.655610619459843,
+            "buy_hold": 11.509983448141359,
+            "outperform": 11.145627171318484
+          },
+          {
+            "symbol": "ISCTR",
+            "return": 54.55212271676497,
+            "buy_hold": 4.515023718500566,
+            "outperform": 50.037098998264405
+          },
+          {
+            "symbol": "YKBNK",
+            "return": 13.59774111564902,
+            "buy_hold": 3.9533415313475206,
+            "outperform": 9.6443995843015
+          },
+          {
+            "symbol": "SAHOL",
+            "return": 2.0544939348104085,
+            "buy_hold": -1.2392733830905889,
+            "outperform": 3.2937673179009974
+          },
+          {
+            "symbol": "KCHOL",
+            "return": -5.974201838375615,
+            "buy_hold": -13.295886247871092,
+            "outperform": 7.321684409495477
+          },
+          {
+            "symbol": "SISE",
+            "return": -4.882052969077389,
+            "buy_hold": -11.187470037945534,
+            "outperform": 6.305417068868145
+          },
+          {
+            "symbol": "EREGL",
+            "return": 13.223407171391077,
+            "buy_hold": 6.4456448699909075,
+            "outperform": 6.77776230140017
+          },
+          {
+            "symbol": "KRDMD",
+            "return": 29.73217468303271,
+            "buy_hold": -8.97079243106239,
+            "outperform": 38.7029671140951
+          },
+          {
+            "symbol": "TUPRS",
+            "return": 7.027772039442226,
+            "buy_hold": 1.0547748383441968,
+            "outperform": 5.972997201098029
+          },
+          {
+            "symbol": "ASELS",
+            "return": 15.429830314649395,
+            "buy_hold": 118.18180417007494,
+            "outperform": -102.75197385542555
+          },
+          {
+            "symbol": "THYAO",
+            "return": 3.713635938544857,
+            "buy_hold": -1.536601968932938,
+            "outperform": 5.2502379074777945
+          },
+          {
+            "symbol": "TCELL",
+            "return": 12.623317682780355,
+            "buy_hold": 8.861115848818946,
+            "outperform": 3.7622018339614094
+          },
+          {
+            "symbol": "BIMAS",
+            "return": 2.4759979787772,
+            "buy_hold": -5.0294223200787584,
+            "outperform": 7.505420298855959
+          },
+          {
+            "symbol": "MGROS",
+            "return": 41.86019458711758,
+            "buy_hold": -3.4970277690322016,
+            "outperform": 45.357222356149784
+          },
+          {
+            "symbol": "ULKER",
+            "return": 15.915167581248312,
+            "buy_hold": 4.908680822352118,
+            "outperform": 11.006486758896195
+          },
+          {
+            "symbol": "AKSEN",
+            "return": -4.484300617814219,
+            "buy_hold": -5.1224844980125805,
+            "outperform": 0.6381838801983619
+          },
+          {
+            "symbol": "ENKAI",
+            "return": 36.641171357779335,
+            "buy_hold": 31.894013301363522,
+            "outperform": 4.747158056415813
+          },
+          {
+            "symbol": "PETKM",
+            "return": -1.5168458538632135,
+            "buy_hold": -6.7056954097358235,
+            "outperform": 5.1888495558726095
+          },
+          {
+            "symbol": "KOZAL",
+            "return": 13.369963625883763,
+            "buy_hold": 6.266098882522897,
+            "outperform": 7.103864743360866
+          }
+        ],
+        "stats": {
+          "positive_count": 16,
+          "outperform_count": 19,
+          "avg_return": 14.912608055376108,
+          "median_return": 13.29668539863742
+        }
+      },
+      "180": {
+        "results": [
+          {
+            "symbol": "GARAN",
+            "return": 27.214559851399645,
+            "buy_hold": 18.83261533881231,
+            "outperform": 8.381944512587335
+          },
+          {
+            "symbol": "AKBNK",
+            "return": 32.55606018571575,
+            "buy_hold": 25.22825459240412,
+            "outperform": 7.327805593311631
+          },
+          {
+            "symbol": "ISCTR",
+            "return": 51.53080013274505,
+            "buy_hold": 3.011207338902766,
+            "outperform": 48.519592793842286
+          },
+          {
+            "symbol": "YKBNK",
+            "return": 14.735346500315249,
+            "buy_hold": 9.1156539023737,
+            "outperform": 5.619692597941549
+          },
+          {
+            "symbol": "SAHOL",
+            "return": 17.307688101627726,
+            "buy_hold": 5.460026891430769,
+            "outperform": 11.847661210196957
+          },
+          {
+            "symbol": "KCHOL",
+            "return": -7.262229514095775,
+            "buy_hold": -13.693818102863231,
+            "outperform": 6.431588588767456
+          },
+          {
+            "symbol": "SISE",
+            "return": -7.675695432386953,
+            "buy_hold": -12.947354112404696,
+            "outperform": 5.271658680017743
+          },
+          {
+            "symbol": "EREGL",
+            "return": 13.408571531126313,
+            "buy_hold": 10.737467643297594,
+            "outperform": 2.6711038878287194
+          },
+          {
+            "symbol": "KRDMD",
+            "return": 56.26355284098994,
+            "buy_hold": -2.459015810953613,
+            "outperform": 58.722568651943554
+          },
+          {
+            "symbol": "TUPRS",
+            "return": 8.368416482371632,
+            "buy_hold": 8.969281230101767,
+            "outperform": -0.6008647477301352
+          },
+          {
+            "symbol": "ASELS",
+            "return": 0.0,
+            "buy_hold": 166.8674425422131,
+            "outperform": -166.8674425422131
+          },
+          {
+            "symbol": "THYAO",
+            "return": 10.679482159096443,
+            "buy_hold": 7.083389426678011,
+            "outperform": 3.596092732418432
+          },
+          {
+            "symbol": "TCELL",
+            "return": 34.83976999049825,
+            "buy_hold": 3.9723137565821576,
+            "outperform": 30.86745623391609
+          },
+          {
+            "symbol": "BIMAS",
+            "return": 5.675631940352344,
+            "buy_hold": -7.586728168060297,
+            "outperform": 13.26236010841264
+          },
+          {
+            "symbol": "MGROS",
+            "return": 46.61793341569309,
+            "buy_hold": -2.787863502303556,
+            "outperform": 49.405796917996646
+          },
+          {
+            "symbol": "ULKER",
+            "return": -25.220578270753215,
+            "buy_hold": -26.38761198464007,
+            "outperform": 1.1670337138868554
+          },
+          {
+            "symbol": "AKSEN",
+            "return": 17.22382030725358,
+            "buy_hold": -7.441602081693366,
+            "outperform": 24.665422388946943
+          },
+          {
+            "symbol": "ENKAI",
+            "return": 73.5390468593615,
+            "buy_hold": 56.074576413684674,
+            "outperform": 17.46447044567683
+          },
+          {
+            "symbol": "PETKM",
+            "return": -11.37512599541559,
+            "buy_hold": -17.311320491599304,
+            "outperform": 5.936194496183713
+          },
+          {
+            "symbol": "KOZAL",
+            "return": 27.697729560742435,
+            "buy_hold": 11.934897330410465,
+            "outperform": 15.76283223033197
+          }
+        ],
+        "stats": {
+          "positive_count": 15,
+          "outperform_count": 18,
+          "avg_return": 19.30623903233187,
+          "median_return": 15.979583403784414
+        }
+      },
+      "360": {
+        "results": [
+          {
+            "symbol": "GARAN",
+            "return": 59.690287690214184,
+            "buy_hold": 211.6717885705756,
+            "outperform": -151.9815008803614
+          },
+          {
+            "symbol": "AKBNK",
+            "return": 74.00910198502643,
+            "buy_hold": 156.57116706553538,
+            "outperform": -82.56206508050894
+          },
+          {
+            "symbol": "ISCTR",
+            "return": 51.53080013274505,
+            "buy_hold": 82.91085940148318,
+            "outperform": -31.38005926873813
+          },
+          {
+            "symbol": "YKBNK",
+            "return": 31.541421113531086,
+            "buy_hold": 97.5970899849457,
+            "outperform": -66.05566887141461
+          },
+          {
+            "symbol": "SAHOL",
+            "return": 17.307688101627726,
+            "buy_hold": 74.52254144432304,
+            "outperform": -57.214853342695314
+          },
+          {
+            "symbol": "KCHOL",
+            "return": -9.105029643530482,
+            "buy_hold": 25.09317798121733,
+            "outperform": -34.19820762474781
+          },
+          {
+            "symbol": "SISE",
+            "return": -12.26644125640598,
+            "buy_hold": -20.937505594971284,
+            "outperform": 8.671064338565305
+          },
+          {
+            "symbol": "EREGL",
+            "return": 42.174217832048996,
+            "buy_hold": 50.965143997778625,
+            "outperform": -8.79092616572963
+          },
+          {
+            "symbol": "KRDMD",
+            "return": 92.88198809188366,
+            "buy_hold": 4.096867043677221,
+            "outperform": 88.78512104820643
+          },
+          {
+            "symbol": "TUPRS",
+            "return": 21.964081369097688,
+            "buy_hold": 18.82197622340833,
+            "outperform": 3.1421051456893565
+          },
+          {
+            "symbol": "ASELS",
+            "return": 47.677144852377815,
+            "buy_hold": 259.8997704009965,
+            "outperform": -212.22262554861868
+          },
+          {
+            "symbol": "THYAO",
+            "return": 32.77302955323245,
+            "buy_hold": 29.472275502608024,
+            "outperform": 3.3007540506244233
+          },
+          {
+            "symbol": "TCELL",
+            "return": 60.01186711441904,
+            "buy_hold": 93.05760219792212,
+            "outperform": -33.04573508350308
+          },
+          {
+            "symbol": "BIMAS",
+            "return": 84.62036059744848,
+            "buy_hold": 77.73654376629902,
+            "outperform": 6.88381683114946
+          },
+          {
+            "symbol": "MGROS",
+            "return": 112.18536139329349,
+            "buy_hold": 42.608885739033475,
+            "outperform": 69.57647565426001
+          },
+          {
+            "symbol": "ULKER",
+            "return": 13.819392732575885,
+            "buy_hold": 46.784251893920704,
+            "outperform": -32.96485916134482
+          },
+          {
+            "symbol": "AKSEN",
+            "return": 53.57130089965354,
+            "buy_hold": -4.078650226874414,
+            "outperform": 57.64995112652795
+          },
+          {
+            "symbol": "ENKAI",
+            "return": 143.61612737605546,
+            "buy_hold": 121.35444541800618,
+            "outperform": 22.26168195804928
+          },
+          {
+            "symbol": "PETKM",
+            "return": 46.988415244027436,
+            "buy_hold": -17.233236855234225,
+            "outperform": 64.22165209926166
+          },
+          {
+            "symbol": "KOZAL",
+            "return": 92.34305793670701,
+            "buy_hold": 11.934897330410465,
+            "outperform": 80.40816060629655
+          }
+        ],
+        "stats": {
+          "positive_count": 18,
+          "outperform_count": 10,
+          "avg_return": 52.866708655801446,
+          "median_return": 49.60397249256143
+        }
+      }
+    },
+    "Squeeze": {
+      "30": {
+        "results": [
+          {
+            "symbol": "GARAN",
+            "return": 29.13533075755219,
+            "buy_hold": 2.6515229673145013,
+            "outperform": 26.483807790237687
+          },
+          {
+            "symbol": "AKBNK",
+            "return": 0.0,
+            "buy_hold": -2.9885874273321122,
+            "outperform": 2.9885874273321122
+          },
+          {
+            "symbol": "ISCTR",
+            "return": 28.858446597764708,
+            "buy_hold": -10.843349898317811,
+            "outperform": 39.70179649608252
+          },
+          {
+            "symbol": "YKBNK",
+            "return": 0.0,
+            "buy_hold": 1.5832866008758328,
+            "outperform": -1.5832866008758328
+          },
+          {
+            "symbol": "SAHOL",
+            "return": 16.918235155021645,
+            "buy_hold": -10.500958854648934,
+            "outperform": 27.419194009670576
+          },
+          {
+            "symbol": "KCHOL",
+            "return": 2.8181819584421675,
+            "buy_hold": -0.03163994236135004,
+            "outperform": 2.8498219008035175
+          },
+          {
+            "symbol": "SISE",
+            "return": -1.530781701086914,
+            "buy_hold": -3.6694343074016755,
+            "outperform": 2.1386526063147615
+          },
+          {
+            "symbol": "EREGL",
+            "return": 11.853775100641673,
+            "buy_hold": 12.397630507450618,
+            "outperform": -0.5438554068089445
+          },
+          {
+            "symbol": "KRDMD",
+            "return": 7.450750184275834,
+            "buy_hold": -17.621146194068338,
+            "outperform": 25.07189637834417
+          },
+          {
+            "symbol": "TUPRS",
+            "return": 4.130456325101539,
+            "buy_hold": 13.172531318394597,
+            "outperform": -9.042074993293058
+          },
+          {
+            "symbol": "ASELS",
+            "return": 6.855121518192386,
+            "buy_hold": 34.75935923419915,
+            "outperform": -27.904237716006765
+          },
+          {
+            "symbol": "THYAO",
+            "return": 3.2627865961199376,
+            "buy_hold": -11.719937940597047,
+            "outperform": 14.982724536716985
+          },
+          {
+            "symbol": "TCELL",
+            "return": 0.4568496936468991,
+            "buy_hold": -5.937510720176064,
+            "outperform": 6.394360413822963
+          },
+          {
+            "symbol": "BIMAS",
+            "return": -4.229607250755274,
+            "buy_hold": -8.40108401084011,
+            "outperform": 4.171476760084836
+          },
+          {
+            "symbol": "MGROS",
+            "return": 1.5664477008590305,
+            "buy_hold": -11.69225723002375,
+            "outperform": 13.258704930882782
+          },
+          {
+            "symbol": "ULKER",
+            "return": 14.253915024270313,
+            "buy_hold": 0.11285404170229274,
+            "outperform": 14.141060982568021
+          },
+          {
+            "symbol": "AKSEN",
+            "return": -1.217385996942899,
+            "buy_hold": -2.572892289763884,
+            "outperform": 1.355506292820985
+          },
+          {
+            "symbol": "ENKAI",
+            "return": 12.178953869025966,
+            "buy_hold": 31.277685087824093,
+            "outperform": -19.09873121879813
+          },
+          {
+            "symbol": "PETKM",
+            "return": 2.245360531075269,
+            "buy_hold": -0.11395185917050243,
+            "outperform": 2.3593123902457713
+          },
+          {
+            "symbol": "KOZAL",
+            "return": -5.394836453801921,
+            "buy_hold": -0.7217333653620872,
+            "outperform": -4.673103088439834
+          }
+        ],
+        "stats": {
+          "positive_count": 14,
+          "outperform_count": 14,
+          "avg_return": 6.480599980470127,
+          "median_return": 3.0404842772810525
+        }
+      },
+      "90": {
+        "results": [
+          {
+            "symbol": "GARAN",
+            "return": 19.831035358526528,
+            "buy_hold": 13.079612306911015,
+            "outperform": 6.751423051615513
+          },
+          {
+            "symbol": "AKBNK",
+            "return": 29.698668393756012,
+            "buy_hold": 11.509983448141359,
+            "outperform": 18.188684945614654
+          },
+          {
+            "symbol": "ISCTR",
+            "return": 16.598634842857287,
+            "buy_hold": 4.515023718500566,
+            "outperform": 12.083611124356722
+          },
+          {
+            "symbol": "YKBNK",
+            "return": 8.923391833678496,
+            "buy_hold": 3.9533415313475206,
+            "outperform": 4.970050302330975
+          },
+          {
+            "symbol": "SAHOL",
+            "return": 3.6426545788723397,
+            "buy_hold": -1.2392733830905889,
+            "outperform": 4.881927961962928
+          },
+          {
+            "symbol": "KCHOL",
+            "return": -2.0403281948742635,
+            "buy_hold": -13.295886247871092,
+            "outperform": 11.255558052996829
+          },
+          {
+            "symbol": "SISE",
+            "return": -6.351310595251169,
+            "buy_hold": -11.187470037945534,
+            "outperform": 4.836159442694365
+          },
+          {
+            "symbol": "EREGL",
+            "return": 4.277816319926231,
+            "buy_hold": 6.4456448699909075,
+            "outperform": -2.1678285500646766
+          },
+          {
+            "symbol": "KRDMD",
+            "return": 10.352761431781964,
+            "buy_hold": -8.97079243106239,
+            "outperform": 19.323553862844356
+          },
+          {
+            "symbol": "TUPRS",
+            "return": 2.191270467368045,
+            "buy_hold": 1.0547748383441968,
+            "outperform": 1.1364956290238482
+          },
+          {
+            "symbol": "ASELS",
+            "return": 54.78123834971997,
+            "buy_hold": 118.18180417007494,
+            "outperform": -63.40056582035497
+          },
+          {
+            "symbol": "THYAO",
+            "return": -17.25791961836781,
+            "buy_hold": -1.536601968932938,
+            "outperform": -15.721317649434873
+          },
+          {
+            "symbol": "TCELL",
+            "return": -6.462767682149362,
+            "buy_hold": 8.861115848818946,
+            "outperform": -15.323883530968308
+          },
+          {
+            "symbol": "BIMAS",
+            "return": -0.30797478904053266,
+            "buy_hold": -5.0294223200787584,
+            "outperform": 4.721447531038226
+          },
+          {
+            "symbol": "MGROS",
+            "return": 3.3576484582363175,
+            "buy_hold": -3.4970277690322016,
+            "outperform": 6.854676227268519
+          },
+          {
+            "symbol": "ULKER",
+            "return": 10.631227896651163,
+            "buy_hold": 4.908680822352118,
+            "outperform": 5.722547074299045
+          },
+          {
+            "symbol": "AKSEN",
+            "return": -9.643586451923403,
+            "buy_hold": -5.1224844980125805,
+            "outperform": -4.521101953910822
+          },
+          {
+            "symbol": "ENKAI",
+            "return": 22.072320676946532,
+            "buy_hold": 31.894013301363522,
+            "outperform": -9.82169262441699
+          },
+          {
+            "symbol": "PETKM",
+            "return": -4.118781463414978,
+            "buy_hold": -6.7056954097358235,
+            "outperform": 2.5869139463208457
+          },
+          {
+            "symbol": "KOZAL",
+            "return": -10.62734098658752,
+            "buy_hold": 6.266098882522897,
+            "outperform": -16.893439869110416
+          }
+        ],
+        "stats": {
+          "positive_count": 12,
+          "outperform_count": 13,
+          "avg_return": 6.477432941335593,
+          "median_return": 3.5001515185543286
+        }
+      },
+      "180": {
+        "results": [
+          {
+            "symbol": "GARAN",
+            "return": 25.01229972709602,
+            "buy_hold": 18.83261533881231,
+            "outperform": 6.179684388283711
+          },
+          {
+            "symbol": "AKBNK",
+            "return": 47.41976443598463,
+            "buy_hold": 25.22825459240412,
+            "outperform": 22.191509843580512
+          },
+          {
+            "symbol": "ISCTR",
+            "return": 24.240382995756416,
+            "buy_hold": 3.011207338902766,
+            "outperform": 21.22917565685365
+          },
+          {
+            "symbol": "YKBNK",
+            "return": 10.435828535932522,
+            "buy_hold": 9.1156539023737,
+            "outperform": 1.320174633558823
+          },
+          {
+            "symbol": "SAHOL",
+            "return": 18.352044135270983,
+            "buy_hold": 5.460026891430769,
+            "outperform": 12.892017243840215
+          },
+          {
+            "symbol": "KCHOL",
+            "return": 3.904738985536471,
+            "buy_hold": -13.693818102863231,
+            "outperform": 17.5985570883997
+          },
+          {
+            "symbol": "SISE",
+            "return": -0.27395193137852436,
+            "buy_hold": -12.947354112404696,
+            "outperform": 12.673402181026171
+          },
+          {
+            "symbol": "EREGL",
+            "return": 8.21283151952914,
+            "buy_hold": 10.737467643297594,
+            "outperform": -2.5246361237684543
+          },
+          {
+            "symbol": "KRDMD",
+            "return": 11.941359647618931,
+            "buy_hold": -2.459015810953613,
+            "outperform": 14.400375458572544
+          },
+          {
+            "symbol": "TUPRS",
+            "return": -0.1738857762940471,
+            "buy_hold": 8.969281230101767,
+            "outperform": -9.143167006395814
+          },
+          {
+            "symbol": "ASELS",
+            "return": 108.58204971299297,
+            "buy_hold": 166.8674425422131,
+            "outperform": -58.28539282922013
+          },
+          {
+            "symbol": "THYAO",
+            "return": -9.233621706965733,
+            "buy_hold": 7.083389426678011,
+            "outperform": -16.317011133643746
+          },
+          {
+            "symbol": "TCELL",
+            "return": 12.001634769938452,
+            "buy_hold": 3.9723137565821576,
+            "outperform": 8.029321013356295
+          },
+          {
+            "symbol": "BIMAS",
+            "return": -3.62137246437626,
+            "buy_hold": -7.586728168060297,
+            "outperform": 3.965355703684037
+          },
+          {
+            "symbol": "MGROS",
+            "return": 34.73110560013182,
+            "buy_hold": -2.787863502303556,
+            "outperform": 37.51896910243538
+          },
+          {
+            "symbol": "ULKER",
+            "return": 0.15430904846513993,
+            "buy_hold": -26.38761198464007,
+            "outperform": 26.54192103310521
+          },
+          {
+            "symbol": "AKSEN",
+            "return": 11.587998652909404,
+            "buy_hold": -7.441602081693366,
+            "outperform": 19.02960073460277
+          },
+          {
+            "symbol": "ENKAI",
+            "return": 20.85061111160322,
+            "buy_hold": 56.074576413684674,
+            "outperform": -35.22396530208145
+          },
+          {
+            "symbol": "PETKM",
+            "return": -4.223229622343084,
+            "buy_hold": -17.311320491599304,
+            "outperform": 13.08809086925622
+          },
+          {
+            "symbol": "KOZAL",
+            "return": -6.835796998571519,
+            "buy_hold": 11.934897330410465,
+            "outperform": -18.770694328981982
+          }
+        ],
+        "stats": {
+          "positive_count": 14,
+          "outperform_count": 14,
+          "avg_return": 15.653255018941843,
+          "median_return": 11.011913594420964
+        }
+      },
+      "360": {
+        "results": [
+          {
+            "symbol": "GARAN",
+            "return": 136.32246290541906,
+            "buy_hold": 211.6717885705756,
+            "outperform": -75.34932566515653
+          },
+          {
+            "symbol": "AKBNK",
+            "return": 48.2175325870948,
+            "buy_hold": 156.57116706553538,
+            "outperform": -108.35363447844057
+          },
+          {
+            "symbol": "ISCTR",
+            "return": 57.5485938433675,
+            "buy_hold": 82.91085940148318,
+            "outperform": -25.36226555811568
+          },
+          {
+            "symbol": "YKBNK",
+            "return": 14.947072842139896,
+            "buy_hold": 97.5970899849457,
+            "outperform": -82.65001714280581
+          },
+          {
+            "symbol": "SAHOL",
+            "return": 71.02548696867272,
+            "buy_hold": 74.52254144432304,
+            "outperform": -3.497054475650316
+          },
+          {
+            "symbol": "KCHOL",
+            "return": 34.74438282934518,
+            "buy_hold": 25.09317798121733,
+            "outperform": 9.651204848127847
+          },
+          {
+            "symbol": "SISE",
+            "return": -0.989478482090389,
+            "buy_hold": -20.937505594971284,
+            "outperform": 19.948027112880894
+          },
+          {
+            "symbol": "EREGL",
+            "return": 39.02253175681256,
+            "buy_hold": 50.965143997778625,
+            "outperform": -11.942612240966064
+          },
+          {
+            "symbol": "KRDMD",
+            "return": 42.1226640901573,
+            "buy_hold": 4.096867043677221,
+            "outperform": 38.02579704648008
+          },
+          {
+            "symbol": "TUPRS",
+            "return": 24.59377213834273,
+            "buy_hold": 18.82197622340833,
+            "outperform": 5.771795914934398
+          },
+          {
+            "symbol": "ASELS",
+            "return": 152.4135902871637,
+            "buy_hold": 259.8997704009965,
+            "outperform": -107.4861801138328
+          },
+          {
+            "symbol": "THYAO",
+            "return": 7.635937220427391,
+            "buy_hold": 29.472275502608024,
+            "outperform": -21.836338282180634
+          },
+          {
+            "symbol": "TCELL",
+            "return": 70.96266520549754,
+            "buy_hold": 93.05760219792212,
+            "outperform": -22.09493699242458
+          },
+          {
+            "symbol": "BIMAS",
+            "return": 56.950943103380155,
+            "buy_hold": 77.73654376629902,
+            "outperform": -20.785600662918867
+          },
+          {
+            "symbol": "MGROS",
+            "return": 113.63923653657109,
+            "buy_hold": 42.608885739033475,
+            "outperform": 71.03035079753761
+          },
+          {
+            "symbol": "ULKER",
+            "return": 45.120873102473546,
+            "buy_hold": 46.784251893920704,
+            "outperform": -1.6633787914471583
+          },
+          {
+            "symbol": "AKSEN",
+            "return": 44.81121480518402,
+            "buy_hold": -4.078650226874414,
+            "outperform": 48.88986503205844
+          },
+          {
+            "symbol": "ENKAI",
+            "return": 73.80890062148389,
+            "buy_hold": 121.35444541800618,
+            "outperform": -47.54554479652229
+          },
+          {
+            "symbol": "PETKM",
+            "return": 11.98227096009008,
+            "buy_hold": -17.233236855234225,
+            "outperform": 29.215507815324305
+          },
+          {
+            "symbol": "KOZAL",
+            "return": 0.43701217294449535,
+            "buy_hold": 11.934897330410465,
+            "outperform": -11.49788515746597
+          }
+        ],
+        "stats": {
+          "positive_count": 19,
+          "outperform_count": 7,
+          "avg_return": 52.265883274723876,
+          "median_return": 44.96604395382879
+        }
+      }
+    }
+  }
+}

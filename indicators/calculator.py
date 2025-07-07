@@ -17,6 +17,7 @@ from adx_di import calculate_adx_di
 from squeeze_momentum import calculate_squeeze_momentum
 from wavetrend import calculate_wavetrend
 from macd_custom import calculate_macd_custom
+from vixfix import calculate_vixfix
 
 
 class IndicatorCalculator:
@@ -33,13 +34,14 @@ class IndicatorCalculator:
         self.indicators_dir = data_dir / 'indicators'
         self.indicators_dir.mkdir(exist_ok=True, parents=True)
         
-        # Core 5 indicators
+        # Core 5 indicators + VixFix
         self.core_indicators = {
             'supertrend': calculate_supertrend,
             'adx_di': calculate_adx_di,
             'squeeze_momentum': calculate_squeeze_momentum,
             'wavetrend': calculate_wavetrend,
-            'macd_custom': calculate_macd_custom
+            'macd_custom': calculate_macd_custom,
+            'vixfix': calculate_vixfix
         }
         
         logger.info(f"IndicatorCalculator initialized with {len(self.core_indicators)} indicators")
@@ -56,7 +58,7 @@ class IndicatorCalculator:
             DataFrame with OHLCV data or None if not found
         """
         filename = f"{symbol}_{timeframe}_raw.csv"
-        filepath = self.raw_data_dir / filename
+        filepath = self.raw_data_dir / timeframe / filename
         
         if not filepath.exists():
             logger.warning(f"Raw data not found: {filepath}")
@@ -104,6 +106,12 @@ class IndicatorCalculator:
             indicator_func = self.core_indicators[indicator_name]
             result = indicator_func(df, **kwargs)
             
+            # Forward fill NaN values to handle missing data
+            result = result.ffill()
+            
+            # Also backward fill for initial NaN values
+            result = result.bfill()
+            
             # Add datetime column for CSV export
             result.reset_index(inplace=True)
             
@@ -149,8 +157,12 @@ class IndicatorCalculator:
                 
                 # Save to CSV
                 if save:
+                    # Create timeframe subdirectory
+                    output_dir = self.indicators_dir / timeframe
+                    output_dir.mkdir(exist_ok=True, parents=True)
+                    
                     filename = f"{symbol}_{timeframe}_{indicator_name}.csv"
-                    filepath = self.indicators_dir / filename
+                    filepath = output_dir / filename
                     indicator_df.to_csv(filepath, index=False)
                     logger.info(f"    Saved {len(indicator_df)} rows to {filepath}")
             else:
@@ -194,31 +206,43 @@ class IndicatorCalculator:
         """Get summary of calculated indicators"""
         summary_data = []
         
-        for csv_file in self.indicators_dir.glob("*.csv"):
+        # Search in all subdirectories
+        for csv_file in self.indicators_dir.rglob("*.csv"):
             try:
                 df = pd.read_csv(csv_file)
                 
-                # Parse filename: SYMBOL_TIMEFRAME_INDICATOR.csv
-                parts = csv_file.stem.split('_')
-                if len(parts) >= 3:
-                    symbol = parts[0]
-                    timeframe = parts[1]
-                    indicator = '_'.join(parts[2:])
-                    
-                    summary_data.append({
-                        'symbol': symbol,
-                        'timeframe': timeframe,
-                        'indicator': indicator,
-                        'rows': len(df),
-                        'file': csv_file.name
-                    })
+                # Get timeframe from parent directory
+                timeframe = csv_file.parent.name
+                if timeframe == 'indicators':
+                    # Old style file in root indicators dir
+                    parts = csv_file.stem.split('_')
+                    if len(parts) >= 3:
+                        symbol = parts[0]
+                        timeframe = parts[1]
+                        indicator = '_'.join(parts[2:])
+                else:
+                    # New style file in timeframe subdirectory
+                    parts = csv_file.stem.split('_')
+                    if len(parts) >= 3:
+                        symbol = parts[0]
+                        # timeframe is already from parent dir
+                        indicator = '_'.join(parts[2:])
+                
+                summary_data.append({
+                    'symbol': symbol,
+                    'timeframe': timeframe,
+                    'indicator': indicator,
+                    'rows': len(df),
+                    'file': csv_file.name,
+                    'path': str(csv_file.relative_to(self.indicators_dir))
+                })
                     
             except Exception as e:
                 logger.error(f"Error reading {csv_file}: {e}")
         
         if summary_data:
             summary_df = pd.DataFrame(summary_data)
-            summary_df.sort_values(['symbol', 'timeframe', 'indicator'], inplace=True)
+            summary_df.sort_values(['timeframe', 'symbol', 'indicator'], inplace=True)
             return summary_df
         else:
             return pd.DataFrame()

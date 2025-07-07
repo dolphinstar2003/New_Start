@@ -1,0 +1,2662 @@
+{
+  "GARAN": {
+    "1h": {
+      "30d": {
+        "MACD": {
+          "best_params": {
+            "macd_fast": 15,
+            "macd_slow": 34,
+            "macd_signal": 15
+          },
+          "best_score": 15.989256232937832,
+          "n_trials": 10
+        },
+        "ADX": {
+          "best_params": {
+            "adx_period": 16,
+            "adx_threshold": 24.446505220199818
+          },
+          "best_score": 14.257559278642562,
+          "n_trials": 10
+        },
+        "Supertrend": {
+          "best_params": {
+            "st_period": 25,
+            "st_multiplier": 0.5328390045139442
+          },
+          "best_score": 22.350315235536478,
+          "n_trials": 10
+        },
+        "WaveTrend": {
+          "best_params": {
+            "wt_channel_length": 7,
+            "wt_average_length": 23,
+            "wt_overbought": 44.763386678649084,
+            "wt_oversold": -61.73592265488864
+          },
+          "best_score": 0.0,
+          "n_trials": 10
+        },
+        "SqueezeMomentum": {
+          "best_params": {
+            "sq_bb_length": 22,
+            "sq_bb_mult": 1.975722436899881,
+            "sq_kc_length": 21,
+            "sq_kc_mult": 1.9448390407621727
+          },
+          "best_score": 0.0,
+          "n_trials": 10
+        },
+        "VixFix": {
+          "best_params": {
+            "vix_length": 14,
+            "vix_threshold": 24.216904088872486
+          },
+          "best_score": 0.0,
+          "n_trials": 10
+        }
+      },
+      "60d": {
+        "MACD": {
+          "best_params": {
+            "macd_fast": 9,
+            "macd_slow": 35,
+            "macd_signal": 5
+          },
+          "best_score": 22.746055845846193,
+          "n_trials": 10
+        },
+        "ADX": {
+          "best_params": {
+            "adx_period": 9,
+            "adx_threshold": 18.283078932689758
+          },
+          "best_score": 19.320972266903947,
+          "n_trials": 10
+        },
+        "Supertrend": {
+          "best_params": {
+            "st_period": 20,
+            "st_multiplier": 0.9753166206867921
+          },
+          "best_score": 26.751780269169178,
+          "n_trials": 10
+        },
+        "WaveTrend": {
+          "best_params": {
+            "wt_channel_length": 12,
+            "wt_average_length": 17,
+            "wt_overbought": 57.279442038776935,
+            "wt_oversold": -66.43306402264237
+          },
+          "best_score": 0.0,
+          "n_trials": 10
+        },
+        "SqueezeMomentum": {
+          "best_params": {
+            "sq_bb_length": 18,
+            "sq_bb_mult": 1.9932540569540453,
+            "sq_kc_length": 19,
+            "sq_kc_mult": 1.212652329137439
+          },
+          "best_score": 15.21382225455512,
+          "n_trials": 10
+        },
+        "VixFix": {
+          "best_params": {
+            "vix_length": 25,
+            "vix_threshold": 11.519841301214697
+          },
+          "best_score": 0.0,
+          "n_trials": 10
+        }
+      },
+      "90d": {
+        "MACD": {
+          "best_params": {
+            "macd_fast": 11,
+            "macd_slow": 32,
+            "macd_signal": 6
+          },
+          "best_score": 18.84126778839901,
+          "n_trials": 10
+        },
+        "ADX": {
+          "best_params": {
+            "adx_period": 14,
+            "adx_threshold": 20.78823276719229
+          },
+          "best_score": 12.294381617877438,
+          "n_trials": 10
+        },
+        "Supertrend": {
+          "best_params": {
+            "st_period": 18,
+            "st_multiplier": 0.6563425385863477
+          },
+          "best_score": 34.242442257564186,
+          "n_trials": 10
+        },
+        "WaveTrend": {
+          "best_params": {
+            "wt_channel_length": 14,
+            "wt_average_length": 20,
+            "wt_overbought": 47.64307535931094,
+            "wt_oversold": -41.462848384221125
+          },
+          "best_score": 7.453417704826237,
+          "n_trials": 10
+        },
+        "SqueezeMomentum": {
+          "best_params": {
+            "sq_bb_length": 19,
+            "sq_bb_mult": 1.544090604131056,
+            "sq_kc_length": 20,
+            "sq_kc_mult": 1.1427668556604447
+          },
+          "best_score": 19.89002777028115,
+          "n_trials": 10
+        },
+        "VixFix": {
+          "best_params": {
+            "vix_length": 11,
+            "vix_threshold": 13.31638588874986
+          },
+          "best_score": 0.0,
+          "n_trials": 10
+        }
+      },
+      "180d": {
+        "MACD": {
+          "best_params": {
+            "macd_fast": 8,
+            "macd_slow": 24,
+            "macd_signal": 7
+          },
+          "best_score": 40.70363291681576,
+          "n_trials": 10
+        },
+        "ADX": {
+          "best_params": {
+            "adx_period": 8,
+            "adx_threshold": 15.205342725340344
+          },
+          "best_score": 24.51825944368007,
+          "n_trials": 10
+        },
+        "Supertrend": {
+          "best_params": {
+            "st_period": 5,
+            "st_multiplier": 0.5210217531186581
+          },
+          "best_score": 68.49096427667223,
+          "n_trials": 10
+        },
+        "WaveTrend": {
+          "best_params": {
+            "wt_channel_length": 7,
+            "wt_average_length": 23,
+            "wt_overbought": 56.353920219025945,
+            "wt_oversold": -40.46573183748548
+          },
+          "best_score": 19.737996596957007,
+          "n_trials": 10
+        },
+        "SqueezeMomentum": {
+          "best_params": {
+            "sq_bb_length": 19,
+            "sq_bb_mult": 2.071758396021921,
+            "sq_kc_length": 16,
+            "sq_kc_mult": 1.3025122160501903
+          },
+          "best_score": 33.357100340661994,
+          "n_trials": 10
+        },
+        "VixFix": {
+          "best_params": {
+            "vix_length": 27,
+            "vix_threshold": 26.8569938408966
+          },
+          "best_score": 0.0,
+          "n_trials": 10
+        }
+      },
+      "365d": {
+        "MACD": {
+          "best_params": {
+            "macd_fast": 12,
+            "macd_slow": 23,
+            "macd_signal": 5
+          },
+          "best_score": 73.95557935738842,
+          "n_trials": 10
+        },
+        "ADX": {
+          "best_params": {
+            "adx_period": 8,
+            "adx_threshold": 19.383526802918535
+          },
+          "best_score": 35.663047300106435,
+          "n_trials": 10
+        },
+        "Supertrend": {
+          "best_params": {
+            "st_period": 23,
+            "st_multiplier": 0.5614266929394318
+          },
+          "best_score": 124.09931689136187,
+          "n_trials": 10
+        },
+        "WaveTrend": {
+          "best_params": {
+            "wt_channel_length": 10,
+            "wt_average_length": 19,
+            "wt_overbought": 64.84553217645816,
+            "wt_oversold": -55.528947341835604
+          },
+          "best_score": 52.19984399507762,
+          "n_trials": 10
+        },
+        "SqueezeMomentum": {
+          "best_params": {
+            "sq_bb_length": 19,
+            "sq_bb_mult": 2.458562730553748,
+            "sq_kc_length": 16,
+            "sq_kc_mult": 1.785308798093429
+          },
+          "best_score": 43.38245430357115,
+          "n_trials": 10
+        },
+        "VixFix": {
+          "best_params": {
+            "vix_length": 15,
+            "vix_threshold": 29.326959245113976
+          },
+          "best_score": 0.0,
+          "n_trials": 10
+        }
+      },
+      "all": {
+        "MACD": {
+          "best_params": {
+            "macd_fast": 11,
+            "macd_slow": 22,
+            "macd_signal": 7
+          },
+          "best_score": 67.27921817142042,
+          "n_trials": 10
+        },
+        "ADX": {
+          "best_params": {
+            "adx_period": 8,
+            "adx_threshold": 18.484408202890194
+          },
+          "best_score": 34.81059481697131,
+          "n_trials": 10
+        },
+        "Supertrend": {
+          "best_params": {
+            "st_period": 9,
+            "st_multiplier": 0.9722162170407598
+          },
+          "best_score": 116.70179870439239,
+          "n_trials": 10
+        },
+        "WaveTrend": {
+          "best_params": {
+            "wt_channel_length": 7,
+            "wt_average_length": 21,
+            "wt_overbought": 53.158725634342424,
+            "wt_oversold": -44.6046931682228
+          },
+          "best_score": 44.128057540016655,
+          "n_trials": 10
+        },
+        "SqueezeMomentum": {
+          "best_params": {
+            "sq_bb_length": 15,
+            "sq_bb_mult": 2.216837409454703,
+            "sq_kc_length": 16,
+            "sq_kc_mult": 1.325997161429062
+          },
+          "best_score": 39.264844701112025,
+          "n_trials": 10
+        },
+        "VixFix": {
+          "best_params": {
+            "vix_length": 11,
+            "vix_threshold": 24.698520863120024
+          },
+          "best_score": 0.0,
+          "n_trials": 10
+        }
+      }
+    },
+    "4h": {
+      "30d": {
+        "MACD": {
+          "best_params": {
+            "macd_fast": 9,
+            "macd_slow": 22,
+            "macd_signal": 7
+          },
+          "best_score": 36.10118006551313,
+          "n_trials": 10
+        },
+        "ADX": {
+          "best_params": {
+            "adx_period": 13,
+            "adx_threshold": 15.348247107602875
+          },
+          "best_score": 24.523168032323504,
+          "n_trials": 10
+        },
+        "Supertrend": {
+          "best_params": {
+            "st_period": 24,
+            "st_multiplier": 0.6081812905854154
+          },
+          "best_score": 45.92118702868715,
+          "n_trials": 10
+        },
+        "WaveTrend": {
+          "best_params": {
+            "wt_channel_length": 8,
+            "wt_average_length": 30,
+            "wt_overbought": 51.807060937333645,
+            "wt_oversold": -42.49913204362283
+          },
+          "best_score": 29.22077839355537,
+          "n_trials": 10
+        },
+        "SqueezeMomentum": {
+          "best_params": {
+            "sq_bb_length": 25,
+            "sq_bb_mult": 2.363861890984569,
+            "sq_kc_length": 15,
+            "sq_kc_mult": 1.5984016524611273
+          },
+          "best_score": 19.113820956601547,
+          "n_trials": 10
+        },
+        "VixFix": {
+          "best_params": {
+            "vix_length": 22,
+            "vix_threshold": 12.600002488658726
+          },
+          "best_score": 0.0,
+          "n_trials": 10
+        }
+      },
+      "60d": {
+        "MACD": {
+          "best_params": {
+            "macd_fast": 14,
+            "macd_slow": 34,
+            "macd_signal": 6
+          },
+          "best_score": 34.819716383340804,
+          "n_trials": 10
+        },
+        "ADX": {
+          "best_params": {
+            "adx_period": 12,
+            "adx_threshold": 15.294105771113736
+          },
+          "best_score": 29.431082430384414,
+          "n_trials": 10
+        },
+        "Supertrend": {
+          "best_params": {
+            "st_period": 19,
+            "st_multiplier": 1.1786775226236192
+          },
+          "best_score": 39.65926373732791,
+          "n_trials": 10
+        },
+        "WaveTrend": {
+          "best_params": {
+            "wt_channel_length": 15,
+            "wt_average_length": 19,
+            "wt_overbought": 63.76544499767498,
+            "wt_oversold": -50.4117706003406
+          },
+          "best_score": 29.944036396767792,
+          "n_trials": 10
+        },
+        "SqueezeMomentum": {
+          "best_params": {
+            "sq_bb_length": 19,
+            "sq_bb_mult": 2.3491223277704414,
+            "sq_kc_length": 16,
+            "sq_kc_mult": 1.6643788885332786
+          },
+          "best_score": 17.781226928627824,
+          "n_trials": 10
+        },
+        "VixFix": {
+          "best_params": {
+            "vix_length": 25,
+            "vix_threshold": 10.547721205613936
+          },
+          "best_score": 0.0,
+          "n_trials": 10
+        }
+      },
+      "90d": {
+        "MACD": {
+          "best_params": {
+            "macd_fast": 10,
+            "macd_slow": 25,
+            "macd_signal": 5
+          },
+          "best_score": 54.62747300578017,
+          "n_trials": 10
+        },
+        "ADX": {
+          "best_params": {
+            "adx_period": 7,
+            "adx_threshold": 27.434041256196785
+          },
+          "best_score": 40.83159080153844,
+          "n_trials": 10
+        },
+        "Supertrend": {
+          "best_params": {
+            "st_period": 16,
+            "st_multiplier": 2.3396389836652354
+          },
+          "best_score": 42.41128933880838,
+          "n_trials": 10
+        },
+        "WaveTrend": {
+          "best_params": {
+            "wt_channel_length": 12,
+            "wt_average_length": 18,
+            "wt_overbought": 51.240023267067244,
+            "wt_oversold": -47.53535805322475
+          },
+          "best_score": 39.247381676621586,
+          "n_trials": 10
+        },
+        "SqueezeMomentum": {
+          "best_params": {
+            "sq_bb_length": 19,
+            "sq_bb_mult": 2.4418161942282124,
+            "sq_kc_length": 20,
+            "sq_kc_mult": 1.7432951017735947
+          },
+          "best_score": 15.048822249805038,
+          "n_trials": 10
+        },
+        "VixFix": {
+          "best_params": {
+            "vix_length": 21,
+            "vix_threshold": 24.67933439051773
+          },
+          "best_score": 0.0,
+          "n_trials": 10
+        }
+      },
+      "180d": {
+        "MACD": {
+          "best_params": {
+            "macd_fast": 10,
+            "macd_slow": 27,
+            "macd_signal": 7
+          },
+          "best_score": 47.028001947975454,
+          "n_trials": 10
+        },
+        "ADX": {
+          "best_params": {
+            "adx_period": 7,
+            "adx_threshold": 31.1293654258622
+          },
+          "best_score": 6.7056518546339205,
+          "n_trials": 10
+        },
+        "Supertrend": {
+          "best_params": {
+            "st_period": 19,
+            "st_multiplier": 0.9354288555216672
+          },
+          "best_score": 84.95270892278648,
+          "n_trials": 10
+        },
+        "WaveTrend": {
+          "best_params": {
+            "wt_channel_length": 11,
+            "wt_average_length": 22,
+            "wt_overbought": 57.658611883762326,
+            "wt_oversold": -52.579941522426054
+          },
+          "best_score": 28.86216930438352,
+          "n_trials": 10
+        },
+        "SqueezeMomentum": {
+          "best_params": {
+            "sq_bb_length": 19,
+            "sq_bb_mult": 2.2713023803643453,
+            "sq_kc_length": 25,
+            "sq_kc_mult": 1.5896213365264442
+          },
+          "best_score": 21.818079944600942,
+          "n_trials": 10
+        },
+        "VixFix": {
+          "best_params": {
+            "vix_length": 16,
+            "vix_threshold": 10.377841378730015
+          },
+          "best_score": 11.172210438533291,
+          "n_trials": 10
+        }
+      },
+      "365d": {
+        "MACD": {
+          "best_params": {
+            "macd_fast": 11,
+            "macd_slow": 24,
+            "macd_signal": 5
+          },
+          "best_score": 117.29856937207121,
+          "n_trials": 10
+        },
+        "ADX": {
+          "best_params": {
+            "adx_period": 11,
+            "adx_threshold": 15.628087690028064
+          },
+          "best_score": 9.438697248819118,
+          "n_trials": 10
+        },
+        "Supertrend": {
+          "best_params": {
+            "st_period": 23,
+            "st_multiplier": 1.347589497656349
+          },
+          "best_score": 131.5865930995135,
+          "n_trials": 10
+        },
+        "WaveTrend": {
+          "best_params": {
+            "wt_channel_length": 8,
+            "wt_average_length": 28,
+            "wt_overbought": 66.77701689920859,
+            "wt_oversold": -48.10205199430128
+          },
+          "best_score": 35.34057450468817,
+          "n_trials": 10
+        },
+        "SqueezeMomentum": {
+          "best_params": {
+            "sq_bb_length": 25,
+            "sq_bb_mult": 2.1726225327687922,
+            "sq_kc_length": 16,
+            "sq_kc_mult": 1.2048263320999513
+          },
+          "best_score": 32.34483908472596,
+          "n_trials": 10
+        },
+        "VixFix": {
+          "best_params": {
+            "vix_length": 19,
+            "vix_threshold": 19.649142056644223
+          },
+          "best_score": 12.954327587278392,
+          "n_trials": 10
+        }
+      },
+      "all": {
+        "MACD": {
+          "best_params": {
+            "macd_fast": 19,
+            "macd_slow": 21,
+            "macd_signal": 5
+          },
+          "best_score": 124.91594914489977,
+          "n_trials": 10
+        },
+        "ADX": {
+          "best_params": {
+            "adx_period": 8,
+            "adx_threshold": 21.54268005748592
+          },
+          "best_score": 17.933175701746396,
+          "n_trials": 10
+        },
+        "Supertrend": {
+          "best_params": {
+            "st_period": 13,
+            "st_multiplier": 0.9713024405404878
+          },
+          "best_score": 291.1028420870494,
+          "n_trials": 10
+        },
+        "WaveTrend": {
+          "best_params": {
+            "wt_channel_length": 11,
+            "wt_average_length": 16,
+            "wt_overbought": 58.73245595815643,
+            "wt_oversold": -57.78946686513275
+          },
+          "best_score": 68.861324265785,
+          "n_trials": 10
+        },
+        "SqueezeMomentum": {
+          "best_params": {
+            "sq_bb_length": 22,
+            "sq_bb_mult": 2.3188705662050966,
+            "sq_kc_length": 17,
+            "sq_kc_mult": 1.2110455484827105
+          },
+          "best_score": 33.65110643201894,
+          "n_trials": 10
+        },
+        "VixFix": {
+          "best_params": {
+            "vix_length": 25,
+            "vix_threshold": 10.102687246696851
+          },
+          "best_score": 22.94622737596381,
+          "n_trials": 10
+        }
+      }
+    },
+    "1d": {
+      "30d": {
+        "MACD": {
+          "best_params": {
+            "macd_fast": 19,
+            "macd_slow": 32,
+            "macd_signal": 11
+          },
+          "best_score": 33.918124697770644,
+          "n_trials": 10
+        },
+        "ADX": {
+          "best_params": {
+            "adx_period": 18,
+            "adx_threshold": 35.92544177361248
+          },
+          "best_score": 2.5270716112303138,
+          "n_trials": 10
+        },
+        "Supertrend": {
+          "best_params": {
+            "st_period": 20,
+            "st_multiplier": 1.1470923579142953
+          },
+          "best_score": 47.86337635288953,
+          "n_trials": 10
+        },
+        "WaveTrend": {
+          "best_params": {
+            "wt_channel_length": 15,
+            "wt_average_length": 23,
+            "wt_overbought": 67.89921168791597,
+            "wt_oversold": -44.18938716538993
+          },
+          "best_score": 31.232089686122123,
+          "n_trials": 10
+        },
+        "SqueezeMomentum": {
+          "best_params": {
+            "sq_bb_length": 16,
+            "sq_bb_mult": 1.5528790299058721,
+            "sq_kc_length": 20,
+            "sq_kc_mult": 1.159012390215532
+          },
+          "best_score": 29.13533075755219,
+          "n_trials": 10
+        },
+        "VixFix": {
+          "best_params": {
+            "vix_length": 28,
+            "vix_threshold": 19.632781868130856
+          },
+          "best_score": 3.9810397613670334,
+          "n_trials": 10
+        }
+      },
+      "60d": {
+        "MACD": {
+          "best_params": {
+            "macd_fast": 19,
+            "macd_slow": 22,
+            "macd_signal": 5
+          },
+          "best_score": 54.27519812775839,
+          "n_trials": 10
+        },
+        "ADX": {
+          "best_params": {
+            "adx_period": 14,
+            "adx_threshold": 15.007232981693786
+          },
+          "best_score": 7.0405107485302265,
+          "n_trials": 10
+        },
+        "Supertrend": {
+          "best_params": {
+            "st_period": 7,
+            "st_multiplier": 0.6428221837831332
+          },
+          "best_score": 92.75851380086092,
+          "n_trials": 10
+        },
+        "WaveTrend": {
+          "best_params": {
+            "wt_channel_length": 6,
+            "wt_average_length": 18,
+            "wt_overbought": 62.07655935946474,
+            "wt_oversold": -43.54713130323452
+          },
+          "best_score": 14.810887050015008,
+          "n_trials": 10
+        },
+        "SqueezeMomentum": {
+          "best_params": {
+            "sq_bb_length": 20,
+            "sq_bb_mult": 2.4454248745933125,
+            "sq_kc_length": 17,
+            "sq_kc_mult": 1.437407427922639
+          },
+          "best_score": 29.13533075755219,
+          "n_trials": 10
+        },
+        "VixFix": {
+          "best_params": {
+            "vix_length": 29,
+            "vix_threshold": 20.843992607531405
+          },
+          "best_score": 9.888357233237244,
+          "n_trials": 10
+        }
+      },
+      "90d": {
+        "MACD": {
+          "best_params": {
+            "macd_fast": 11,
+            "macd_slow": 26,
+            "macd_signal": 5
+          },
+          "best_score": 60.87595071057772,
+          "n_trials": 10
+        },
+        "ADX": {
+          "best_params": {
+            "adx_period": 10,
+            "adx_threshold": 15.229533585305527
+          },
+          "best_score": 12.027428707059418,
+          "n_trials": 10
+        },
+        "Supertrend": {
+          "best_params": {
+            "st_period": 22,
+            "st_multiplier": 0.7614131555985788
+          },
+          "best_score": 97.11758364433025,
+          "n_trials": 10
+        },
+        "WaveTrend": {
+          "best_params": {
+            "wt_channel_length": 12,
+            "wt_average_length": 18,
+            "wt_overbought": 64.50818289785792,
+            "wt_oversold": -40.2835271741304
+          },
+          "best_score": 31.232089686122123,
+          "n_trials": 10
+        },
+        "SqueezeMomentum": {
+          "best_params": {
+            "sq_bb_length": 15,
+            "sq_bb_mult": 2.3768208986646506,
+            "sq_kc_length": 20,
+            "sq_kc_mult": 1.282209237260187
+          },
+          "best_score": 29.13533075755219,
+          "n_trials": 10
+        },
+        "VixFix": {
+          "best_params": {
+            "vix_length": 28,
+            "vix_threshold": 20.084036204115396
+          },
+          "best_score": 6.115780062088949,
+          "n_trials": 10
+        }
+      },
+      "180d": {
+        "MACD": {
+          "best_params": {
+            "macd_fast": 14,
+            "macd_slow": 30,
+            "macd_signal": 5
+          },
+          "best_score": 127.3973280856695,
+          "n_trials": 10
+        },
+        "ADX": {
+          "best_params": {
+            "adx_period": 9,
+            "adx_threshold": 19.766727158316336
+          },
+          "best_score": 37.525935724967255,
+          "n_trials": 10
+        },
+        "Supertrend": {
+          "best_params": {
+            "st_period": 17,
+            "st_multiplier": 0.7398956177154421
+          },
+          "best_score": 227.8742743301884,
+          "n_trials": 10
+        },
+        "WaveTrend": {
+          "best_params": {
+            "wt_channel_length": 11,
+            "wt_average_length": 17,
+            "wt_overbought": 54.35512459190425,
+            "wt_oversold": -41.16082915519293
+          },
+          "best_score": 51.03406494728486,
+          "n_trials": 10
+        },
+        "SqueezeMomentum": {
+          "best_params": {
+            "sq_bb_length": 19,
+            "sq_bb_mult": 2.4683806024980193,
+            "sq_kc_length": 16,
+            "sq_kc_mult": 1.7690553482756985
+          },
+          "best_score": 46.28160259382976,
+          "n_trials": 10
+        },
+        "VixFix": {
+          "best_params": {
+            "vix_length": 29,
+            "vix_threshold": 16.937011662265498
+          },
+          "best_score": 28.943158201184318,
+          "n_trials": 10
+        }
+      },
+      "365d": {
+        "MACD": {
+          "best_params": {
+            "macd_fast": 16,
+            "macd_slow": 27,
+            "macd_signal": 5
+          },
+          "best_score": 496.42579570502596,
+          "n_trials": 10
+        },
+        "ADX": {
+          "best_params": {
+            "adx_period": 7,
+            "adx_threshold": 17.18434068559187
+          },
+          "best_score": 210.29771006071255,
+          "n_trials": 10
+        },
+        "Supertrend": {
+          "best_params": {
+            "st_period": 19,
+            "st_multiplier": 1.4464262732385347
+          },
+          "best_score": 517.3006732138876,
+          "n_trials": 10
+        },
+        "WaveTrend": {
+          "best_params": {
+            "wt_channel_length": 7,
+            "wt_average_length": 16,
+            "wt_overbought": 43.24632846817245,
+            "wt_oversold": -47.430990236488185
+          },
+          "best_score": 69.49439876440205,
+          "n_trials": 10
+        },
+        "SqueezeMomentum": {
+          "best_params": {
+            "sq_bb_length": 19,
+            "sq_bb_mult": 2.0257661604435295,
+            "sq_kc_length": 20,
+            "sq_kc_mult": 1.3163635099141828
+          },
+          "best_score": 165.6847581115652,
+          "n_trials": 10
+        },
+        "VixFix": {
+          "best_params": {
+            "vix_length": 17,
+            "vix_threshold": 12.89077929915159
+          },
+          "best_score": 20.73486546664487,
+          "n_trials": 10
+        }
+      },
+      "all": {
+        "MACD": {
+          "best_params": {
+            "macd_fast": 20,
+            "macd_slow": 28,
+            "macd_signal": 5
+          },
+          "best_score": 2762.7849199073908,
+          "n_trials": 10
+        },
+        "ADX": {
+          "best_params": {
+            "adx_period": 20,
+            "adx_threshold": 17.823094742507365
+          },
+          "best_score": 289.79254496409453,
+          "n_trials": 10
+        },
+        "Supertrend": {
+          "best_params": {
+            "st_period": 5,
+            "st_multiplier": 0.9980172760888126
+          },
+          "best_score": 17434.329535918198,
+          "n_trials": 10
+        },
+        "WaveTrend": {
+          "best_params": {
+            "wt_channel_length": 13,
+            "wt_average_length": 15,
+            "wt_overbought": 48.841669142543196,
+            "wt_oversold": -44.29531199018215
+          },
+          "best_score": 114.18429570372406,
+          "n_trials": 10
+        },
+        "SqueezeMomentum": {
+          "best_params": {
+            "sq_bb_length": 15,
+            "sq_bb_mult": 2.14806343031493,
+            "sq_kc_length": 21,
+            "sq_kc_mult": 1.3173882960360563
+          },
+          "best_score": 581.3353640009751,
+          "n_trials": 10
+        },
+        "VixFix": {
+          "best_params": {
+            "vix_length": 28,
+            "vix_threshold": 27.067780014034327
+          },
+          "best_score": 101.36291399234536,
+          "n_trials": 10
+        }
+      }
+    },
+    "1wk": {
+      "30d": {
+        "MACD": {
+          "best_params": {
+            "macd_fast": 19,
+            "macd_slow": 31,
+            "macd_signal": 6
+          },
+          "best_score": 149.34601164814447,
+          "n_trials": 10
+        },
+        "ADX": {
+          "best_params": {
+            "adx_period": 19,
+            "adx_threshold": 27.144592582456944
+          },
+          "best_score": 126.29014577750301,
+          "n_trials": 10
+        },
+        "Supertrend": {
+          "best_params": {
+            "st_period": 22,
+            "st_multiplier": 0.9103936484346871
+          },
+          "best_score": 342.61099952111175,
+          "n_trials": 10
+        },
+        "WaveTrend": {
+          "best_params": {
+            "wt_channel_length": 5,
+            "wt_average_length": 19,
+            "wt_overbought": 60.27819958539131,
+            "wt_oversold": -53.61093458893912
+          },
+          "best_score": 0.0,
+          "n_trials": 10
+        },
+        "SqueezeMomentum": {
+          "best_params": {
+            "sq_bb_length": 25,
+            "sq_bb_mult": 2.0043517317444657,
+            "sq_kc_length": 15,
+            "sq_kc_mult": 1.4719656544549404
+          },
+          "best_score": 6.014463443983931,
+          "n_trials": 10
+        },
+        "VixFix": {
+          "best_params": {
+            "vix_length": 18,
+            "vix_threshold": 27.28565204478951
+          },
+          "best_score": 33.91812469777069,
+          "n_trials": 10
+        }
+      },
+      "60d": {
+        "MACD": {
+          "best_params": {
+            "macd_fast": 8,
+            "macd_slow": 27,
+            "macd_signal": 6
+          },
+          "best_score": 253.89418173001638,
+          "n_trials": 10
+        },
+        "ADX": {
+          "best_params": {
+            "adx_period": 15,
+            "adx_threshold": 15.63401890460387
+          },
+          "best_score": 395.27631922349957,
+          "n_trials": 10
+        },
+        "Supertrend": {
+          "best_params": {
+            "st_period": 11,
+            "st_multiplier": 0.7276837434883161
+          },
+          "best_score": 547.1602080353958,
+          "n_trials": 10
+        },
+        "WaveTrend": {
+          "best_params": {
+            "wt_channel_length": 10,
+            "wt_average_length": 15,
+            "wt_overbought": 60.84095308947139,
+            "wt_oversold": -54.15739695800178
+          },
+          "best_score": 0.0,
+          "n_trials": 10
+        },
+        "SqueezeMomentum": {
+          "best_params": {
+            "sq_bb_length": 19,
+            "sq_bb_mult": 1.9287284278787757,
+            "sq_kc_length": 15,
+            "sq_kc_mult": 1.4026840074221685
+          },
+          "best_score": 19.167380971192127,
+          "n_trials": 10
+        },
+        "VixFix": {
+          "best_params": {
+            "vix_length": 20,
+            "vix_threshold": 15.984047106220585
+          },
+          "best_score": 94.81055824150464,
+          "n_trials": 10
+        }
+      },
+      "90d": {
+        "MACD": {
+          "best_params": {
+            "macd_fast": 13,
+            "macd_slow": 27,
+            "macd_signal": 6
+          },
+          "best_score": 738.6674560307436,
+          "n_trials": 10
+        },
+        "ADX": {
+          "best_params": {
+            "adx_period": 12,
+            "adx_threshold": 17.16057465171498
+          },
+          "best_score": 531.8087147598661,
+          "n_trials": 10
+        },
+        "Supertrend": {
+          "best_params": {
+            "st_period": 8,
+            "st_multiplier": 0.7863462392067616
+          },
+          "best_score": 2076.297607698724,
+          "n_trials": 10
+        },
+        "WaveTrend": {
+          "best_params": {
+            "wt_channel_length": 9,
+            "wt_average_length": 30,
+            "wt_overbought": 47.96275291939558,
+            "wt_oversold": -65.85875254510725
+          },
+          "best_score": 0.0,
+          "n_trials": 10
+        },
+        "SqueezeMomentum": {
+          "best_params": {
+            "sq_bb_length": 23,
+            "sq_bb_mult": 2.218726466628831,
+            "sq_kc_length": 15,
+            "sq_kc_mult": 1.4204723428904709
+          },
+          "best_score": 115.74443954202955,
+          "n_trials": 10
+        },
+        "VixFix": {
+          "best_params": {
+            "vix_length": 17,
+            "vix_threshold": 14.470110227778946
+          },
+          "best_score": 163.36132257381632,
+          "n_trials": 10
+        }
+      },
+      "180d": {
+        "MACD": {
+          "best_params": {
+            "macd_fast": 16,
+            "macd_slow": 23,
+            "macd_signal": 6
+          },
+          "best_score": 1916.1829566659587,
+          "n_trials": 10
+        },
+        "ADX": {
+          "best_params": {
+            "adx_period": 19,
+            "adx_threshold": 15.430613571928687
+          },
+          "best_score": 1708.1857886045082,
+          "n_trials": 10
+        },
+        "Supertrend": {
+          "best_params": {
+            "st_period": 6,
+            "st_multiplier": 0.5048866745567343
+          },
+          "best_score": 21830.18930817602,
+          "n_trials": 10
+        },
+        "WaveTrend": {
+          "best_params": {
+            "wt_channel_length": 8,
+            "wt_average_length": 16,
+            "wt_overbought": 62.733357707382574,
+            "wt_oversold": -40.47529201748643
+          },
+          "best_score": 150.01093160243656,
+          "n_trials": 10
+        },
+        "SqueezeMomentum": {
+          "best_params": {
+            "sq_bb_length": 20,
+            "sq_bb_mult": 2.274807802661421,
+            "sq_kc_length": 15,
+            "sq_kc_mult": 1.3511510163441285
+          },
+          "best_score": 678.65442608646,
+          "n_trials": 10
+        },
+        "VixFix": {
+          "best_params": {
+            "vix_length": 25,
+            "vix_threshold": 10.190991395495814
+          },
+          "best_score": 718.1912105242952,
+          "n_trials": 10
+        }
+      },
+      "365d": {
+        "MACD": {
+          "best_params": {
+            "macd_fast": 9,
+            "macd_slow": 21,
+            "macd_signal": 11
+          },
+          "best_score": 2353.1268307793866,
+          "n_trials": 10
+        },
+        "ADX": {
+          "best_params": {
+            "adx_period": 15,
+            "adx_threshold": 17.65336613761602
+          },
+          "best_score": 2137.0650085830184,
+          "n_trials": 10
+        },
+        "Supertrend": {
+          "best_params": {
+            "st_period": 20,
+            "st_multiplier": 1.4305213191440638
+          },
+          "best_score": 5857.154023730638,
+          "n_trials": 10
+        },
+        "WaveTrend": {
+          "best_params": {
+            "wt_channel_length": 6,
+            "wt_average_length": 20,
+            "wt_overbought": 50.16651309052906,
+            "wt_oversold": -51.59371551045314
+          },
+          "best_score": 134.80517006825062,
+          "n_trials": 10
+        },
+        "SqueezeMomentum": {
+          "best_params": {
+            "sq_bb_length": 17,
+            "sq_bb_mult": 2.097900687359462,
+            "sq_kc_length": 21,
+            "sq_kc_mult": 1.4391089813567544
+          },
+          "best_score": 1003.5428361381745,
+          "n_trials": 10
+        },
+        "VixFix": {
+          "best_params": {
+            "vix_length": 30,
+            "vix_threshold": 10.006368664021393
+          },
+          "best_score": 732.2590244972462,
+          "n_trials": 10
+        }
+      },
+      "all": {
+        "MACD": {
+          "best_params": {
+            "macd_fast": 11,
+            "macd_slow": 30,
+            "macd_signal": 6
+          },
+          "best_score": 2235.7518261637206,
+          "n_trials": 10
+        },
+        "ADX": {
+          "best_params": {
+            "adx_period": 19,
+            "adx_threshold": 17.19703943888195
+          },
+          "best_score": 2449.6525059355045,
+          "n_trials": 10
+        },
+        "Supertrend": {
+          "best_params": {
+            "st_period": 18,
+            "st_multiplier": 1.2556276894289393
+          },
+          "best_score": 8731.541112308989,
+          "n_trials": 10
+        },
+        "WaveTrend": {
+          "best_params": {
+            "wt_channel_length": 6,
+            "wt_average_length": 27,
+            "wt_overbought": 62.94803432452693,
+            "wt_oversold": -41.63923680883484
+          },
+          "best_score": 2216.0190423984923,
+          "n_trials": 10
+        },
+        "SqueezeMomentum": {
+          "best_params": {
+            "sq_bb_length": 17,
+            "sq_bb_mult": 2.3336249561865388,
+            "sq_kc_length": 15,
+            "sq_kc_mult": 1.0521000121830475
+          },
+          "best_score": 1038.1812575780757,
+          "n_trials": 10
+        },
+        "VixFix": {
+          "best_params": {
+            "vix_length": 29,
+            "vix_threshold": 11.986895972442728
+          },
+          "best_score": 435.94912982893624,
+          "n_trials": 10
+        }
+      }
+    }
+  },
+  "THYAO": {
+    "1h": {
+      "30d": {
+        "MACD": {
+          "best_params": {
+            "macd_fast": 9,
+            "macd_slow": 22,
+            "macd_signal": 14
+          },
+          "best_score": 10.71428571428572,
+          "n_trials": 10
+        },
+        "ADX": {
+          "best_params": {
+            "adx_period": 11,
+            "adx_threshold": 33.997595842062815
+          },
+          "best_score": 9.232346358215594,
+          "n_trials": 10
+        },
+        "Supertrend": {
+          "best_params": {
+            "st_period": 10,
+            "st_multiplier": 0.6370392738465476
+          },
+          "best_score": 12.597669545566493,
+          "n_trials": 10
+        },
+        "WaveTrend": {
+          "best_params": {
+            "wt_channel_length": 9,
+            "wt_average_length": 16,
+            "wt_overbought": 54.47579995092556,
+            "wt_oversold": -40.70335388778716
+          },
+          "best_score": 8.514664143803197,
+          "n_trials": 10
+        },
+        "SqueezeMomentum": {
+          "best_params": {
+            "sq_bb_length": 21,
+            "sq_bb_mult": 1.8331244208115696,
+            "sq_kc_length": 16,
+            "sq_kc_mult": 1.0958002926747392
+          },
+          "best_score": 9.132474105529798,
+          "n_trials": 10
+        },
+        "VixFix": {
+          "best_params": {
+            "vix_length": 25,
+            "vix_threshold": 16.179283747356997
+          },
+          "best_score": 0.0,
+          "n_trials": 10
+        }
+      },
+      "60d": {
+        "MACD": {
+          "best_params": {
+            "macd_fast": 14,
+            "macd_slow": 29,
+            "macd_signal": 5
+          },
+          "best_score": 19.347208407184667,
+          "n_trials": 10
+        },
+        "ADX": {
+          "best_params": {
+            "adx_period": 7,
+            "adx_threshold": 19.050556587162234
+          },
+          "best_score": 13.565891472868108,
+          "n_trials": 10
+        },
+        "Supertrend": {
+          "best_params": {
+            "st_period": 8,
+            "st_multiplier": 0.6913527645250704
+          },
+          "best_score": 24.27192202905777,
+          "n_trials": 10
+        },
+        "WaveTrend": {
+          "best_params": {
+            "wt_channel_length": 11,
+            "wt_average_length": 18,
+            "wt_overbought": 65.09727127763392,
+            "wt_oversold": -40.673694532231686
+          },
+          "best_score": 16.269841269841322,
+          "n_trials": 10
+        },
+        "SqueezeMomentum": {
+          "best_params": {
+            "sq_bb_length": 23,
+            "sq_bb_mult": 1.5466835525357279,
+            "sq_kc_length": 15,
+            "sq_kc_mult": 1.86797419113491
+          },
+          "best_score": 16.713326383491367,
+          "n_trials": 10
+        },
+        "VixFix": {
+          "best_params": {
+            "vix_length": 19,
+            "vix_threshold": 18.123540774951394
+          },
+          "best_score": 0.0,
+          "n_trials": 10
+        }
+      },
+      "90d": {
+        "MACD": {
+          "best_params": {
+            "macd_fast": 11,
+            "macd_slow": 30,
+            "macd_signal": 7
+          },
+          "best_score": 18.87833922704367,
+          "n_trials": 10
+        },
+        "ADX": {
+          "best_params": {
+            "adx_period": 9,
+            "adx_threshold": 32.20509129557445
+          },
+          "best_score": 18.422314063454138,
+          "n_trials": 10
+        },
+        "Supertrend": {
+          "best_params": {
+            "st_period": 18,
+            "st_multiplier": 0.9710120188965956
+          },
+          "best_score": 23.833666170237766,
+          "n_trials": 10
+        },
+        "WaveTrend": {
+          "best_params": {
+            "wt_channel_length": 11,
+            "wt_average_length": 22,
+            "wt_overbought": 58.99977063860315,
+            "wt_oversold": -69.18609621936059
+          },
+          "best_score": 0.0,
+          "n_trials": 10
+        },
+        "SqueezeMomentum": {
+          "best_params": {
+            "sq_bb_length": 24,
+            "sq_bb_mult": 1.600944430484855,
+            "sq_kc_length": 17,
+            "sq_kc_mult": 1.4442194588306863
+          },
+          "best_score": 16.390913879669554,
+          "n_trials": 10
+        },
+        "VixFix": {
+          "best_params": {
+            "vix_length": 29,
+            "vix_threshold": 19.563716557906133
+          },
+          "best_score": 0.0,
+          "n_trials": 10
+        }
+      },
+      "180d": {
+        "MACD": {
+          "best_params": {
+            "macd_fast": 14,
+            "macd_slow": 21,
+            "macd_signal": 6
+          },
+          "best_score": 27.132297543972527,
+          "n_trials": 10
+        },
+        "ADX": {
+          "best_params": {
+            "adx_period": 7,
+            "adx_threshold": 28.75735508464853
+          },
+          "best_score": 12.02493880166755,
+          "n_trials": 10
+        },
+        "Supertrend": {
+          "best_params": {
+            "st_period": 25,
+            "st_multiplier": 0.5001572413569401
+          },
+          "best_score": 39.804279046605686,
+          "n_trials": 10
+        },
+        "WaveTrend": {
+          "best_params": {
+            "wt_channel_length": 10,
+            "wt_average_length": 23,
+            "wt_overbought": 53.70666786154095,
+            "wt_oversold": -62.17299063326724
+          },
+          "best_score": 12.404580152671961,
+          "n_trials": 10
+        },
+        "SqueezeMomentum": {
+          "best_params": {
+            "sq_bb_length": 15,
+            "sq_bb_mult": 2.110855370900837,
+            "sq_kc_length": 15,
+            "sq_kc_mult": 1.2017511271224035
+          },
+          "best_score": 20.705072591153883,
+          "n_trials": 10
+        },
+        "VixFix": {
+          "best_params": {
+            "vix_length": 10,
+            "vix_threshold": 17.90148715475143
+          },
+          "best_score": 0.0,
+          "n_trials": 10
+        }
+      },
+      "365d": {
+        "MACD": {
+          "best_params": {
+            "macd_fast": 10,
+            "macd_slow": 26,
+            "macd_signal": 5
+          },
+          "best_score": 46.6674166507939,
+          "n_trials": 10
+        },
+        "ADX": {
+          "best_params": {
+            "adx_period": 7,
+            "adx_threshold": 34.352390916202836
+          },
+          "best_score": 5.030000144109259,
+          "n_trials": 10
+        },
+        "Supertrend": {
+          "best_params": {
+            "st_period": 8,
+            "st_multiplier": 0.7280660110644654
+          },
+          "best_score": 60.62272061174312,
+          "n_trials": 10
+        },
+        "WaveTrend": {
+          "best_params": {
+            "wt_channel_length": 12,
+            "wt_average_length": 24,
+            "wt_overbought": 49.465227232144144,
+            "wt_oversold": -66.92733023465841
+          },
+          "best_score": 10.726692274132631,
+          "n_trials": 10
+        },
+        "SqueezeMomentum": {
+          "best_params": {
+            "sq_bb_length": 16,
+            "sq_bb_mult": 1.8717683391491495,
+            "sq_kc_length": 15,
+            "sq_kc_mult": 1.1139179731404678
+          },
+          "best_score": 28.57690667402406,
+          "n_trials": 10
+        },
+        "VixFix": {
+          "best_params": {
+            "vix_length": 22,
+            "vix_threshold": 10.047597134871339
+          },
+          "best_score": 0.09523809523810378,
+          "n_trials": 10
+        }
+      },
+      "all": {
+        "MACD": {
+          "best_params": {
+            "macd_fast": 9,
+            "macd_slow": 33,
+            "macd_signal": 9
+          },
+          "best_score": 42.29766935704986,
+          "n_trials": 10
+        },
+        "ADX": {
+          "best_params": {
+            "adx_period": 12,
+            "adx_threshold": 26.4377160082857
+          },
+          "best_score": 11.178325817366353,
+          "n_trials": 10
+        },
+        "Supertrend": {
+          "best_params": {
+            "st_period": 9,
+            "st_multiplier": 0.5511809011963427
+          },
+          "best_score": 87.9717334202847,
+          "n_trials": 10
+        },
+        "WaveTrend": {
+          "best_params": {
+            "wt_channel_length": 13,
+            "wt_average_length": 24,
+            "wt_overbought": 50.496387103295405,
+            "wt_oversold": -59.11734204264059
+          },
+          "best_score": 16.17529514667142,
+          "n_trials": 10
+        },
+        "SqueezeMomentum": {
+          "best_params": {
+            "sq_bb_length": 24,
+            "sq_bb_mult": 1.9474498434529417,
+            "sq_kc_length": 15,
+            "sq_kc_mult": 1.8506832957838788
+          },
+          "best_score": 33.477405244697955,
+          "n_trials": 10
+        },
+        "VixFix": {
+          "best_params": {
+            "vix_length": 23,
+            "vix_threshold": 10.580755964704656
+          },
+          "best_score": 0.4793863854266611,
+          "n_trials": 10
+        }
+      }
+    },
+    "4h": {
+      "30d": {
+        "MACD": {
+          "best_params": {
+            "macd_fast": 18,
+            "macd_slow": 27,
+            "macd_signal": 6
+          },
+          "best_score": 23.261849600412134,
+          "n_trials": 10
+        },
+        "ADX": {
+          "best_params": {
+            "adx_period": 12,
+            "adx_threshold": 21.602346365334707
+          },
+          "best_score": 4.979533039579698,
+          "n_trials": 10
+        },
+        "Supertrend": {
+          "best_params": {
+            "st_period": 5,
+            "st_multiplier": 3.6242722942209604
+          },
+          "best_score": 15.81027667984194,
+          "n_trials": 10
+        },
+        "WaveTrend": {
+          "best_params": {
+            "wt_channel_length": 11,
+            "wt_average_length": 23,
+            "wt_overbought": 68.66248866015088,
+            "wt_oversold": -51.455784015408454
+          },
+          "best_score": 5.967450271247743,
+          "n_trials": 10
+        },
+        "SqueezeMomentum": {
+          "best_params": {
+            "sq_bb_length": 15,
+            "sq_bb_mult": 2.110673490986944,
+            "sq_kc_length": 15,
+            "sq_kc_mult": 1.5906068250452794
+          },
+          "best_score": 15.81027667984194,
+          "n_trials": 10
+        },
+        "VixFix": {
+          "best_params": {
+            "vix_length": 30,
+            "vix_threshold": 11.448186405827203
+          },
+          "best_score": 6.019417475728117,
+          "n_trials": 10
+        }
+      },
+      "60d": {
+        "MACD": {
+          "best_params": {
+            "macd_fast": 20,
+            "macd_slow": 27,
+            "macd_signal": 5
+          },
+          "best_score": 19.01049192331483,
+          "n_trials": 10
+        },
+        "ADX": {
+          "best_params": {
+            "adx_period": 20,
+            "adx_threshold": 18.775481842476967
+          },
+          "best_score": -0.08525149190106163,
+          "n_trials": 10
+        },
+        "Supertrend": {
+          "best_params": {
+            "st_period": 10,
+            "st_multiplier": 0.9117869357820415
+          },
+          "best_score": 23.813811067858627,
+          "n_trials": 10
+        },
+        "WaveTrend": {
+          "best_params": {
+            "wt_channel_length": 12,
+            "wt_average_length": 22,
+            "wt_overbought": 57.34118444067462,
+            "wt_oversold": -49.73363098958644
+          },
+          "best_score": 4.363312555654519,
+          "n_trials": 10
+        },
+        "SqueezeMomentum": {
+          "best_params": {
+            "sq_bb_length": 25,
+            "sq_bb_mult": 2.0669166246963027,
+            "sq_kc_length": 17,
+            "sq_kc_mult": 1.6607478933047697
+          },
+          "best_score": 7.6725252109487,
+          "n_trials": 10
+        },
+        "VixFix": {
+          "best_params": {
+            "vix_length": 26,
+            "vix_threshold": 11.244769349269976
+          },
+          "best_score": 4.368932038834927,
+          "n_trials": 10
+        }
+      },
+      "90d": {
+        "MACD": {
+          "best_params": {
+            "macd_fast": 8,
+            "macd_slow": 32,
+            "macd_signal": 5
+          },
+          "best_score": 24.070115880520394,
+          "n_trials": 10
+        },
+        "ADX": {
+          "best_params": {
+            "adx_period": 21,
+            "adx_threshold": 35.63787245233493
+          },
+          "best_score": 2.9940119760479167,
+          "n_trials": 10
+        },
+        "Supertrend": {
+          "best_params": {
+            "st_period": 9,
+            "st_multiplier": 0.8922933332098746
+          },
+          "best_score": 39.055562164358705,
+          "n_trials": 10
+        },
+        "WaveTrend": {
+          "best_params": {
+            "wt_channel_length": 12,
+            "wt_average_length": 27,
+            "wt_overbought": 66.53062499300194,
+            "wt_oversold": -55.5346716209986
+          },
+          "best_score": 3.169014084507027,
+          "n_trials": 10
+        },
+        "SqueezeMomentum": {
+          "best_params": {
+            "sq_bb_length": 18,
+            "sq_bb_mult": 1.7533220618038299,
+            "sq_kc_length": 15,
+            "sq_kc_mult": 1.367798672938406
+          },
+          "best_score": 14.682920004197397,
+          "n_trials": 10
+        },
+        "VixFix": {
+          "best_params": {
+            "vix_length": 18,
+            "vix_threshold": 24.604903982346066
+          },
+          "best_score": 0.0,
+          "n_trials": 10
+        }
+      },
+      "180d": {
+        "MACD": {
+          "best_params": {
+            "macd_fast": 18,
+            "macd_slow": 27,
+            "macd_signal": 5
+          },
+          "best_score": 36.81109350233407,
+          "n_trials": 10
+        },
+        "ADX": {
+          "best_params": {
+            "adx_period": 14,
+            "adx_threshold": 34.54008896108944
+          },
+          "best_score": 4.06442644495848,
+          "n_trials": 10
+        },
+        "Supertrend": {
+          "best_params": {
+            "st_period": 13,
+            "st_multiplier": 2.3011700702189155
+          },
+          "best_score": 37.99419929885666,
+          "n_trials": 10
+        },
+        "WaveTrend": {
+          "best_params": {
+            "wt_channel_length": 13,
+            "wt_average_length": 20,
+            "wt_overbought": 42.93459565867869,
+            "wt_oversold": -45.360392664348836
+          },
+          "best_score": 12.53263707571799,
+          "n_trials": 10
+        },
+        "SqueezeMomentum": {
+          "best_params": {
+            "sq_bb_length": 19,
+            "sq_bb_mult": 1.6521681898374396,
+            "sq_kc_length": 15,
+            "sq_kc_mult": 1.5750380267456667
+          },
+          "best_score": 15.86091508578451,
+          "n_trials": 10
+        },
+        "VixFix": {
+          "best_params": {
+            "vix_length": 15,
+            "vix_threshold": 17.574898930064656
+          },
+          "best_score": 0.0,
+          "n_trials": 10
+        }
+      },
+      "365d": {
+        "MACD": {
+          "best_params": {
+            "macd_fast": 12,
+            "macd_slow": 22,
+            "macd_signal": 5
+          },
+          "best_score": 69.73779166555789,
+          "n_trials": 10
+        },
+        "ADX": {
+          "best_params": {
+            "adx_period": 15,
+            "adx_threshold": 31.03850513541266
+          },
+          "best_score": 7.606350488550495,
+          "n_trials": 10
+        },
+        "Supertrend": {
+          "best_params": {
+            "st_period": 14,
+            "st_multiplier": 0.5861197324200444
+          },
+          "best_score": 183.87774494854773,
+          "n_trials": 10
+        },
+        "WaveTrend": {
+          "best_params": {
+            "wt_channel_length": 10,
+            "wt_average_length": 19,
+            "wt_overbought": 44.281611340702405,
+            "wt_oversold": -48.67011799240002
+          },
+          "best_score": 14.609581719732901,
+          "n_trials": 10
+        },
+        "SqueezeMomentum": {
+          "best_params": {
+            "sq_bb_length": 23,
+            "sq_bb_mult": 2.174598054865434,
+            "sq_kc_length": 15,
+            "sq_kc_mult": 1.2855406359663668
+          },
+          "best_score": 26.029351208744767,
+          "n_trials": 10
+        },
+        "VixFix": {
+          "best_params": {
+            "vix_length": 26,
+            "vix_threshold": 13.256257662311965
+          },
+          "best_score": 7.071713147410352,
+          "n_trials": 10
+        }
+      },
+      "all": {
+        "MACD": {
+          "best_params": {
+            "macd_fast": 8,
+            "macd_slow": 33,
+            "macd_signal": 8
+          },
+          "best_score": 75.57079169673146,
+          "n_trials": 10
+        },
+        "ADX": {
+          "best_params": {
+            "adx_period": 21,
+            "adx_threshold": 16.998330546890205
+          },
+          "best_score": 5.977931682782867,
+          "n_trials": 10
+        },
+        "Supertrend": {
+          "best_params": {
+            "st_period": 23,
+            "st_multiplier": 0.6882941470014123
+          },
+          "best_score": 255.4104423725475,
+          "n_trials": 10
+        },
+        "WaveTrend": {
+          "best_params": {
+            "wt_channel_length": 13,
+            "wt_average_length": 17,
+            "wt_overbought": 44.27972621313511,
+            "wt_oversold": -52.75229257050751
+          },
+          "best_score": 28.79002161488571,
+          "n_trials": 10
+        },
+        "SqueezeMomentum": {
+          "best_params": {
+            "sq_bb_length": 15,
+            "sq_bb_mult": 1.7949072156729518,
+            "sq_kc_length": 15,
+            "sq_kc_mult": 1.415137293479083
+          },
+          "best_score": 26.983539344677855,
+          "n_trials": 10
+        },
+        "VixFix": {
+          "best_params": {
+            "vix_length": 24,
+            "vix_threshold": 10.968052216468703
+          },
+          "best_score": 15.865263488116899,
+          "n_trials": 10
+        }
+      }
+    },
+    "1d": {
+      "30d": {
+        "MACD": {
+          "best_params": {
+            "macd_fast": 13,
+            "macd_slow": 22,
+            "macd_signal": 5
+          },
+          "best_score": 17.877984010248472,
+          "n_trials": 10
+        },
+        "ADX": {
+          "best_params": {
+            "adx_period": 8,
+            "adx_threshold": 33.69231676584716
+          },
+          "best_score": 23.93742230657152,
+          "n_trials": 10
+        },
+        "Supertrend": {
+          "best_params": {
+            "st_period": 11,
+            "st_multiplier": 1.682652423097629
+          },
+          "best_score": 17.872698681977784,
+          "n_trials": 10
+        },
+        "WaveTrend": {
+          "best_params": {
+            "wt_channel_length": 13,
+            "wt_average_length": 21,
+            "wt_overbought": 45.71994790172797,
+            "wt_oversold": -43.56004820517554
+          },
+          "best_score": 7.568814746504082,
+          "n_trials": 10
+        },
+        "SqueezeMomentum": {
+          "best_params": {
+            "sq_bb_length": 25,
+            "sq_bb_mult": 1.7187375328797456,
+            "sq_kc_length": 24,
+            "sq_kc_mult": 1.0142160409028487
+          },
+          "best_score": 3.2627865961199376,
+          "n_trials": 10
+        },
+        "VixFix": {
+          "best_params": {
+            "vix_length": 25,
+            "vix_threshold": 16.35247723352134
+          },
+          "best_score": 0.0,
+          "n_trials": 10
+        }
+      },
+      "60d": {
+        "MACD": {
+          "best_params": {
+            "macd_fast": 8,
+            "macd_slow": 35,
+            "macd_signal": 14
+          },
+          "best_score": 7.315734336734803,
+          "n_trials": 10
+        },
+        "ADX": {
+          "best_params": {
+            "adx_period": 20,
+            "adx_threshold": 24.671692511573333
+          },
+          "best_score": 4.564526752931464,
+          "n_trials": 10
+        },
+        "Supertrend": {
+          "best_params": {
+            "st_period": 15,
+            "st_multiplier": 0.7654303941104066
+          },
+          "best_score": 65.26194284322253,
+          "n_trials": 10
+        },
+        "WaveTrend": {
+          "best_params": {
+            "wt_channel_length": 12,
+            "wt_average_length": 28,
+            "wt_overbought": 46.316587108683784,
+            "wt_oversold": -43.10106705179276
+          },
+          "best_score": 15.711462450592872,
+          "n_trials": 10
+        },
+        "SqueezeMomentum": {
+          "best_params": {
+            "sq_bb_length": 20,
+            "sq_bb_mult": 1.7967224999785512,
+            "sq_kc_length": 25,
+            "sq_kc_mult": 1.8604758484413808
+          },
+          "best_score": 3.2627865961199376,
+          "n_trials": 10
+        },
+        "VixFix": {
+          "best_params": {
+            "vix_length": 10,
+            "vix_threshold": 10.797745912226462
+          },
+          "best_score": 20.254761650471444,
+          "n_trials": 10
+        }
+      },
+      "90d": {
+        "MACD": {
+          "best_params": {
+            "macd_fast": 13,
+            "macd_slow": 34,
+            "macd_signal": 5
+          },
+          "best_score": 42.30587682689395,
+          "n_trials": 10
+        },
+        "ADX": {
+          "best_params": {
+            "adx_period": 20,
+            "adx_threshold": 22.92939462697392
+          },
+          "best_score": 9.62018548090262,
+          "n_trials": 10
+        },
+        "Supertrend": {
+          "best_params": {
+            "st_period": 25,
+            "st_multiplier": 0.8995571068383015
+          },
+          "best_score": 83.0454506709713,
+          "n_trials": 10
+        },
+        "WaveTrend": {
+          "best_params": {
+            "wt_channel_length": 15,
+            "wt_average_length": 28,
+            "wt_overbought": 47.37752663701791,
+            "wt_oversold": -69.64116072817063
+          },
+          "best_score": 11.471102843821445,
+          "n_trials": 10
+        },
+        "SqueezeMomentum": {
+          "best_params": {
+            "sq_bb_length": 17,
+            "sq_bb_mult": 1.9299137923568714,
+            "sq_kc_length": 19,
+            "sq_kc_mult": 1.6773157955073101
+          },
+          "best_score": -2.51360197984285,
+          "n_trials": 10
+        },
+        "VixFix": {
+          "best_params": {
+            "vix_length": 13,
+            "vix_threshold": 11.495238641066134
+          },
+          "best_score": 21.832564680538713,
+          "n_trials": 10
+        }
+      },
+      "180d": {
+        "MACD": {
+          "best_params": {
+            "macd_fast": 13,
+            "macd_slow": 25,
+            "macd_signal": 5
+          },
+          "best_score": 66.883934620119,
+          "n_trials": 10
+        },
+        "ADX": {
+          "best_params": {
+            "adx_period": 11,
+            "adx_threshold": 32.93704171708737
+          },
+          "best_score": 18.43431824619064,
+          "n_trials": 10
+        },
+        "Supertrend": {
+          "best_params": {
+            "st_period": 16,
+            "st_multiplier": 0.511154912228003
+          },
+          "best_score": 195.17306593487064,
+          "n_trials": 10
+        },
+        "WaveTrend": {
+          "best_params": {
+            "wt_channel_length": 15,
+            "wt_average_length": 21,
+            "wt_overbought": 66.84153057588816,
+            "wt_oversold": -40.48274865216636
+          },
+          "best_score": 10.679482159096443,
+          "n_trials": 10
+        },
+        "SqueezeMomentum": {
+          "best_params": {
+            "sq_bb_length": 17,
+            "sq_bb_mult": 1.8444897165011447,
+            "sq_kc_length": 17,
+            "sq_kc_mult": 1.1778151989738421
+          },
+          "best_score": 5.27563614599682,
+          "n_trials": 10
+        },
+        "VixFix": {
+          "best_params": {
+            "vix_length": 30,
+            "vix_threshold": 16.2980992399933
+          },
+          "best_score": 12.5,
+          "n_trials": 10
+        }
+      },
+      "365d": {
+        "MACD": {
+          "best_params": {
+            "macd_fast": 8,
+            "macd_slow": 28,
+            "macd_signal": 8
+          },
+          "best_score": 116.04132148201546,
+          "n_trials": 10
+        },
+        "ADX": {
+          "best_params": {
+            "adx_period": 9,
+            "adx_threshold": 17.16815079072659
+          },
+          "best_score": 38.851514596730794,
+          "n_trials": 10
+        },
+        "Supertrend": {
+          "best_params": {
+            "st_period": 5,
+            "st_multiplier": 0.7605472665096152
+          },
+          "best_score": 441.8964263460965,
+          "n_trials": 10
+        },
+        "WaveTrend": {
+          "best_params": {
+            "wt_channel_length": 11,
+            "wt_average_length": 15,
+            "wt_overbought": 68.18587189884487,
+            "wt_oversold": -48.73600880766469
+          },
+          "best_score": 41.647192277641885,
+          "n_trials": 10
+        },
+        "SqueezeMomentum": {
+          "best_params": {
+            "sq_bb_length": 20,
+            "sq_bb_mult": 1.6414012199020145,
+            "sq_kc_length": 22,
+            "sq_kc_mult": 1.7044495314609251
+          },
+          "best_score": 25.93938600956063,
+          "n_trials": 10
+        },
+        "VixFix": {
+          "best_params": {
+            "vix_length": 10,
+            "vix_threshold": 12.042142653676507
+          },
+          "best_score": 15.818584013380166,
+          "n_trials": 10
+        }
+      },
+      "all": {
+        "MACD": {
+          "best_params": {
+            "macd_fast": 12,
+            "macd_slow": 24,
+            "macd_signal": 7
+          },
+          "best_score": 1319.7819711602278,
+          "n_trials": 10
+        },
+        "ADX": {
+          "best_params": {
+            "adx_period": 9,
+            "adx_threshold": 29.122482884031186
+          },
+          "best_score": 566.5452176902718,
+          "n_trials": 10
+        },
+        "Supertrend": {
+          "best_params": {
+            "st_period": 22,
+            "st_multiplier": 0.8629756612483959
+          },
+          "best_score": 10976.317946063768,
+          "n_trials": 10
+        },
+        "WaveTrend": {
+          "best_params": {
+            "wt_channel_length": 13,
+            "wt_average_length": 15,
+            "wt_overbought": 68.19773741525594,
+            "wt_oversold": -51.94165668019393
+          },
+          "best_score": 119.6209177126462,
+          "n_trials": 10
+        },
+        "SqueezeMomentum": {
+          "best_params": {
+            "sq_bb_length": 20,
+            "sq_bb_mult": 2.4455517144801253,
+            "sq_kc_length": 15,
+            "sq_kc_mult": 1.0137154498852765
+          },
+          "best_score": 300.33761071974413,
+          "n_trials": 10
+        },
+        "VixFix": {
+          "best_params": {
+            "vix_length": 18,
+            "vix_threshold": 12.337934159240005
+          },
+          "best_score": 52.29368253970523,
+          "n_trials": 10
+        }
+      }
+    },
+    "1wk": {
+      "30d": {
+        "MACD": {
+          "best_params": {
+            "macd_fast": 16,
+            "macd_slow": 26,
+            "macd_signal": 6
+          },
+          "best_score": 20.57244870719348,
+          "n_trials": 10
+        },
+        "ADX": {
+          "best_params": {
+            "adx_period": 18,
+            "adx_threshold": 26.76406769202842
+          },
+          "best_score": 24.229077783518616,
+          "n_trials": 10
+        },
+        "Supertrend": {
+          "best_params": {
+            "st_period": 23,
+            "st_multiplier": 0.8081232266474758
+          },
+          "best_score": 67.28953339301944,
+          "n_trials": 10
+        },
+        "WaveTrend": {
+          "best_params": {
+            "wt_channel_length": 10,
+            "wt_average_length": 29,
+            "wt_overbought": 52.65521155594695,
+            "wt_oversold": -55.86584785331175
+          },
+          "best_score": 0.0,
+          "n_trials": 10
+        },
+        "SqueezeMomentum": {
+          "best_params": {
+            "sq_bb_length": 16,
+            "sq_bb_mult": 1.945086818829675,
+            "sq_kc_length": 17,
+            "sq_kc_mult": 1.5154484560251575
+          },
+          "best_score": 5.740439666278352,
+          "n_trials": 10
+        },
+        "VixFix": {
+          "best_params": {
+            "vix_length": 27,
+            "vix_threshold": 15.686506928517478
+          },
+          "best_score": 30.832406683519032,
+          "n_trials": 10
+        }
+      },
+      "60d": {
+        "MACD": {
+          "best_params": {
+            "macd_fast": 11,
+            "macd_slow": 22,
+            "macd_signal": 6
+          },
+          "best_score": 41.01578916035571,
+          "n_trials": 10
+        },
+        "ADX": {
+          "best_params": {
+            "adx_period": 20,
+            "adx_threshold": 21.48687822251064
+          },
+          "best_score": 56.60101205012291,
+          "n_trials": 10
+        },
+        "Supertrend": {
+          "best_params": {
+            "st_period": 8,
+            "st_multiplier": 0.6252088054195434
+          },
+          "best_score": 148.85558018293867,
+          "n_trials": 10
+        },
+        "WaveTrend": {
+          "best_params": {
+            "wt_channel_length": 12,
+            "wt_average_length": 19,
+            "wt_overbought": 49.333608252073304,
+            "wt_oversold": -43.93643827016354
+          },
+          "best_score": 23.44322974950499,
+          "n_trials": 10
+        },
+        "SqueezeMomentum": {
+          "best_params": {
+            "sq_bb_length": 17,
+            "sq_bb_mult": 1.8053440558859637,
+            "sq_kc_length": 15,
+            "sq_kc_mult": 1.1904934202625825
+          },
+          "best_score": 6.156408335631358,
+          "n_trials": 10
+        },
+        "VixFix": {
+          "best_params": {
+            "vix_length": 17,
+            "vix_threshold": 14.686405352965474
+          },
+          "best_score": 45.66711659890148,
+          "n_trials": 10
+        }
+      },
+      "90d": {
+        "MACD": {
+          "best_params": {
+            "macd_fast": 12,
+            "macd_slow": 21,
+            "macd_signal": 7
+          },
+          "best_score": 149.03883320063346,
+          "n_trials": 10
+        },
+        "ADX": {
+          "best_params": {
+            "adx_period": 8,
+            "adx_threshold": 22.564085959315296
+          },
+          "best_score": 118.46808613937357,
+          "n_trials": 10
+        },
+        "Supertrend": {
+          "best_params": {
+            "st_period": 19,
+            "st_multiplier": 0.660829248604045
+          },
+          "best_score": 526.369554418225,
+          "n_trials": 10
+        },
+        "WaveTrend": {
+          "best_params": {
+            "wt_channel_length": 10,
+            "wt_average_length": 25,
+            "wt_overbought": 45.90593609765665,
+            "wt_oversold": -67.84391880660787
+          },
+          "best_score": 0.0,
+          "n_trials": 10
+        },
+        "SqueezeMomentum": {
+          "best_params": {
+            "sq_bb_length": 16,
+            "sq_bb_mult": 2.342488199586147,
+            "sq_kc_length": 18,
+            "sq_kc_mult": 1.3337334043979792
+          },
+          "best_score": 39.46952609259489,
+          "n_trials": 10
+        },
+        "VixFix": {
+          "best_params": {
+            "vix_length": 23,
+            "vix_threshold": 11.517708223008201
+          },
+          "best_score": 75.75225639122085,
+          "n_trials": 10
+        }
+      },
+      "180d": {
+        "MACD": {
+          "best_params": {
+            "macd_fast": 11,
+            "macd_slow": 35,
+            "macd_signal": 5
+          },
+          "best_score": 2749.1204249697057,
+          "n_trials": 10
+        },
+        "ADX": {
+          "best_params": {
+            "adx_period": 7,
+            "adx_threshold": 17.455522928128296
+          },
+          "best_score": 2335.8646294862465,
+          "n_trials": 10
+        },
+        "Supertrend": {
+          "best_params": {
+            "st_period": 20,
+            "st_multiplier": 0.5953782935359668
+          },
+          "best_score": 16243.329556019913,
+          "n_trials": 10
+        },
+        "WaveTrend": {
+          "best_params": {
+            "wt_channel_length": 13,
+            "wt_average_length": 16,
+            "wt_overbought": 57.79964745347028,
+            "wt_oversold": -55.21032014654821
+          },
+          "best_score": 8.652383303960121,
+          "n_trials": 10
+        },
+        "SqueezeMomentum": {
+          "best_params": {
+            "sq_bb_length": 22,
+            "sq_bb_mult": 2.1158704454606028,
+            "sq_kc_length": 15,
+            "sq_kc_mult": 1.985409627560228
+          },
+          "best_score": 1531.739435381421,
+          "n_trials": 10
+        },
+        "VixFix": {
+          "best_params": {
+            "vix_length": 29,
+            "vix_threshold": 12.301041601918804
+          },
+          "best_score": 382.7770386404797,
+          "n_trials": 10
+        }
+      },
+      "365d": {
+        "MACD": {
+          "best_params": {
+            "macd_fast": 11,
+            "macd_slow": 26,
+            "macd_signal": 5
+          },
+          "best_score": 5427.062338768348,
+          "n_trials": 10
+        },
+        "ADX": {
+          "best_params": {
+            "adx_period": 15,
+            "adx_threshold": 20.872950993066187
+          },
+          "best_score": 2044.7730193923185,
+          "n_trials": 10
+        },
+        "Supertrend": {
+          "best_params": {
+            "st_period": 20,
+            "st_multiplier": 2.0095003186799762
+          },
+          "best_score": 4404.052402167352,
+          "n_trials": 10
+        },
+        "WaveTrend": {
+          "best_params": {
+            "wt_channel_length": 15,
+            "wt_average_length": 30,
+            "wt_overbought": 63.87419309021941,
+            "wt_oversold": -54.2267271380894
+          },
+          "best_score": 205.04634434423457,
+          "n_trials": 10
+        },
+        "SqueezeMomentum": {
+          "best_params": {
+            "sq_bb_length": 17,
+            "sq_bb_mult": 1.9526232292761412,
+            "sq_kc_length": 17,
+            "sq_kc_mult": 1.277828567262094
+          },
+          "best_score": 1488.105693194809,
+          "n_trials": 10
+        },
+        "VixFix": {
+          "best_params": {
+            "vix_length": 27,
+            "vix_threshold": 11.070990464663375
+          },
+          "best_score": 355.30365282920695,
+          "n_trials": 10
+        }
+      },
+      "all": {
+        "MACD": {
+          "best_params": {
+            "macd_fast": 12,
+            "macd_slow": 23,
+            "macd_signal": 5
+          },
+          "best_score": 4769.1649795087005,
+          "n_trials": 10
+        },
+        "ADX": {
+          "best_params": {
+            "adx_period": 9,
+            "adx_threshold": 16.38693432136451
+          },
+          "best_score": 2786.1186699430646,
+          "n_trials": 10
+        },
+        "Supertrend": {
+          "best_params": {
+            "st_period": 25,
+            "st_multiplier": 0.5758803118332997
+          },
+          "best_score": 28093.486463323505,
+          "n_trials": 10
+        },
+        "WaveTrend": {
+          "best_params": {
+            "wt_channel_length": 9,
+            "wt_average_length": 20,
+            "wt_overbought": 67.47977853479863,
+            "wt_oversold": -42.848527031729866
+          },
+          "best_score": 215.10310141138166,
+          "n_trials": 10
+        },
+        "SqueezeMomentum": {
+          "best_params": {
+            "sq_bb_length": 15,
+            "sq_bb_mult": 2.4565002374007734,
+            "sq_kc_length": 15,
+            "sq_kc_mult": 1.286158453538217
+          },
+          "best_score": 1661.3138102845178,
+          "n_trials": 10
+        },
+        "VixFix": {
+          "best_params": {
+            "vix_length": 29,
+            "vix_threshold": 10.180214847496856
+          },
+          "best_score": 355.30365282920695,
+          "n_trials": 10
+        }
+      }
+    }
+  }
+}

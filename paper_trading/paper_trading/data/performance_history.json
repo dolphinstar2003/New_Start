@@ -1,0 +1,37 @@
+{
+  "2025-07-07": {
+    "balanced": {
+      "portfolio_value": 50000,
+      "total_return": 0.0,
+      "daily_pnl": 0,
+      "positions_count": 0,
+      "cash": 50000,
+      "win_rate": 0,
+      "sharpe_ratio": 0,
+      "max_drawdown": 0,
+      "portfolio_heat": 0
+    },
+    "aggressive": {
+      "portfolio_value": 50000,
+      "total_return": 0.0,
+      "daily_pnl": 0,
+      "positions_count": 0,
+      "cash": 50000,
+      "win_rate": 0,
+      "sharpe_ratio": 0,
+      "max_drawdown": 0,
+      "portfolio_heat": 0
+    },
+    "conservative": {
+      "portfolio_value": 50000,
+      "total_return": 0.0,
+      "daily_pnl": 0,
+      "positions_count": 0,
+      "cash": 50000,
+      "win_rate": 0,
+      "sharpe_ratio": 0,
+      "max_drawdown": 0,
+      "portfolio_heat": 0
+    }
+  }
+}

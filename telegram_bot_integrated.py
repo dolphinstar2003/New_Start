@@ -48,6 +48,14 @@ class IntegratedTelegramBot:
         # Setup handlers
         self._setup_handlers()
         
+        # Add missing commands via patch
+        try:
+            from telegram_bot_commands_patch import add_missing_commands
+            add_missing_commands(self)
+            logger.info("Additional commands loaded via patch")
+        except Exception as e:
+            logger.warning(f"Could not load command patch: {e}")
+        
     def _setup_handlers(self):
         """Setup all command handlers with detailed responses"""
         
@@ -341,7 +349,7 @@ Bu işlem 5-10 dakika sürebilir.
 """, parse_mode='Markdown')
             
             # Start training in subprocess  
-            cmd = ['/home/yunus/Belgeler/New_Start/venv/bin/python', 'ml_models/train_all_models.py']
+            cmd = ['/home/yunus/Belgeler/New_Start/venv/bin/python', 'ml_models/train_models.py']
             self.active_processes['train'] = subprocess.Popen(
                 cmd,
                 stdout=subprocess.PIPE,

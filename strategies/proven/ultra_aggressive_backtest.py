@@ -11,7 +11,7 @@ import warnings
 warnings.filterwarnings('ignore')
 
 import sys
-sys.path.append(str(Path(__file__).parent))
+sys.path.append(str(Path(__file__).parent.parent.parent))
 
 from config.settings import SACRED_SYMBOLS, DATA_DIR
 
