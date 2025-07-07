@@ -122,7 +122,12 @@ class WalkForwardBacktest:
                 
                 # Generate signals based on indicator
                 if indicator == 'all':
-                    signals = ensemble.generate_signals(test_data, strategy='balanced')
+                    # Calculate indicators first
+                    indicator_data = ensemble.calculate_indicators(test_data)
+                    if indicator_data:
+                        signals = ensemble.generate_signals(test_data, indicator_data, 'balanced')
+                    else:
+                        signals = pd.Series(0, index=test_data.index)
                 else:
                     # Single indicator test
                     if indicator == 'Supertrend':
@@ -248,20 +253,38 @@ class WalkForwardBacktest:
         out_sample_returns = [r['out_sample_return'] for r in indicator_results]
         in_sample_returns = [r['in_sample_return'] for r in indicator_results]
         
-        stats = {
-            'indicator': indicator,
-            'total_periods': len(indicator_results),
-            'avg_in_sample_return': np.mean(in_sample_returns),
-            'avg_out_sample_return': np.mean(out_sample_returns),
-            'std_out_sample_return': np.std(out_sample_returns),
-            'sharpe_ratio': np.mean(out_sample_returns) / np.std(out_sample_returns) if np.std(out_sample_returns) > 0 else 0,
-            'win_periods': sum(1 for r in out_sample_returns if r > 0),
-            'win_period_rate': sum(1 for r in out_sample_returns if r > 0) / len(out_sample_returns) * 100,
-            'total_return': (equity_curve[-1] - 100),
-            'max_drawdown': self.calculate_max_drawdown(equity_curve),
-            'results': indicator_results,
-            'equity_curve': equity_curve
-        }
+        # Handle empty results
+        if len(indicator_results) == 0:
+            logger.warning(f"No results for {indicator}. Check date range - may be requesting future data.")
+            stats = {
+                'indicator': indicator,
+                'total_periods': 0,
+                'avg_in_sample_return': 0,
+                'avg_out_sample_return': 0,
+                'std_out_sample_return': 0,
+                'sharpe_ratio': 0,
+                'win_periods': 0,
+                'win_period_rate': 0,
+                'total_return': 0,
+                'max_drawdown': 0,
+                'results': [],
+                'equity_curve': [100]
+            }
+        else:
+            stats = {
+                'indicator': indicator,
+                'total_periods': len(indicator_results),
+                'avg_in_sample_return': np.mean(in_sample_returns),
+                'avg_out_sample_return': np.mean(out_sample_returns),
+                'std_out_sample_return': np.std(out_sample_returns),
+                'sharpe_ratio': np.mean(out_sample_returns) / np.std(out_sample_returns) if np.std(out_sample_returns) > 0 else 0,
+                'win_periods': sum(1 for r in out_sample_returns if r > 0),
+                'win_period_rate': sum(1 for r in out_sample_returns if r > 0) / len(out_sample_returns) * 100 if len(out_sample_returns) > 0 else 0,
+                'total_return': (equity_curve[-1] - 100),
+                'max_drawdown': self.calculate_max_drawdown(equity_curve),
+                'results': indicator_results,
+                'equity_curve': equity_curve
+            }
         
         return stats
     

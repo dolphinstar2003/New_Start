@@ -186,24 +186,26 @@ class SignalGenerator:
         return 0
     
     def generate_conservative_signals(self, indicators: dict) -> int:
-        """Generate signals for conservative strategy (5 indicators)"""
+        """Generate signals for conservative strategy (MACD + ADX focus)"""
         buy_votes = 0
         sell_votes = 0
         total_indicators = 0
         
-        # Check all 5 indicators
-        # 1. Supertrend
-        if 'supertrend' in indicators:
-            current_trend = indicators['supertrend'].iloc[-1]
-            prev_trend = indicators['supertrend'].iloc[-2]
+        # Focus on MACD and ADX (best performing from optimization)
+        # 1. MACD (3,585% avg return)
+        if all(k in indicators for k in ['macd', 'macd_signal']):
+            current_macd = indicators['macd'].iloc[-1]
+            current_signal = indicators['macd_signal'].iloc[-1]
+            prev_macd = indicators['macd'].iloc[-2]
+            prev_signal = indicators['macd_signal'].iloc[-2]
             
-            if current_trend == 1 and prev_trend == -1:
+            if current_macd > current_signal and prev_macd <= prev_signal:
                 buy_votes += 1
-            elif current_trend == -1 and prev_trend == 1:
+            elif current_macd < current_signal and prev_macd >= prev_signal:
                 sell_votes += 1
             total_indicators += 1
         
-        # 2. ADX
+        # 2. ADX (3,603% avg return)
         if all(k in indicators for k in ['adx', 'plus_di', 'minus_di']):
             adx_params = self.params['ADX']['params']
             current_adx = indicators['adx'].iloc[-1]
@@ -220,57 +222,22 @@ class SignalGenerator:
                 sell_votes += 1
             total_indicators += 1
         
-        # 3. MACD
-        if all(k in indicators for k in ['macd', 'macd_signal']):
-            current_macd = indicators['macd'].iloc[-1]
-            current_signal = indicators['macd_signal'].iloc[-1]
-            prev_macd = indicators['macd'].iloc[-2]
-            prev_signal = indicators['macd_signal'].iloc[-2]
+        # 3. Supertrend as confirmation (41,347% avg return)
+        if 'supertrend' in indicators:
+            current_trend = indicators['supertrend'].iloc[-1]
+            prev_trend = indicators['supertrend'].iloc[-2]
             
-            if current_macd > current_signal and prev_macd <= prev_signal:
-                buy_votes += 1
-            elif current_macd < current_signal and prev_macd >= prev_signal:
-                sell_votes += 1
-            total_indicators += 1
+            if current_trend == 1 and prev_trend == -1:
+                buy_votes += 0.5  # Half vote as confirmation
+            elif current_trend == -1 and prev_trend == 1:
+                sell_votes += 0.5
+            total_indicators += 0.5
         
-        # 4. WaveTrend
-        if all(k in indicators for k in ['wt1', 'wt2']):
-            wt_params = self.params['WaveTrend']['params']
-            current_wt1 = indicators['wt1'].iloc[-1]
-            current_wt2 = indicators['wt2'].iloc[-1]
-            prev_wt1 = indicators['wt1'].iloc[-2]
-            prev_wt2 = indicators['wt2'].iloc[-2]
-            
-            if (current_wt1 > current_wt2 and prev_wt1 <= prev_wt2 and 
-                current_wt1 < wt_params['wt_oversold']):
-                buy_votes += 1
-            elif (current_wt1 < current_wt2 and prev_wt1 >= prev_wt2 and 
-                  current_wt1 > wt_params['wt_overbought']):
-                sell_votes += 1
-            total_indicators += 1
-        
-        # 5. Squeeze Momentum
-        if 'squeeze_momentum' in indicators:
-            current_mom = indicators['squeeze_momentum'].iloc[-1]
-            prev_mom = indicators['squeeze_momentum'].iloc[-2]
-            
-            if current_mom > 0 and prev_mom <= 0:
-                buy_votes += 1
-            elif current_mom < 0 and prev_mom >= 0:
-                sell_votes += 1
-            total_indicators += 1
-        
-        # Apply VixFix filter
-        required_votes = 3  # Need 3 out of 5
-        
-        if 'vix_high_volatility' in indicators and indicators['vix_high_volatility'].iloc[-1]:
-            # In high volatility, require more confirmations
-            required_votes = 4
-        
-        # Generate signal
-        if buy_votes >= required_votes:
+        # Conservative strategy: Need both MACD and ADX to agree
+        # Plus optional Supertrend confirmation
+        if buy_votes >= 1.5:  # Need at least MACD + ADX or one + Supertrend
             return 1
-        elif sell_votes >= 2:  # 2 sell signals to exit
+        elif sell_votes >= 1:  # Any sell signal exits
             return -1
         
         return 0

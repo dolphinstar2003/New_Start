@@ -50,21 +50,24 @@ class PaperTrader:
         if enable_telegram:
             self._init_telegram_bot()
         
-        # Trading strategies
+        # Trading strategies based on optimization results
         self.strategies = {
             'aggressive': {
                 'portfolio_name': 'aggressive',
-                'description': 'Aggressive Supertrend Only Strategy',
+                'description': 'Supertrend Only (41,347% avg return)',
+                'signal_method': 'aggressive',
                 'initial_capital': 50000
             },
             'balanced': {
-                'portfolio_name': 'balanced',
-                'description': 'Balanced Top 3 Indicators Strategy',
+                'portfolio_name': 'balanced', 
+                'description': 'VixFix Enhanced Supertrend (56,908% backtest)',
+                'signal_method': 'vixfix_enhanced',
                 'initial_capital': 50000
             },
             'conservative': {
                 'portfolio_name': 'conservative',
-                'description': 'Conservative 5 Indicators Confirmation Strategy',
+                'description': 'MACD + ADX Balanced (3,585% + 3,603% avg)',
+                'signal_method': 'conservative',
                 'initial_capital': 50000
             }
         }
@@ -159,8 +162,9 @@ class PaperTrader:
                 logger.error(f"Portfolio not found for {strategy_name}")
                 return
             
-            # Generate signals
-            signals = self.signal_generator.scan_all_symbols(strategy_name)
+            # Generate signals using the strategy's signal method
+            signal_method = config.get('signal_method', strategy_name)
+            signals = self.signal_generator.scan_all_symbols(signal_method)
             
             # Get current prices
             current_prices = self.data_fetcher.get_current_prices()
@@ -168,7 +172,7 @@ class PaperTrader:
             # Check exit signals for existing positions
             exit_signals = self.signal_generator.get_exit_signals(
                 portfolio.positions,
-                strategy_name
+                signal_method
             )
             
             # Execute exits first
