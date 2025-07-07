@@ -1,25 +1,51 @@
 {
   "name": "aggressive",
   "initial_capital": 50000,
-  "cash": 50000,
-  "created_date": "2025-07-07T05:38:33.866866",
-  "positions": {},
+  "cash": 42576.38254983521,
+  "created_date": "2025-07-07T05:50:00.942567",
+  "positions": {
+    "ASELS": {
+      "symbol": "ASELS",
+      "entry_price": 151.1999969482422,
+      "shares": 49,
+      "entry_date": "2025-07-07T05:50:02.390825",
+      "strategy": "aggressive",
+      "current_price": 151.1999969482422,
+      "stop_loss": 143.63999710083007,
+      "take_profit": 173.8799964904785,
+      "peak_price": 151.1999969482422,
+      "pnl": 0.0,
+      "pnl_percentage": 0.0
+    }
+  },
   "performance": {
-    "portfolio_value": 50000,
-    "total_return": 0.0,
+    "portfolio_value": 49985.182400299076,
+    "total_return": -0.029635199401847785,
     "total_pnl": 0,
-    "cash": 50000,
-    "positions_value": 0,
-    "num_positions": 0,
+    "cash": 42576.38254983521,
+    "positions_value": 7408.799850463867,
+    "num_positions": 1,
     "total_trades": 0,
     "winning_trades": 0,
     "win_rate": 0,
     "sharpe_ratio": 0,
-    "max_drawdown": 0,
-    "portfolio_heat": 0
+    "max_drawdown": 0.0,
+    "portfolio_heat": 0.7410996113939902
   },
-  "transaction_history": [],
+  "transaction_history": [
+    {
+      "date": "2025-07-07T05:50:02.390825",
+      "type": "BUY",
+      "symbol": "ASELS",
+      "shares": 49,
+      "price": 151.1999969482422,
+      "cost": 7423.617450164795,
+      "strategy": "aggressive",
+      "portfolio_value": 49985.182400299076
+    }
+  ],
   "daily_values": [
+    50000,
     50000
   ]
 }

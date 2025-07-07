@@ -45,17 +45,17 @@ class PaperTrader:
         self.strategies = {
             'aggressive': {
                 'portfolio_name': 'aggressive',
-                'description': 'VixFix Enhanced Strategy',
+                'description': 'Aggressive Supertrend Only Strategy',
                 'initial_capital': 50000
             },
             'balanced': {
                 'portfolio_name': 'balanced',
-                'description': 'Balanced Top 3 Strategy',
+                'description': 'Balanced Top 3 Indicators Strategy',
                 'initial_capital': 50000
             },
             'conservative': {
                 'portfolio_name': 'conservative',
-                'description': 'Conservative 5 Indicator Strategy',
+                'description': 'Conservative 5 Indicators Confirmation Strategy',
                 'initial_capital': 50000
             }
         }
@@ -128,10 +128,7 @@ class PaperTrader:
                 return
             
             # Generate signals
-            if strategy_name == 'aggressive':
-                signals = self.signal_generator.scan_all_symbols('vixfix_enhanced')
-            else:
-                signals = self.signal_generator.scan_all_symbols(strategy_name)
+            signals = self.signal_generator.scan_all_symbols(strategy_name)
             
             # Get current prices
             current_prices = self.data_fetcher.get_current_prices()
@@ -139,7 +136,7 @@ class PaperTrader:
             # Check exit signals for existing positions
             exit_signals = self.signal_generator.get_exit_signals(
                 portfolio.positions,
-                'vixfix_enhanced' if strategy_name == 'aggressive' else strategy_name
+                strategy_name
             )
             
             # Execute exits first

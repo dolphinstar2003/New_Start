@@ -8,19 +8,19 @@
       "cash": 50000,
       "win_rate": 0,
       "sharpe_ratio": 0,
-      "max_drawdown": 0,
+      "max_drawdown": 0.0,
       "portfolio_heat": 0
     },
     "aggressive": {
-      "portfolio_value": 50000,
-      "total_return": 0.0,
+      "portfolio_value": 49985.182400299076,
+      "total_return": -0.029635199401847785,
       "daily_pnl": 0,
-      "positions_count": 0,
-      "cash": 50000,
+      "positions_count": 1,
+      "cash": 42576.38254983521,
       "win_rate": 0,
       "sharpe_ratio": 0,
-      "max_drawdown": 0,
-      "portfolio_heat": 0
+      "max_drawdown": 0.0,
+      "portfolio_heat": 0.7410996113939902
     },
     "conservative": {
       "portfolio_value": 50000,
@@ -30,7 +30,7 @@
       "cash": 50000,
       "win_rate": 0,
       "sharpe_ratio": 0,
-      "max_drawdown": 0,
+      "max_drawdown": 0.0,
       "portfolio_heat": 0
     }
   }
