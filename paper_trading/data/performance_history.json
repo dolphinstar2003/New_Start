@@ -1,15 +1,15 @@
 {
   "2025-07-07": {
     "aggressive": {
-      "portfolio_value": 43070.880618927,
-      "total_return": -13.858238762145994,
+      "portfolio_value": 43079.280618927005,
+      "total_return": -13.841438762145991,
       "daily_pnl": 0,
       "positions_count": 1,
       "cash": 36724.68061892701,
       "win_rate": 0,
       "sharpe_ratio": -2.9897639273837155,
       "max_drawdown": -7.416147831018599,
-      "portfolio_heat": 0.40419419686417685
+      "portfolio_heat": 0.42361431615880707
     },
     "balanced": {
       "portfolio_value": 50000,

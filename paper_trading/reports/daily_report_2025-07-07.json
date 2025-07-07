@@ -1,6 +1,6 @@
 {
   "date": "2025-07-07",
-  "time": "17:25:37",
+  "time": "18:15:00",
   "portfolios": [
     {
       "name": "balanced",
@@ -14,8 +14,8 @@
     },
     {
       "name": "aggressive",
-      "value": 43070.880618927,
-      "return": -13.858238762145994,
+      "value": 43079.280618927005,
+      "return": -13.841438762145991,
       "pnl": 0,
       "positions": 1,
       "win_rate": 0,

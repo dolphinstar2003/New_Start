@@ -12,11 +12,28 @@ import sys
 import json
 import time
 
-sys.path.append(str(Path(__file__).parent.parent))
+# Fix import paths for Streamlit deployment
+current_dir = Path(__file__).parent
+parent_dir = current_dir.parent
+sys.path.insert(0, str(parent_dir))
+sys.path.insert(0, str(current_dir))
 
-from signal_generator import SignalGenerator
-from config.settings import SACRED_SYMBOLS
-from target_manager import TargetManager
+try:
+    from signal_generator import SignalGenerator
+    from target_manager import TargetManager
+    from config.settings import SACRED_SYMBOLS
+except ImportError:
+    # Fallback for Streamlit Cloud
+    from paper_trading.signal_generator import SignalGenerator
+    from paper_trading.target_manager import TargetManager
+    
+    # Define SACRED_SYMBOLS if not available
+    SACRED_SYMBOLS = [
+        'GARAN', 'AKBNK', 'ISCTR', 'YKBNK', 'SAHOL',
+        'KCHOL', 'SISE', 'EREGL', 'KRDMD', 'TUPRS',
+        'ASELS', 'THYAO', 'TCELL', 'BIMAS', 'MGROS',
+        'ULKER', 'AKSEN', 'ENKAI', 'PETKM', 'KOZAL'
+    ]
 
 # Page config
 st.set_page_config(
