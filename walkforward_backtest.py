@@ -122,8 +122,8 @@ class WalkForwardBacktest:
                 
                 # Generate signals based on indicator
                 if indicator == 'all':
-                    # Calculate indicators first
-                    indicator_data = ensemble.calculate_indicators(test_data)
+                    # Calculate indicators first (need to pass symbol)
+                    indicator_data = ensemble.calculate_indicators(test_data, symbol)
                     if indicator_data:
                         signals = ensemble.generate_signals(test_data, indicator_data, 'balanced')
                     else:
