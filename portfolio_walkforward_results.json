@@ -1,0 +1,439 @@
+{
+  "analysis_info": {
+    "optimization_window": 90,
+    "test_window": 30,
+    "step_size": 15,
+    "date_generated": "2025-07-07T07:13:39.396130"
+  },
+  "portfolios": {
+    "aggressive": {
+      "name": "Aggressive (Supertrend Only)",
+      "description": "High return, high risk - Supertrend only",
+      "indicators": [
+        "Supertrend"
+      ],
+      "stats": {
+        "total_return": 2.168490762710573,
+        "sharpe_ratio": 1.0204567435583245,
+        "max_drawdown": -8.450484859862804,
+        "total_trades": 18,
+        "completed_trades": 11,
+        "win_rate": 63.63636363636363,
+        "current_positions": 7,
+        "current_value": 51084.245381355286,
+        "current_cash": 31905.926748275757
+      },
+      "equity_curve": [
+        50000,
+        50000,
+        50000.0,
+        51821.310831069946,
+        52090.67576122284,
+        52143.098397254944,
+        53884.30961894989,
+        53909.27977848053,
+        51425.05141925812,
+        51326.32361507416,
+        50821.235213279724,
+        52208.84395313263,
+        49438.663712501526,
+        49353.68425273895,
+        50082.30186367035,
+        50793.00953388214,
+        51710.415163993835,
+        51084.245381355286
+      ],
+      "trades": [
+        {
+          "date": "2024-06-29 00:00:00",
+          "symbol": "GARAN",
+          "action": "sell",
+          "shares": 36,
+          "price": 108.3922348022461,
+          "value": 3902.1204528808594
+        },
+        {
+          "date": "2024-06-29 00:00:00",
+          "symbol": "ISCTR",
+          "action": "sell",
+          "shares": 367,
+          "price": 15.619135856628418,
+          "value": 5732.222859382629
+        },
+        {
+          "date": "2024-06-29 00:00:00",
+          "symbol": "SAHOL",
+          "action": "buy",
+          "shares": 44,
+          "price": 93.0556182861328,
+          "value": 4094.4472045898433
+        },
+        {
+          "date": "2024-06-29 00:00:00",
+          "symbol": "EREGL",
+          "action": "buy",
+          "shares": 141,
+          "price": 26.375701904296875,
+          "value": 3718.9739685058594
+        },
+        {
+          "date": "2024-06-29 00:00:00",
+          "symbol": "KRDMD",
+          "action": "buy",
+          "shares": 106,
+          "price": 31.5,
+          "value": 3339.0
+        },
+        {
+          "date": "2024-06-29 00:00:00",
+          "symbol": "THYAO",
+          "action": "buy",
+          "shares": 9,
+          "price": 304.720703125,
+          "value": 2742.486328125
+        },
+        {
+          "date": "2024-06-29 00:00:00",
+          "symbol": "TCELL",
+          "action": "buy",
+          "shares": 28,
+          "price": 95.54947662353516,
+          "value": 2675.3853454589844
+        },
+        {
+          "date": "2024-06-29 00:00:00",
+          "symbol": "ULKER",
+          "action": "buy",
+          "shares": 15,
+          "price": 157.42520141601562,
+          "value": 2361.3780212402344
+        },
+        {
+          "date": "2024-07-14 00:00:00",
+          "symbol": "ASELS",
+          "action": "sell",
+          "shares": 54,
+          "price": 63.695831298828125,
+          "value": 3439.5748901367188
+        },
+        {
+          "date": "2024-07-29 00:00:00",
+          "symbol": "KOZAL",
+          "action": "buy",
+          "shares": 110,
+          "price": 23.440000534057617,
+          "value": 2578.400058746338
+        },
+        {
+          "date": "2024-08-13 00:00:00",
+          "symbol": "GARAN",
+          "action": "buy",
+          "shares": 20,
+          "price": 112.0567398071289,
+          "value": 2241.134796142578
+        },
+        {
+          "date": "2024-08-13 00:00:00",
+          "symbol": "THYAO",
+          "action": "sell",
+          "shares": 9,
+          "price": 293.8642578125,
+          "value": 2644.7783203125
+        },
+        {
+          "date": "2024-09-27 00:00:00",
+          "symbol": "SISE",
+          "action": "buy",
+          "shares": 56,
+          "price": 41.86567687988281,
+          "value": 2344.4779052734375
+        },
+        {
+          "date": "2024-10-12 00:00:00",
+          "symbol": "SAHOL",
+          "action": "sell",
+          "shares": 44,
+          "price": 85.14830780029297,
+          "value": 3746.5255432128906
+        },
+        {
+          "date": "2024-10-12 00:00:00",
+          "symbol": "TCELL",
+          "action": "sell",
+          "shares": 28,
+          "price": 79.87785339355469,
+          "value": 2236.5798950195312
+        },
+        {
+          "date": "2024-10-27 00:00:00",
+          "symbol": "ISCTR",
+          "action": "buy",
+          "shares": 235,
+          "price": 11.657689094543455,
+          "value": 2739.556937217712
+        },
+        {
+          "date": "2024-10-27 00:00:00",
+          "symbol": "THYAO",
+          "action": "buy",
+          "shares": 9,
+          "price": 272.3981018066406,
+          "value": 2451.5829162597656
+        },
+        {
+          "date": "2024-11-11 00:00:00",
+          "symbol": "ENKAI",
+          "action": "sell",
+          "shares": 100,
+          "price": 50.1723747253418,
+          "value": 5017.23747253418
+        },
+        {
+          "date": "2024-11-26 00:00:00",
+          "symbol": "SISE",
+          "action": "sell",
+          "shares": 56,
+          "price": 39.76650619506836,
+          "value": 2226.924346923828
+        },
+        {
+          "date": "2024-12-11 00:00:00",
+          "symbol": "GARAN",
+          "action": "sell",
+          "shares": 20,
+          "price": 121.50730895996094,
+          "value": 2430.1461791992188
+        }
+      ],
+      "final_positions": {
+        "ISCTR": 235,
+        "ULKER": 15,
+        "PETKM": 164,
+        "EREGL": 141,
+        "KRDMD": 106,
+        "THYAO": 9,
+        "KOZAL": 110
+      }
+    },
+    "balanced": {
+      "name": "Balanced (Multi-Indicator)",
+      "description": "Balanced approach - ADX + WaveTrend confirmation",
+      "indicators": [
+        "ADX",
+        "WaveTrend"
+      ],
+      "stats": {
+        "total_return": 0.9989633903503492,
+        "sharpe_ratio": 2.293719685799713,
+        "max_drawdown": -0.5728176312184511,
+        "total_trades": 2,
+        "completed_trades": 1,
+        "win_rate": 100.0,
+        "current_positions": 1,
+        "current_value": 50499.48169517517,
+        "current_cash": 44171.13143348694
+      },
+      "equity_curve": [
+        50000,
+        50000,
+        50000,
+        50000,
+        50000,
+        50000.0,
+        50755.92042541504,
+        50465.181564331055,
+        50465.181564331055,
+        50465.181564331055,
+        50465.181564331055,
+        50465.181564331055,
+        50465.181564331055,
+        50465.181564331055,
+        50465.181564331055,
+        50468.611642837524,
+        50616.10174751282,
+        50499.48169517517
+      ],
+      "trades": [
+        {
+          "date": "2024-06-29 00:00:00",
+          "symbol": "SAHOL",
+          "action": "buy",
+          "shares": 67,
+          "price": 93.0556182861328,
+          "value": 6234.7264251708975
+        },
+        {
+          "date": "2024-07-29 00:00:00",
+          "symbol": "SAHOL",
+          "action": "sell",
+          "shares": 67,
+          "price": 99.99862670898438,
+          "value": 6699.907989501953
+        },
+        {
+          "date": "2024-11-11 00:00:00",
+          "symbol": "PETKM",
+          "action": "buy",
+          "shares": 343,
+          "price": 18.350000381469727,
+          "value": 6294.050130844116
+        }
+      ],
+      "final_positions": {
+        "PETKM": 343
+      }
+    },
+    "conservative": {
+      "name": "Conservative (MACD + ADX)",
+      "description": "Low risk, steady gains - MACD + ADX",
+      "indicators": [
+        "MACD",
+        "ADX"
+      ],
+      "stats": {
+        "total_return": 2.1076964645385665,
+        "sharpe_ratio": 0.9704201123029345,
+        "max_drawdown": -10.181609789337521,
+        "total_trades": 9,
+        "completed_trades": 4,
+        "win_rate": 50.0,
+        "current_positions": 5,
+        "current_value": 51053.84823226929,
+        "current_cash": 21200.298332214355
+      },
+      "equity_curve": [
+        50000,
+        50000.0,
+        49907.30023574829,
+        51561.0225982666,
+        51243.74696350098,
+        51917.80392074585,
+        52563.70227622986,
+        51741.91156387329,
+        49422.39064216614,
+        49508.307470321655,
+        48849.61986541748,
+        50115.47517776489,
+        47607.00839614868,
+        47211.87121963501,
+        49120.42639160156,
+        49983.34453392029,
+        51404.798828125,
+        51053.84823226929
+      ],
+      "trades": [
+        {
+          "date": "2024-04-30 00:00:00",
+          "symbol": "YKBNK",
+          "action": "buy",
+          "shares": 309,
+          "price": 32.279998779296875,
+          "value": 9974.519622802734
+        },
+        {
+          "date": "2024-05-15 00:00:00",
+          "symbol": "AKSEN",
+          "action": "buy",
+          "shares": 201,
+          "price": 39.65180587768555,
+          "value": 7970.012981414795
+        },
+        {
+          "date": "2024-05-30 00:00:00",
+          "symbol": "TCELL",
+          "action": "buy",
+          "shares": 70,
+          "price": 90.9429702758789,
+          "value": 6366.007919311523
+        },
+        {
+          "date": "2024-05-30 00:00:00",
+          "symbol": "AKSEN",
+          "action": "sell",
+          "shares": 201,
+          "price": 44.43569564819336,
+          "value": 8931.574825286865
+        },
+        {
+          "date": "2024-06-14 00:00:00",
+          "symbol": "KRDMD",
+          "action": "buy",
+          "shares": 230,
+          "price": 30.100000381469727,
+          "value": 6923.000087738037
+        },
+        {
+          "date": "2024-06-14 00:00:00",
+          "symbol": "ASELS",
+          "action": "buy",
+          "shares": 93,
+          "price": 59.25309371948242,
+          "value": 5510.537715911865
+        },
+        {
+          "date": "2024-06-14 00:00:00",
+          "symbol": "ENKAI",
+          "action": "buy",
+          "shares": 109,
+          "price": 40.48491668701172,
+          "value": 4412.855918884277
+        },
+        {
+          "date": "2024-09-27 00:00:00",
+          "symbol": "ASELS",
+          "action": "sell",
+          "shares": 93,
+          "price": 59.15325927734375,
+          "value": 5501.253112792969
+        },
+        {
+          "date": "2024-10-12 00:00:00",
+          "symbol": "AKSEN",
+          "action": "buy",
+          "shares": 130,
+          "price": 35.7599983215332,
+          "value": 4648.799781799316
+        },
+        {
+          "date": "2024-12-11 00:00:00",
+          "symbol": "YKBNK",
+          "action": "sell",
+          "shares": 309,
+          "price": 30.86000061035156,
+          "value": 9535.740188598631
+        },
+        {
+          "date": "2024-12-11 00:00:00",
+          "symbol": "AKSEN",
+          "action": "sell",
+          "shares": 130,
+          "price": 35.91999816894531,
+          "value": 4669.599761962891
+        },
+        {
+          "date": "2024-12-26 00:00:00",
+          "symbol": "SAHOL",
+          "action": "buy",
+          "shares": 68,
+          "price": 95.80389404296876,
+          "value": 6514.664794921876
+        },
+        {
+          "date": "2024-12-26 00:00:00",
+          "symbol": "KCHOL",
+          "action": "buy",
+          "shares": 29,
+          "price": 176.46450805664062,
+          "value": 5117.470733642578
+        }
+      ],
+      "final_positions": {
+        "TCELL": 70,
+        "KRDMD": 230,
+        "ENKAI": 109,
+        "SAHOL": 68,
+        "KCHOL": 29
+      }
+    }
+  }
+}

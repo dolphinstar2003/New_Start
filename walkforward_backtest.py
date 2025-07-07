@@ -146,8 +146,70 @@ class WalkForwardBacktest:
                                (result['macd'].shift(1) <= result['signal'].shift(1))] = 1
                         signals[(result['macd'] < result['signal']) & 
                                (result['macd'].shift(1) >= result['signal'].shift(1))] = -1
+                    elif indicator == 'ADX':
+                        from indicators.adx_di import calculate_adx_di
+                        adx_params = params['params']
+                        result = calculate_adx_di(test_data, adx_params['adx_period'], adx_params['adx_threshold'])
+                        # ADX signals: DI crossovers when ADX > threshold
+                        signals = pd.Series(0, index=test_data.index)
+                        # Buy when +DI crosses above -DI and ADX > threshold
+                        buy_condition = (result['di_bullish_cross'] & 
+                                       (result['adx'] > adx_params['adx_threshold']))
+                        # Sell when -DI crosses above +DI or ADX < exit_threshold
+                        sell_condition = (result['di_bearish_cross'] | 
+                                        (result['adx'] < adx_params['adx_exit_threshold']))
+                        signals[buy_condition] = 1
+                        signals[sell_condition] = -1
+                    elif indicator == 'WaveTrend':
+                        from indicators.wavetrend import calculate_wavetrend
+                        wt_params = params['params']
+                        result = calculate_wavetrend(test_data, wt_params['wt_n1'], wt_params['wt_n2'])
+                        signals = pd.Series(0, index=test_data.index)
+                        # Buy when WT1 crosses above WT2 in oversold area
+                        buy_condition = ((result['wt1'] > result['wt2']) & 
+                                       (result['wt1'].shift(1) <= result['wt2'].shift(1)) &
+                                       (result['wt1'] < wt_params['wt_oversold']))
+                        # Sell when WT1 crosses below WT2 in overbought area
+                        sell_condition = ((result['wt1'] < result['wt2']) & 
+                                        (result['wt1'].shift(1) >= result['wt2'].shift(1)) &
+                                        (result['wt1'] > wt_params['wt_overbought']))
+                        signals[buy_condition] = 1
+                        signals[sell_condition] = -1
+                    elif indicator == 'Squeeze':
+                        from indicators.squeeze_momentum import calculate_squeeze_momentum
+                        sq_params = params['params']
+                        result = calculate_squeeze_momentum(
+                            test_data, sq_params['sq_bb_length'], sq_params['sq_bb_mult'],
+                            sq_params['sq_kc_length'], sq_params['sq_kc_mult'], sq_params['sq_mom_length']
+                        )
+                        signals = pd.Series(0, index=test_data.index)
+                        # Buy when momentum turns positive
+                        buy_condition = ((result['momentum'] > 0) & 
+                                       (result['momentum'].shift(1) <= 0))
+                        # Sell when momentum turns negative
+                        sell_condition = ((result['momentum'] < 0) & 
+                                        (result['momentum'].shift(1) >= 0))
+                        signals[buy_condition] = 1
+                        signals[sell_condition] = -1
+                    elif indicator == 'VixFix':
+                        from indicators.vixfix import calculate_vixfix
+                        vf_params = params['params']
+                        result = calculate_vixfix(
+                            test_data, vf_params['vf_lookback'], vf_params['vf_bb_length'], vf_params['vf_bb_mult']
+                        )
+                        signals = pd.Series(0, index=test_data.index)
+                        # Buy when VixFix spikes above upper band (high volatility = opportunity)
+                        buy_condition = (result['vixfix'] > result['bb_upper'])
+                        # Hold for specified days
+                        if 'vf_hold_days' in vf_params:
+                            hold_days = vf_params['vf_hold_days']
+                            # Create sell signals after hold period
+                            for i in range(len(buy_condition)):
+                                if buy_condition.iloc[i] and i + hold_days < len(signals):
+                                    signals.iloc[i + hold_days] = -1
+                        signals[buy_condition] = 1
                     else:
-                        # Add other indicators as needed
+                        # Unknown indicator
                         signals = pd.Series(0, index=test_data.index)
                 
                 # Calculate returns

@@ -1,0 +1,137 @@
+{
+  "optimization_date": "2025-07-07T07:03:04.608026",
+  "method": "regime_based_optuna",
+  "regimes_used": [
+    "bull_market",
+    "bear_market",
+    "sideways_market"
+  ],
+  "optimized_parameters": {
+    "bull_market": {
+      "Supertrend": {
+        "params": {
+          "st_period": 17,
+          "st_multiplier": 1.2808565206229277
+        },
+        "value": 0.9553154804269444,
+        "n_trials": 30,
+        "regime_data_count": 60
+      },
+      "MACD": {
+        "params": {
+          "macd_fast": 8,
+          "macd_slow": 32,
+          "macd_signal": 6
+        },
+        "value": 3.121049356843941,
+        "n_trials": 30,
+        "regime_data_count": 60
+      },
+      "ADX": {
+        "params": {
+          "adx_period": 24,
+          "adx_threshold": 34.153597832191934,
+          "adx_exit_threshold": 8.489017332966664
+        },
+        "value": 1.808383642670497,
+        "n_trials": 30,
+        "regime_data_count": 60
+      },
+      "WaveTrend": {
+        "params": {
+          "wt_n1": 18,
+          "wt_n2": 20,
+          "wt_overbought": 73,
+          "wt_oversold": -71
+        },
+        "value": 4.916614476621531,
+        "n_trials": 30,
+        "regime_data_count": 60
+      }
+    },
+    "bear_market": {
+      "Supertrend": {
+        "params": {
+          "st_period": 16,
+          "st_multiplier": 0.5210572372044869
+        },
+        "value": 13.418090637064918,
+        "n_trials": 30,
+        "regime_data_count": 60
+      },
+      "MACD": {
+        "params": {
+          "macd_fast": 5,
+          "macd_slow": 34,
+          "macd_signal": 3
+        },
+        "value": 13.571349760274494,
+        "n_trials": 30,
+        "regime_data_count": 60
+      },
+      "ADX": {
+        "params": {
+          "adx_period": 7,
+          "adx_threshold": 14.322050481225324,
+          "adx_exit_threshold": 8.569032151285338
+        },
+        "value": 17.033524106847416,
+        "n_trials": 30,
+        "regime_data_count": 60
+      },
+      "WaveTrend": {
+        "params": {
+          "wt_n1": 9,
+          "wt_n2": 19,
+          "wt_overbought": 80,
+          "wt_oversold": -39
+        },
+        "value": 6.4935659474765375,
+        "n_trials": 30,
+        "regime_data_count": 60
+      }
+    },
+    "sideways_market": {
+      "Supertrend": {
+        "params": {
+          "st_period": 20,
+          "st_multiplier": 0.5085532253727858
+        },
+        "value": 14.695695015859474,
+        "n_trials": 30,
+        "regime_data_count": 20
+      },
+      "MACD": {
+        "params": {
+          "macd_fast": 11,
+          "macd_slow": 46,
+          "macd_signal": 5
+        },
+        "value": 6.035192187113728,
+        "n_trials": 30,
+        "regime_data_count": 20
+      },
+      "ADX": {
+        "params": {
+          "adx_period": 19,
+          "adx_threshold": 19.017000963594377,
+          "adx_exit_threshold": 7.972852634175595
+        },
+        "value": 10.14370807407179,
+        "n_trials": 30,
+        "regime_data_count": 20
+      },
+      "WaveTrend": {
+        "params": {
+          "wt_n1": 7,
+          "wt_n2": 23,
+          "wt_overbought": 63,
+          "wt_oversold": -58
+        },
+        "value": 18.75992085844417,
+        "n_trials": 30,
+        "regime_data_count": 20
+      }
+    }
+  }
+}

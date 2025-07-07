@@ -1,19 +1,179 @@
 [
   {
-    "indicator": "MACD",
-    "total_periods": 3,
-    "avg_in_sample_return": 3585.1840444335517,
-    "avg_out_sample_return": 0.0,
-    "std_out_sample_return": 0.0,
-    "sharpe_ratio": 0,
-    "win_periods": 0,
-    "win_period_rate": 0.0,
-    "total_return": 0.0,
-    "max_drawdown": 0,
+    "indicator": "Supertrend",
+    "total_periods": 10,
+    "avg_in_sample_return": 41347.87421103341,
+    "avg_out_sample_return": -0.09538904973849371,
+    "std_out_sample_return": 1.8449455854536223,
+    "sharpe_ratio": -0.051702906844832565,
+    "win_periods": 3,
+    "win_period_rate": 30.0,
+    "total_return": -1.1185189519437984,
+    "max_drawdown": 6.3590634366535,
     "results": [
       {
-        "optimization_period": "2023-06-01 to 2023-07-31",
-        "test_period": "2023-07-31 to 2023-08-10",
+        "optimization_period": "2024-01-01 to 2024-03-01",
+        "test_period": "2024-03-01 to 2024-03-16",
+        "in_sample_return": 41347.87421103341,
+        "out_sample_return": -0.13592774310025985,
+        "trades": 17,
+        "win_rate": 41.17647058823529,
+        "parameters": {
+          "st_period": 6,
+          "st_multiplier": 0.500137776222671
+        }
+      },
+      {
+        "optimization_period": "2024-01-31 to 2024-03-31",
+        "test_period": "2024-03-31 to 2024-04-15",
+        "in_sample_return": 41347.87421103341,
+        "out_sample_return": 0,
+        "trades": 0,
+        "win_rate": 0,
+        "parameters": {
+          "st_period": 6,
+          "st_multiplier": 0.500137776222671
+        }
+      },
+      {
+        "optimization_period": "2024-03-01 to 2024-04-30",
+        "test_period": "2024-04-30 to 2024-05-15",
+        "in_sample_return": 41347.87421103341,
+        "out_sample_return": -0.642977661186756,
+        "trades": 12,
+        "win_rate": 16.666666666666664,
+        "parameters": {
+          "st_period": 6,
+          "st_multiplier": 0.500137776222671
+        }
+      },
+      {
+        "optimization_period": "2024-03-31 to 2024-05-30",
+        "test_period": "2024-05-30 to 2024-06-14",
+        "in_sample_return": 41347.87421103341,
+        "out_sample_return": -0.11982118422692752,
+        "trades": 27,
+        "win_rate": 40.74074074074074,
+        "parameters": {
+          "st_period": 6,
+          "st_multiplier": 0.500137776222671
+        }
+      },
+      {
+        "optimization_period": "2024-04-30 to 2024-06-29",
+        "test_period": "2024-06-29 to 2024-07-14",
+        "in_sample_return": 41347.87421103341,
+        "out_sample_return": 0.27053585579778205,
+        "trades": 10,
+        "win_rate": 40.0,
+        "parameters": {
+          "st_period": 6,
+          "st_multiplier": 0.500137776222671
+        }
+      },
+      {
+        "optimization_period": "2024-05-30 to 2024-07-29",
+        "test_period": "2024-07-29 to 2024-08-13",
+        "in_sample_return": 41347.87421103341,
+        "out_sample_return": -3.805125129383591,
+        "trades": 25,
+        "win_rate": 12.0,
+        "parameters": {
+          "st_period": 6,
+          "st_multiplier": 0.500137776222671
+        }
+      },
+      {
+        "optimization_period": "2024-06-29 to 2024-08-28",
+        "test_period": "2024-08-28 to 2024-09-12",
+        "in_sample_return": 41347.87421103341,
+        "out_sample_return": -0.5590019722878036,
+        "trades": 9,
+        "win_rate": 11.11111111111111,
+        "parameters": {
+          "st_period": 6,
+          "st_multiplier": 0.500137776222671
+        }
+      },
+      {
+        "optimization_period": "2024-07-29 to 2024-09-27",
+        "test_period": "2024-09-27 to 2024-10-12",
+        "in_sample_return": 41347.87421103341,
+        "out_sample_return": -1.488290869090351,
+        "trades": 15,
+        "win_rate": 20.0,
+        "parameters": {
+          "st_period": 6,
+          "st_multiplier": 0.500137776222671
+        }
+      },
+      {
+        "optimization_period": "2024-08-28 to 2024-10-27",
+        "test_period": "2024-10-27 to 2024-11-11",
+        "in_sample_return": 41347.87421103341,
+        "out_sample_return": 3.579144681575339,
+        "trades": 23,
+        "win_rate": 73.91304347826086,
+        "parameters": {
+          "st_period": 6,
+          "st_multiplier": 0.500137776222671
+        }
+      },
+      {
+        "optimization_period": "2024-09-27 to 2024-11-26",
+        "test_period": "2024-11-26 to 2024-12-11",
+        "in_sample_return": 41347.87421103341,
+        "out_sample_return": 1.94757352451763,
+        "trades": 15,
+        "win_rate": 80.0,
+        "parameters": {
+          "st_period": 6,
+          "st_multiplier": 0.500137776222671
+        }
+      }
+    ],
+    "equity_curve": [
+      100,
+      99.86407225689973,
+      99.86407225689973,
+      99.22196858073646,
+      99.10307964296975,
+      99.3711890076038,
+      95.5899909233082,
+      95.05564098873718,
+      93.6409365633465,
+      96.99248116413085,
+      98.8814810480562
+    ]
+  },
+  {
+    "indicator": "MACD",
+    "total_periods": 10,
+    "avg_in_sample_return": 3585.1840444335517,
+    "avg_out_sample_return": -0.2786696867129272,
+    "std_out_sample_return": 0.9642735234477774,
+    "sharpe_ratio": -0.2889944397898002,
+    "win_periods": 3,
+    "win_period_rate": 30.0,
+    "total_return": -2.7974963990194226,
+    "max_drawdown": 4.821855434461938,
+    "results": [
+      {
+        "optimization_period": "2024-01-01 to 2024-03-01",
+        "test_period": "2024-03-01 to 2024-03-16",
+        "in_sample_return": 3585.1840444335517,
+        "out_sample_return": -1.5137784827771912,
+        "trades": 10,
+        "win_rate": 0.0,
+        "parameters": {
+          "macd_fast": 8,
+          "macd_slow": 21,
+          "macd_signal": 5
+        }
+      },
+      {
+        "optimization_period": "2024-01-31 to 2024-03-31",
+        "test_period": "2024-03-31 to 2024-04-15",
         "in_sample_return": 3585.1840444335517,
         "out_sample_return": 0,
         "trades": 0,
@@ -25,12 +185,12 @@
         }
       },
       {
-        "optimization_period": "2023-06-11 to 2023-08-10",
-        "test_period": "2023-08-10 to 2023-08-20",
+        "optimization_period": "2024-03-01 to 2024-04-30",
+        "test_period": "2024-04-30 to 2024-05-15",
         "in_sample_return": 3585.1840444335517,
-        "out_sample_return": 0,
-        "trades": 0,
-        "win_rate": 0,
+        "out_sample_return": -0.0942142856940812,
+        "trades": 4,
+        "win_rate": 50.0,
         "parameters": {
           "macd_fast": 8,
           "macd_slow": 21,
@@ -38,12 +198,90 @@
         }
       },
       {
-        "optimization_period": "2023-06-21 to 2023-08-20",
-        "test_period": "2023-08-20 to 2023-08-30",
+        "optimization_period": "2024-03-31 to 2024-05-30",
+        "test_period": "2024-05-30 to 2024-06-14",
         "in_sample_return": 3585.1840444335517,
-        "out_sample_return": 0,
-        "trades": 0,
-        "win_rate": 0,
+        "out_sample_return": -0.16753864985658273,
+        "trades": 18,
+        "win_rate": 38.88888888888889,
+        "parameters": {
+          "macd_fast": 8,
+          "macd_slow": 21,
+          "macd_signal": 5
+        }
+      },
+      {
+        "optimization_period": "2024-04-30 to 2024-06-29",
+        "test_period": "2024-06-29 to 2024-07-14",
+        "in_sample_return": 3585.1840444335517,
+        "out_sample_return": 0.3243747392314644,
+        "trades": 7,
+        "win_rate": 71.42857142857143,
+        "parameters": {
+          "macd_fast": 8,
+          "macd_slow": 21,
+          "macd_signal": 5
+        }
+      },
+      {
+        "optimization_period": "2024-05-30 to 2024-07-29",
+        "test_period": "2024-07-29 to 2024-08-13",
+        "in_sample_return": 3585.1840444335517,
+        "out_sample_return": -1.1720487334306495,
+        "trades": 8,
+        "win_rate": 0.0,
+        "parameters": {
+          "macd_fast": 8,
+          "macd_slow": 21,
+          "macd_signal": 5
+        }
+      },
+      {
+        "optimization_period": "2024-06-29 to 2024-08-28",
+        "test_period": "2024-08-28 to 2024-09-12",
+        "in_sample_return": 3585.1840444335517,
+        "out_sample_return": -0.37496646444729553,
+        "trades": 3,
+        "win_rate": 0.0,
+        "parameters": {
+          "macd_fast": 8,
+          "macd_slow": 21,
+          "macd_signal": 5
+        }
+      },
+      {
+        "optimization_period": "2024-07-29 to 2024-09-27",
+        "test_period": "2024-09-27 to 2024-10-12",
+        "in_sample_return": 3585.1840444335517,
+        "out_sample_return": -1.9055118601690513,
+        "trades": 13,
+        "win_rate": 0.0,
+        "parameters": {
+          "macd_fast": 8,
+          "macd_slow": 21,
+          "macd_signal": 5
+        }
+      },
+      {
+        "optimization_period": "2024-08-28 to 2024-10-27",
+        "test_period": "2024-10-27 to 2024-11-11",
+        "in_sample_return": 3585.1840444335517,
+        "out_sample_return": 1.4155803920692833,
+        "trades": 18,
+        "win_rate": 66.66666666666666,
+        "parameters": {
+          "macd_fast": 8,
+          "macd_slow": 21,
+          "macd_signal": 5
+        }
+      },
+      {
+        "optimization_period": "2024-09-27 to 2024-11-26",
+        "test_period": "2024-11-26 to 2024-12-11",
+        "in_sample_return": 3585.1840444335517,
+        "out_sample_return": 0.701406477944832,
+        "trades": 6,
+        "win_rate": 83.33333333333334,
         "parameters": {
           "macd_fast": 8,
           "macd_slow": 21,
@@ -53,6 +291,798 @@
     ],
     "equity_curve": [
       100,
+      98.4862215172228,
+      98.4862215172228,
+      98.39343342711325,
+      98.22858639720194,
+      98.54721511817861,
+      97.39219373155483,
+      97.02700566607196,
+      95.17814456553806,
+      96.52546771754318,
+      97.20250360098058
+    ]
+  },
+  {
+    "indicator": "ADX",
+    "total_periods": 10,
+    "avg_in_sample_return": 3603.584347431022,
+    "avg_out_sample_return": -0.32865140851731656,
+    "std_out_sample_return": 1.536061040909591,
+    "sharpe_ratio": -0.21395725805447352,
+    "win_periods": 3,
+    "win_period_rate": 30.0,
+    "total_return": -3.353237701628757,
+    "max_drawdown": 6.682134481636027,
+    "results": [
+      {
+        "optimization_period": "2024-01-01 to 2024-03-01",
+        "test_period": "2024-03-01 to 2024-03-16",
+        "in_sample_return": 3603.584347431022,
+        "out_sample_return": -1.2493101703815224,
+        "trades": 13,
+        "win_rate": 7.6923076923076925,
+        "parameters": {
+          "adx_period": 7,
+          "adx_threshold": 15.031027985021474,
+          "adx_exit_threshold": 11.909229456219547
+        }
+      },
+      {
+        "optimization_period": "2024-01-31 to 2024-03-31",
+        "test_period": "2024-03-31 to 2024-04-15",
+        "in_sample_return": 3603.584347431022,
+        "out_sample_return": 0,
+        "trades": 0,
+        "win_rate": 0,
+        "parameters": {
+          "adx_period": 7,
+          "adx_threshold": 15.031027985021474,
+          "adx_exit_threshold": 11.909229456219547
+        }
+      },
+      {
+        "optimization_period": "2024-03-01 to 2024-04-30",
+        "test_period": "2024-04-30 to 2024-05-15",
+        "in_sample_return": 3603.584347431022,
+        "out_sample_return": -0.8668858522591968,
+        "trades": 12,
+        "win_rate": 25.0,
+        "parameters": {
+          "adx_period": 7,
+          "adx_threshold": 15.031027985021474,
+          "adx_exit_threshold": 11.909229456219547
+        }
+      },
+      {
+        "optimization_period": "2024-03-31 to 2024-05-30",
+        "test_period": "2024-05-30 to 2024-06-14",
+        "in_sample_return": 3603.584347431022,
+        "out_sample_return": -0.46158684400625694,
+        "trades": 19,
+        "win_rate": 36.84210526315789,
+        "parameters": {
+          "adx_period": 7,
+          "adx_threshold": 15.031027985021474,
+          "adx_exit_threshold": 11.909229456219547
+        }
+      },
+      {
+        "optimization_period": "2024-04-30 to 2024-06-29",
+        "test_period": "2024-06-29 to 2024-07-14",
+        "in_sample_return": 3603.584347431022,
+        "out_sample_return": 1.2571721168201244,
+        "trades": 14,
+        "win_rate": 57.14285714285714,
+        "parameters": {
+          "adx_period": 7,
+          "adx_threshold": 15.031027985021474,
+          "adx_exit_threshold": 11.909229456219547
+        }
+      },
+      {
+        "optimization_period": "2024-05-30 to 2024-07-29",
+        "test_period": "2024-07-29 to 2024-08-13",
+        "in_sample_return": 3603.584347431022,
+        "out_sample_return": -3.021726055848447,
+        "trades": 16,
+        "win_rate": 6.25,
+        "parameters": {
+          "adx_period": 7,
+          "adx_threshold": 15.031027985021474,
+          "adx_exit_threshold": 11.909229456219547
+        }
+      },
+      {
+        "optimization_period": "2024-06-29 to 2024-08-28",
+        "test_period": "2024-08-28 to 2024-09-12",
+        "in_sample_return": 3603.584347431022,
+        "out_sample_return": -2.1464101396150697,
+        "trades": 16,
+        "win_rate": 12.5,
+        "parameters": {
+          "adx_period": 7,
+          "adx_threshold": 15.031027985021474,
+          "adx_exit_threshold": 11.909229456219547
+        }
+      },
+      {
+        "optimization_period": "2024-07-29 to 2024-09-27",
+        "test_period": "2024-09-27 to 2024-10-12",
+        "in_sample_return": 3603.584347431022,
+        "out_sample_return": -0.33602858933261526,
+        "trades": 6,
+        "win_rate": 33.33333333333333,
+        "parameters": {
+          "adx_period": 7,
+          "adx_threshold": 15.031027985021474,
+          "adx_exit_threshold": 11.909229456219547
+        }
+      },
+      {
+        "optimization_period": "2024-08-28 to 2024-10-27",
+        "test_period": "2024-10-27 to 2024-11-11",
+        "in_sample_return": 3603.584347431022,
+        "out_sample_return": 1.2902390514546442,
+        "trades": 18,
+        "win_rate": 66.66666666666666,
+        "parameters": {
+          "adx_period": 7,
+          "adx_threshold": 15.031027985021474,
+          "adx_exit_threshold": 11.909229456219547
+        }
+      },
+      {
+        "optimization_period": "2024-09-27 to 2024-11-26",
+        "test_period": "2024-11-26 to 2024-12-11",
+        "in_sample_return": 3603.584347431022,
+        "out_sample_return": 2.2480223979951743,
+        "trades": 14,
+        "win_rate": 92.85714285714286,
+        "parameters": {
+          "adx_period": 7,
+          "adx_threshold": 15.031027985021474,
+          "adx_exit_threshold": 11.909229456219547
+        }
+      }
+    ],
+    "equity_curve": [
+      100,
+      98.75068982961848,
+      98.75068982961848,
+      97.89463407047717,
+      97.44276531861978,
+      98.66778859406394,
+      95.68631831738765,
+      93.63249747879888,
+      93.31786551836397,
+      94.52188906126584,
+      96.64676229837124
+    ]
+  },
+  {
+    "indicator": "WaveTrend",
+    "total_periods": 10,
+    "avg_in_sample_return": 147.5,
+    "avg_out_sample_return": -0.1746441817432635,
+    "std_out_sample_return": 0.8872996811406477,
+    "sharpe_ratio": -0.19682660261835513,
+    "win_periods": 4,
+    "win_period_rate": 40.0,
+    "total_return": -1.7717514881331908,
+    "max_drawdown": 3.3883135283004435,
+    "results": [
+      {
+        "optimization_period": "2024-01-01 to 2024-03-01",
+        "test_period": "2024-03-01 to 2024-03-16",
+        "in_sample_return": 147.5,
+        "out_sample_return": -2.112775072488348,
+        "trades": 12,
+        "win_rate": 0.0,
+        "parameters": {
+          "wt_n1": 13,
+          "wt_n2": 15,
+          "wt_overbought": 70,
+          "wt_oversold": -50
+        }
+      },
+      {
+        "optimization_period": "2024-01-31 to 2024-03-31",
+        "test_period": "2024-03-31 to 2024-04-15",
+        "in_sample_return": 147.5,
+        "out_sample_return": 0,
+        "trades": 0,
+        "win_rate": 0,
+        "parameters": {
+          "wt_n1": 13,
+          "wt_n2": 15,
+          "wt_overbought": 70,
+          "wt_oversold": -50
+        }
+      },
+      {
+        "optimization_period": "2024-03-01 to 2024-04-30",
+        "test_period": "2024-04-30 to 2024-05-15",
+        "in_sample_return": 147.5,
+        "out_sample_return": 0.06975247525949979,
+        "trades": 3,
+        "win_rate": 33.33333333333333,
+        "parameters": {
+          "wt_n1": 13,
+          "wt_n2": 15,
+          "wt_overbought": 70,
+          "wt_oversold": -50
+        }
+      },
+      {
+        "optimization_period": "2024-03-31 to 2024-05-30",
+        "test_period": "2024-05-30 to 2024-06-14",
+        "in_sample_return": 147.5,
+        "out_sample_return": 0.5526443341475779,
+        "trades": 7,
+        "win_rate": 85.71428571428571,
+        "parameters": {
+          "wt_n1": 13,
+          "wt_n2": 15,
+          "wt_overbought": 70,
+          "wt_oversold": -50
+        }
+      },
+      {
+        "optimization_period": "2024-04-30 to 2024-06-29",
+        "test_period": "2024-06-29 to 2024-07-14",
+        "in_sample_return": 147.5,
+        "out_sample_return": 0,
+        "trades": 0,
+        "win_rate": 0,
+        "parameters": {
+          "wt_n1": 13,
+          "wt_n2": 15,
+          "wt_overbought": 70,
+          "wt_oversold": -50
+        }
+      },
+      {
+        "optimization_period": "2024-05-30 to 2024-07-29",
+        "test_period": "2024-07-29 to 2024-08-13",
+        "in_sample_return": 147.5,
+        "out_sample_return": -0.7878189688534175,
+        "trades": 12,
+        "win_rate": 8.333333333333332,
+        "parameters": {
+          "wt_n1": 13,
+          "wt_n2": 15,
+          "wt_overbought": 70,
+          "wt_oversold": -50
+        }
+      },
+      {
+        "optimization_period": "2024-06-29 to 2024-08-28",
+        "test_period": "2024-08-28 to 2024-09-12",
+        "in_sample_return": 147.5,
+        "out_sample_return": -0.10291585517105777,
+        "trades": 2,
+        "win_rate": 0.0,
+        "parameters": {
+          "wt_n1": 13,
+          "wt_n2": 15,
+          "wt_overbought": 70,
+          "wt_oversold": -50
+        }
+      },
+      {
+        "optimization_period": "2024-07-29 to 2024-09-27",
+        "test_period": "2024-09-27 to 2024-10-12",
+        "in_sample_return": 147.5,
+        "out_sample_return": -1.0332027295284198,
+        "trades": 16,
+        "win_rate": 12.5,
+        "parameters": {
+          "wt_n1": 13,
+          "wt_n2": 15,
+          "wt_overbought": 70,
+          "wt_oversold": -50
+        }
+      },
+      {
+        "optimization_period": "2024-08-28 to 2024-10-27",
+        "test_period": "2024-10-27 to 2024-11-11",
+        "in_sample_return": 147.5,
+        "out_sample_return": 1.2303290713240904,
+        "trades": 11,
+        "win_rate": 63.63636363636363,
+        "parameters": {
+          "wt_n1": 13,
+          "wt_n2": 15,
+          "wt_overbought": 70,
+          "wt_oversold": -50
+        }
+      },
+      {
+        "optimization_period": "2024-09-27 to 2024-11-26",
+        "test_period": "2024-11-26 to 2024-12-11",
+        "in_sample_return": 147.5,
+        "out_sample_return": 0.4375449278774402,
+        "trades": 3,
+        "win_rate": 100.0,
+        "parameters": {
+          "wt_n1": 13,
+          "wt_n2": 15,
+          "wt_overbought": 70,
+          "wt_oversold": -50
+        }
+      }
+    ],
+    "equity_curve": [
+      100,
+      97.88722492751165,
+      97.88722492751165,
+      97.95550368986143,
+      98.49684923098916,
+      98.49684923098916,
+      97.72087236902448,
+      97.62030209754528,
+      96.61168647169956,
+      97.80032813665737,
+      98.22824851186681
+    ]
+  },
+  {
+    "indicator": "Squeeze",
+    "total_periods": 10,
+    "avg_in_sample_return": 254.06,
+    "avg_out_sample_return": 0.0,
+    "std_out_sample_return": 0.0,
+    "sharpe_ratio": 0,
+    "win_periods": 0,
+    "win_period_rate": 0.0,
+    "total_return": 0.0,
+    "max_drawdown": 0,
+    "results": [
+      {
+        "optimization_period": "2024-01-01 to 2024-03-01",
+        "test_period": "2024-03-01 to 2024-03-16",
+        "in_sample_return": 254.06,
+        "out_sample_return": 0,
+        "trades": 0,
+        "win_rate": 0,
+        "parameters": {
+          "sq_bb_length": 20,
+          "sq_bb_mult": 2.0,
+          "sq_kc_length": 20,
+          "sq_kc_mult": 1.5,
+          "sq_mom_length": 12
+        }
+      },
+      {
+        "optimization_period": "2024-01-31 to 2024-03-31",
+        "test_period": "2024-03-31 to 2024-04-15",
+        "in_sample_return": 254.06,
+        "out_sample_return": 0,
+        "trades": 0,
+        "win_rate": 0,
+        "parameters": {
+          "sq_bb_length": 20,
+          "sq_bb_mult": 2.0,
+          "sq_kc_length": 20,
+          "sq_kc_mult": 1.5,
+          "sq_mom_length": 12
+        }
+      },
+      {
+        "optimization_period": "2024-03-01 to 2024-04-30",
+        "test_period": "2024-04-30 to 2024-05-15",
+        "in_sample_return": 254.06,
+        "out_sample_return": 0,
+        "trades": 0,
+        "win_rate": 0,
+        "parameters": {
+          "sq_bb_length": 20,
+          "sq_bb_mult": 2.0,
+          "sq_kc_length": 20,
+          "sq_kc_mult": 1.5,
+          "sq_mom_length": 12
+        }
+      },
+      {
+        "optimization_period": "2024-03-31 to 2024-05-30",
+        "test_period": "2024-05-30 to 2024-06-14",
+        "in_sample_return": 254.06,
+        "out_sample_return": 0,
+        "trades": 0,
+        "win_rate": 0,
+        "parameters": {
+          "sq_bb_length": 20,
+          "sq_bb_mult": 2.0,
+          "sq_kc_length": 20,
+          "sq_kc_mult": 1.5,
+          "sq_mom_length": 12
+        }
+      },
+      {
+        "optimization_period": "2024-04-30 to 2024-06-29",
+        "test_period": "2024-06-29 to 2024-07-14",
+        "in_sample_return": 254.06,
+        "out_sample_return": 0,
+        "trades": 0,
+        "win_rate": 0,
+        "parameters": {
+          "sq_bb_length": 20,
+          "sq_bb_mult": 2.0,
+          "sq_kc_length": 20,
+          "sq_kc_mult": 1.5,
+          "sq_mom_length": 12
+        }
+      },
+      {
+        "optimization_period": "2024-05-30 to 2024-07-29",
+        "test_period": "2024-07-29 to 2024-08-13",
+        "in_sample_return": 254.06,
+        "out_sample_return": 0,
+        "trades": 0,
+        "win_rate": 0,
+        "parameters": {
+          "sq_bb_length": 20,
+          "sq_bb_mult": 2.0,
+          "sq_kc_length": 20,
+          "sq_kc_mult": 1.5,
+          "sq_mom_length": 12
+        }
+      },
+      {
+        "optimization_period": "2024-06-29 to 2024-08-28",
+        "test_period": "2024-08-28 to 2024-09-12",
+        "in_sample_return": 254.06,
+        "out_sample_return": 0,
+        "trades": 0,
+        "win_rate": 0,
+        "parameters": {
+          "sq_bb_length": 20,
+          "sq_bb_mult": 2.0,
+          "sq_kc_length": 20,
+          "sq_kc_mult": 1.5,
+          "sq_mom_length": 12
+        }
+      },
+      {
+        "optimization_period": "2024-07-29 to 2024-09-27",
+        "test_period": "2024-09-27 to 2024-10-12",
+        "in_sample_return": 254.06,
+        "out_sample_return": 0,
+        "trades": 0,
+        "win_rate": 0,
+        "parameters": {
+          "sq_bb_length": 20,
+          "sq_bb_mult": 2.0,
+          "sq_kc_length": 20,
+          "sq_kc_mult": 1.5,
+          "sq_mom_length": 12
+        }
+      },
+      {
+        "optimization_period": "2024-08-28 to 2024-10-27",
+        "test_period": "2024-10-27 to 2024-11-11",
+        "in_sample_return": 254.06,
+        "out_sample_return": 0,
+        "trades": 0,
+        "win_rate": 0,
+        "parameters": {
+          "sq_bb_length": 20,
+          "sq_bb_mult": 2.0,
+          "sq_kc_length": 20,
+          "sq_kc_mult": 1.5,
+          "sq_mom_length": 12
+        }
+      },
+      {
+        "optimization_period": "2024-09-27 to 2024-11-26",
+        "test_period": "2024-11-26 to 2024-12-11",
+        "in_sample_return": 254.06,
+        "out_sample_return": 0,
+        "trades": 0,
+        "win_rate": 0,
+        "parameters": {
+          "sq_bb_length": 20,
+          "sq_bb_mult": 2.0,
+          "sq_kc_length": 20,
+          "sq_kc_mult": 1.5,
+          "sq_mom_length": 12
+        }
+      }
+    ],
+    "equity_curve": [
+      100,
+      100.0,
+      100.0,
+      100.0,
+      100.0,
+      100.0,
+      100.0,
+      100.0,
+      100.0,
+      100.0,
+      100.0
+    ]
+  },
+  {
+    "indicator": "VixFix",
+    "total_periods": 10,
+    "avg_in_sample_return": -100.0,
+    "avg_out_sample_return": 0.0,
+    "std_out_sample_return": 0.0,
+    "sharpe_ratio": 0,
+    "win_periods": 0,
+    "win_period_rate": 0.0,
+    "total_return": 0.0,
+    "max_drawdown": 0,
+    "results": [
+      {
+        "optimization_period": "2024-01-01 to 2024-03-01",
+        "test_period": "2024-03-01 to 2024-03-16",
+        "in_sample_return": -100.0,
+        "out_sample_return": 0,
+        "trades": 0,
+        "win_rate": 0,
+        "parameters": {
+          "vf_lookback": 21,
+          "vf_bb_length": 25,
+          "vf_bb_mult": 2.0037901490166563,
+          "vf_hold_days": 6
+        }
+      },
+      {
+        "optimization_period": "2024-01-31 to 2024-03-31",
+        "test_period": "2024-03-31 to 2024-04-15",
+        "in_sample_return": -100.0,
+        "out_sample_return": 0,
+        "trades": 0,
+        "win_rate": 0,
+        "parameters": {
+          "vf_lookback": 21,
+          "vf_bb_length": 25,
+          "vf_bb_mult": 2.0037901490166563,
+          "vf_hold_days": 6
+        }
+      },
+      {
+        "optimization_period": "2024-03-01 to 2024-04-30",
+        "test_period": "2024-04-30 to 2024-05-15",
+        "in_sample_return": -100.0,
+        "out_sample_return": 0,
+        "trades": 0,
+        "win_rate": 0,
+        "parameters": {
+          "vf_lookback": 21,
+          "vf_bb_length": 25,
+          "vf_bb_mult": 2.0037901490166563,
+          "vf_hold_days": 6
+        }
+      },
+      {
+        "optimization_period": "2024-03-31 to 2024-05-30",
+        "test_period": "2024-05-30 to 2024-06-14",
+        "in_sample_return": -100.0,
+        "out_sample_return": 0,
+        "trades": 0,
+        "win_rate": 0,
+        "parameters": {
+          "vf_lookback": 21,
+          "vf_bb_length": 25,
+          "vf_bb_mult": 2.0037901490166563,
+          "vf_hold_days": 6
+        }
+      },
+      {
+        "optimization_period": "2024-04-30 to 2024-06-29",
+        "test_period": "2024-06-29 to 2024-07-14",
+        "in_sample_return": -100.0,
+        "out_sample_return": 0,
+        "trades": 0,
+        "win_rate": 0,
+        "parameters": {
+          "vf_lookback": 21,
+          "vf_bb_length": 25,
+          "vf_bb_mult": 2.0037901490166563,
+          "vf_hold_days": 6
+        }
+      },
+      {
+        "optimization_period": "2024-05-30 to 2024-07-29",
+        "test_period": "2024-07-29 to 2024-08-13",
+        "in_sample_return": -100.0,
+        "out_sample_return": 0,
+        "trades": 0,
+        "win_rate": 0,
+        "parameters": {
+          "vf_lookback": 21,
+          "vf_bb_length": 25,
+          "vf_bb_mult": 2.0037901490166563,
+          "vf_hold_days": 6
+        }
+      },
+      {
+        "optimization_period": "2024-06-29 to 2024-08-28",
+        "test_period": "2024-08-28 to 2024-09-12",
+        "in_sample_return": -100.0,
+        "out_sample_return": 0,
+        "trades": 0,
+        "win_rate": 0,
+        "parameters": {
+          "vf_lookback": 21,
+          "vf_bb_length": 25,
+          "vf_bb_mult": 2.0037901490166563,
+          "vf_hold_days": 6
+        }
+      },
+      {
+        "optimization_period": "2024-07-29 to 2024-09-27",
+        "test_period": "2024-09-27 to 2024-10-12",
+        "in_sample_return": -100.0,
+        "out_sample_return": 0,
+        "trades": 0,
+        "win_rate": 0,
+        "parameters": {
+          "vf_lookback": 21,
+          "vf_bb_length": 25,
+          "vf_bb_mult": 2.0037901490166563,
+          "vf_hold_days": 6
+        }
+      },
+      {
+        "optimization_period": "2024-08-28 to 2024-10-27",
+        "test_period": "2024-10-27 to 2024-11-11",
+        "in_sample_return": -100.0,
+        "out_sample_return": 0,
+        "trades": 0,
+        "win_rate": 0,
+        "parameters": {
+          "vf_lookback": 21,
+          "vf_bb_length": 25,
+          "vf_bb_mult": 2.0037901490166563,
+          "vf_hold_days": 6
+        }
+      },
+      {
+        "optimization_period": "2024-09-27 to 2024-11-26",
+        "test_period": "2024-11-26 to 2024-12-11",
+        "in_sample_return": -100.0,
+        "out_sample_return": 0,
+        "trades": 0,
+        "win_rate": 0,
+        "parameters": {
+          "vf_lookback": 21,
+          "vf_bb_length": 25,
+          "vf_bb_mult": 2.0037901490166563,
+          "vf_hold_days": 6
+        }
+      }
+    ],
+    "equity_curve": [
+      100,
+      100.0,
+      100.0,
+      100.0,
+      100.0,
+      100.0,
+      100.0,
+      100.0,
+      100.0,
+      100.0,
+      100.0
+    ]
+  },
+  {
+    "indicator": "Ensemble",
+    "total_periods": 10,
+    "avg_in_sample_return": 0.0,
+    "avg_out_sample_return": 0.0,
+    "std_out_sample_return": 0.0,
+    "sharpe_ratio": 0,
+    "win_periods": 0,
+    "win_period_rate": 0.0,
+    "total_return": 0.0,
+    "max_drawdown": 0,
+    "results": [
+      {
+        "optimization_period": "2024-01-01 to 2024-03-01",
+        "test_period": "2024-03-01 to 2024-03-16",
+        "in_sample_return": 0,
+        "out_sample_return": 0,
+        "trades": 0,
+        "win_rate": 0,
+        "parameters": {}
+      },
+      {
+        "optimization_period": "2024-01-31 to 2024-03-31",
+        "test_period": "2024-03-31 to 2024-04-15",
+        "in_sample_return": 0,
+        "out_sample_return": 0,
+        "trades": 0,
+        "win_rate": 0,
+        "parameters": {}
+      },
+      {
+        "optimization_period": "2024-03-01 to 2024-04-30",
+        "test_period": "2024-04-30 to 2024-05-15",
+        "in_sample_return": 0,
+        "out_sample_return": 0,
+        "trades": 0,
+        "win_rate": 0,
+        "parameters": {}
+      },
+      {
+        "optimization_period": "2024-03-31 to 2024-05-30",
+        "test_period": "2024-05-30 to 2024-06-14",
+        "in_sample_return": 0,
+        "out_sample_return": 0,
+        "trades": 0,
+        "win_rate": 0,
+        "parameters": {}
+      },
+      {
+        "optimization_period": "2024-04-30 to 2024-06-29",
+        "test_period": "2024-06-29 to 2024-07-14",
+        "in_sample_return": 0,
+        "out_sample_return": 0,
+        "trades": 0,
+        "win_rate": 0,
+        "parameters": {}
+      },
+      {
+        "optimization_period": "2024-05-30 to 2024-07-29",
+        "test_period": "2024-07-29 to 2024-08-13",
+        "in_sample_return": 0,
+        "out_sample_return": 0,
+        "trades": 0,
+        "win_rate": 0,
+        "parameters": {}
+      },
+      {
+        "optimization_period": "2024-06-29 to 2024-08-28",
+        "test_period": "2024-08-28 to 2024-09-12",
+        "in_sample_return": 0,
+        "out_sample_return": 0,
+        "trades": 0,
+        "win_rate": 0,
+        "parameters": {}
+      },
+      {
+        "optimization_period": "2024-07-29 to 2024-09-27",
+        "test_period": "2024-09-27 to 2024-10-12",
+        "in_sample_return": 0,
+        "out_sample_return": 0,
+        "trades": 0,
+        "win_rate": 0,
+        "parameters": {}
+      },
+      {
+        "optimization_period": "2024-08-28 to 2024-10-27",
+        "test_period": "2024-10-27 to 2024-11-11",
+        "in_sample_return": 0,
+        "out_sample_return": 0,
+        "trades": 0,
+        "win_rate": 0,
+        "parameters": {}
+      },
+      {
+        "optimization_period": "2024-09-27 to 2024-11-26",
+        "test_period": "2024-11-26 to 2024-12-11",
+        "in_sample_return": 0,
+        "out_sample_return": 0,
+        "trades": 0,
+        "win_rate": 0,
+        "parameters": {}
+      }
+    ],
+    "equity_curve": [
+      100,
+      100.0,
+      100.0,
+      100.0,
+      100.0,
+      100.0,
+      100.0,
+      100.0,
       100.0,
       100.0,
       100.0
