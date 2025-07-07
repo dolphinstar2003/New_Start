@@ -11,12 +11,15 @@ import json
 import time
 import schedule
 import sys
+import asyncio
+import threading
 sys.path.append(str(Path(__file__).parent.parent))
 
 from portfolio_manager import PortfolioManager
 from signal_generator import SignalGenerator
 from performance_tracker import PerformanceTracker
 from data_fetcher import DataFetcher
+from telegram_bot import PaperTradingBot
 import logging
 
 # Setup logging
@@ -35,11 +38,17 @@ logger = logging.getLogger(__name__)
 class PaperTrader:
     """Main paper trading engine"""
     
-    def __init__(self):
+    def __init__(self, enable_telegram=False):
         self.portfolio_manager = PortfolioManager()
         self.signal_generator = SignalGenerator()
         self.performance_tracker = PerformanceTracker()
         self.data_fetcher = DataFetcher()
+        
+        # Telegram bot
+        self.telegram_bot = None
+        self.enable_telegram = enable_telegram
+        if enable_telegram:
+            self._init_telegram_bot()
         
         # Trading strategies
         self.strategies = {
@@ -66,6 +75,29 @@ class PaperTrader:
         # Trading state
         self.is_trading_hours = False
         self.last_update_time = None
+    
+    def _init_telegram_bot(self):
+        """Initialize Telegram bot"""
+        try:
+            # Load telegram config
+            config_file = Path(__file__).parent.parent / 'telegram_config.json'
+            if config_file.exists():
+                self.telegram_bot = PaperTradingBot(self)
+                logger.info("Telegram bot initialized")
+            else:
+                logger.warning("Telegram config not found. Run telegram_bot.py to configure.")
+                self.enable_telegram = False
+        except Exception as e:
+            logger.error(f"Failed to initialize Telegram bot: {e}")
+            self.enable_telegram = False
+    
+    async def _send_telegram_notification(self, message: str, notification_type: str = "info"):
+        """Send notification via Telegram"""
+        if self.telegram_bot:
+            try:
+                await self.telegram_bot.send_notification(message, notification_type)
+            except Exception as e:
+                logger.error(f"Failed to send Telegram notification: {e}")
         
     def initialize_portfolios(self):
         """Initialize portfolios for each strategy"""
@@ -142,8 +174,18 @@ class PaperTrader:
             # Execute exits first
             for symbol, exit_data in exit_signals.items():
                 if symbol in portfolio.positions:
-                    portfolio.close_position(symbol, exit_data['price'], exit_data['reason'])
+                    pos = portfolio.positions[symbol]
+                    profit = portfolio.close_position(symbol, exit_data['price'], exit_data['reason'])
                     logger.info(f"{strategy_name}: Closed {symbol} - Reason: {exit_data['reason']}")
+                    
+                    # Send Telegram notification
+                    if self.enable_telegram:
+                        asyncio.create_task(
+                            self.telegram_bot.send_position_closed_notification(
+                                strategy_name, symbol, pos.entry_price, 
+                                exit_data['price'], pos.shares, profit, exit_data['reason']
+                            )
+                        )
             
             # Filter buy signals
             buy_signals = {s: d for s, d in signals.items() if d['signal'] == 1}
@@ -152,7 +194,28 @@ class PaperTrader:
             if buy_signals:
                 # Create price dict for new signals
                 signal_prices = {s: d['price'] for s, d in buy_signals.items()}
+                
+                # Store positions before rebalance
+                positions_before = set(portfolio.positions.keys())
+                
+                # Rebalance
                 portfolio.rebalance_portfolio(signal_prices, current_prices)
+                
+                # Find new positions
+                positions_after = set(portfolio.positions.keys())
+                new_positions = positions_after - positions_before
+                
+                # Send notifications for new positions
+                if self.enable_telegram:
+                    for symbol in new_positions:
+                        if symbol in portfolio.positions:
+                            pos = portfolio.positions[symbol]
+                            asyncio.create_task(
+                                self.telegram_bot.send_trade_notification(
+                                    strategy_name, "BUY", symbol,
+                                    pos.shares, pos.entry_price, "Signal"
+                                )
+                            )
             
             # Save portfolio state
             portfolio.save_state(
@@ -272,6 +335,10 @@ class PaperTrader:
         # Schedule daily report at market close
         schedule.every().day.at("18:15").do(self.generate_daily_report)
         
+        # Schedule daily Telegram summary if enabled
+        if self.enable_telegram:
+            schedule.every().day.at("18:30").do(lambda: asyncio.create_task(self.telegram_bot.send_daily_summary()))
+        
         print("\n🚀 Paper Trader Started!")
         print("="*60)
         print("Strategies:")
@@ -317,11 +384,13 @@ def main():
                        help='Run once and exit')
     parser.add_argument('--report', action='store_true',
                        help='Generate report only')
+    parser.add_argument('--telegram', action='store_true',
+                       help='Enable Telegram notifications')
     
     args = parser.parse_args()
     
     # Create paper trader
-    trader = PaperTrader()
+    trader = PaperTrader(enable_telegram=args.telegram)
     
     if args.report:
         trader.generate_daily_report()

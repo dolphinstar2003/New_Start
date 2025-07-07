@@ -1,0 +1,32 @@
+[
+  {
+    "indicator": "Supertrend",
+    "total_periods": 1,
+    "avg_in_sample_return": 41347.87421103341,
+    "avg_out_sample_return": 0.0,
+    "std_out_sample_return": 0.0,
+    "sharpe_ratio": 0,
+    "win_periods": 0,
+    "win_period_rate": 0.0,
+    "total_return": 0.0,
+    "max_drawdown": 0,
+    "results": [
+      {
+        "optimization_period": "2024-01-01 to 2024-02-15",
+        "test_period": "2024-02-15 to 2024-02-25",
+        "in_sample_return": 41347.87421103341,
+        "out_sample_return": 0,
+        "trades": 0,
+        "win_rate": 0,
+        "parameters": {
+          "st_period": 6,
+          "st_multiplier": 0.500137776222671
+        }
+      }
+    ],
+    "equity_curve": [
+      100,
+      100.0
+    ]
+  }
+]
