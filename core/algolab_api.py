@@ -283,7 +283,7 @@ class AlgoLabAPI:
     
     def get_portfolio(self, subaccount: str = "") -> Dict[str, Any]:
         """
-        Get portfolio information
+        Get portfolio information using InstantPosition endpoint
         
         Args:
             subaccount: Subaccount name (optional)
@@ -294,9 +294,8 @@ class AlgoLabAPI:
         if not self.is_authenticated():
             raise ValueError("Not authenticated. Please login first.")
         
-        payload = {"Subaccount": subaccount}
-        response = self._request("POST", "/api/Portfolio", payload)
-        return response.json()
+        # Use InstantPosition as Portfolio endpoint doesn't exist
+        return self.get_instant_position(subaccount)
     
     def get_symbol_info(self, symbol: str) -> Dict[str, Any]:
         """
@@ -311,9 +310,19 @@ class AlgoLabAPI:
         if not self.is_authenticated():
             raise ValueError("Not authenticated. Please login first.")
         
-        payload = {"Symbol": symbol}
+        payload = {"symbol": symbol}  # Lowercase as per documentation
         response = self._request("POST", "/api/GetEquityInfo", payload)
-        return response.json()
+        
+        try:
+            result = response.json()
+            if response.status_code == 200 and result.get('success'):
+                return result.get('content', {})
+            else:
+                logger.error(f"Failed to get symbol info: {result.get('message', 'Unknown error')}")
+                return {}
+        except Exception as e:
+            logger.error(f"Error parsing symbol info response: {e}")
+            return {}
     
     def get_subaccounts(self) -> Dict[str, Any]:
         """
@@ -433,6 +442,29 @@ class AlgoLabAPI:
         
         response = self._request("POST", "/api/SendOrder", payload)
         return response.json()
+    
+    def get_account_info(self) -> Dict[str, Any]:
+        """
+        Get account information from subaccounts
+        
+        Returns:
+            Account information
+        """
+        if not self.is_authenticated():
+            raise ValueError("Not authenticated. Please login first.")
+        
+        try:
+            response = self._request("POST", "/api/GetSubAccounts", {})
+            result = response.json()
+            
+            if response.status_code == 200 and result.get('success'):
+                return result.get('content', {})
+            else:
+                logger.error(f"Failed to get account info: {result.get('message', 'Unknown error')}")
+                return {}
+        except Exception as e:
+            logger.error(f"Error getting account info: {e}")
+            return {}
 
 
 if __name__ == "__main__":

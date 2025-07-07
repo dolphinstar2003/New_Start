@@ -1,0 +1,312 @@
+{
+  "date": "2025-07-07",
+  "time": "17:23:03",
+  "strategies": {
+    "aggressive": {
+      "GARAN": {
+        "target_price": 133.77,
+        "current_price": 136.5,
+        "distance": -2.0
+      },
+      "AKBNK": {
+        "target_price": 67.03,
+        "current_price": 68.05,
+        "distance": -1.5
+      },
+      "ISCTR": {
+        "target_price": 13.65,
+        "current_price": 13.86,
+        "distance": -1.52
+      },
+      "YKBNK": {
+        "target_price": 31.32,
+        "current_price": 31.8,
+        "distance": -1.51
+      },
+      "SAHOL": {
+        "target_price": 89.44,
+        "current_price": 90.8,
+        "distance": -1.5
+      },
+      "KCHOL": {
+        "target_price": 153.86,
+        "current_price": 157.0,
+        "distance": -2.0
+      },
+      "SISE": {
+        "target_price": 35.3,
+        "current_price": 35.84,
+        "distance": -1.51
+      },
+      "EREGL": {
+        "target_price": 26.52,
+        "current_price": 26.92,
+        "distance": -1.49
+      },
+      "KRDMD": {
+        "target_price": 25.39,
+        "current_price": 25.78,
+        "distance": -1.51
+      },
+      "TUPRS": {
+        "target_price": 142.98,
+        "current_price": 145.9,
+        "distance": -2.0
+      },
+      "ASELS": {
+        "target_price": 148.18,
+        "current_price": 151.2,
+        "distance": -2.0
+      },
+      "THYAO": {
+        "target_price": 282.0,
+        "current_price": 287.75,
+        "distance": -2.0
+      },
+      "TCELL": {
+        "target_price": 95.35,
+        "current_price": 96.8,
+        "distance": -1.5
+      },
+      "BIMAS": {
+        "target_price": 491.96,
+        "current_price": 502.0,
+        "distance": -2.0
+      },
+      "MGROS": {
+        "target_price": 486.08,
+        "current_price": 496.0,
+        "distance": -2.0
+      },
+      "ULKER": {
+        "target_price": 106.62,
+        "current_price": 108.8,
+        "distance": -2.0
+      },
+      "AKSEN": {
+        "target_price": 32.39,
+        "current_price": 32.88,
+        "distance": -1.49
+      },
+      "ENKAI": {
+        "target_price": 64.76,
+        "current_price": 65.75,
+        "distance": -1.51
+      },
+      "PETKM": {
+        "target_price": 17.02,
+        "current_price": 17.28,
+        "distance": -1.5
+      },
+      "KOZAL": {
+        "target_price": 23.58,
+        "current_price": 23.94,
+        "distance": -1.5
+      }
+    },
+    "balanced": {
+      "GARAN": {
+        "target_price": 132.41,
+        "current_price": 136.5,
+        "distance": -3.0
+      },
+      "AKBNK": {
+        "target_price": 66.35,
+        "current_price": 68.05,
+        "distance": -2.5
+      },
+      "ISCTR": {
+        "target_price": 13.51,
+        "current_price": 13.86,
+        "distance": -2.53
+      },
+      "YKBNK": {
+        "target_price": 31.0,
+        "current_price": 31.8,
+        "distance": -2.52
+      },
+      "SAHOL": {
+        "target_price": 88.53,
+        "current_price": 90.8,
+        "distance": -2.5
+      },
+      "KCHOL": {
+        "target_price": 152.29,
+        "current_price": 157.0,
+        "distance": -3.0
+      },
+      "SISE": {
+        "target_price": 34.94,
+        "current_price": 35.84,
+        "distance": -2.51
+      },
+      "EREGL": {
+        "target_price": 26.25,
+        "current_price": 26.92,
+        "distance": -2.49
+      },
+      "KRDMD": {
+        "target_price": 25.14,
+        "current_price": 25.78,
+        "distance": -2.48
+      },
+      "TUPRS": {
+        "target_price": 141.52,
+        "current_price": 145.9,
+        "distance": -3.0
+      },
+      "ASELS": {
+        "target_price": 146.66,
+        "current_price": 151.2,
+        "distance": -3.0
+      },
+      "THYAO": {
+        "target_price": 279.12,
+        "current_price": 287.75,
+        "distance": -3.0
+      },
+      "TCELL": {
+        "target_price": 94.38,
+        "current_price": 96.8,
+        "distance": -2.5
+      },
+      "BIMAS": {
+        "target_price": 486.94,
+        "current_price": 502.0,
+        "distance": -3.0
+      },
+      "MGROS": {
+        "target_price": 481.12,
+        "current_price": 496.0,
+        "distance": -3.0
+      },
+      "ULKER": {
+        "target_price": 105.54,
+        "current_price": 108.8,
+        "distance": -3.0
+      },
+      "AKSEN": {
+        "target_price": 32.06,
+        "current_price": 32.88,
+        "distance": -2.49
+      },
+      "ENKAI": {
+        "target_price": 64.11,
+        "current_price": 65.75,
+        "distance": -2.49
+      },
+      "PETKM": {
+        "target_price": 16.85,
+        "current_price": 17.28,
+        "distance": -2.49
+      },
+      "KOZAL": {
+        "target_price": 23.34,
+        "current_price": 23.94,
+        "distance": -2.51
+      }
+    },
+    "conservative": {
+      "GARAN": {
+        "target_price": 131.04,
+        "current_price": 136.5,
+        "distance": -4.0
+      },
+      "AKBNK": {
+        "target_price": 66.01,
+        "current_price": 68.05,
+        "distance": -3.0
+      },
+      "ISCTR": {
+        "target_price": 13.44,
+        "current_price": 13.86,
+        "distance": -3.03
+      },
+      "YKBNK": {
+        "target_price": 30.85,
+        "current_price": 31.8,
+        "distance": -2.99
+      },
+      "SAHOL": {
+        "target_price": 88.08,
+        "current_price": 90.8,
+        "distance": -3.0
+      },
+      "KCHOL": {
+        "target_price": 150.72,
+        "current_price": 157.0,
+        "distance": -4.0
+      },
+      "SISE": {
+        "target_price": 34.76,
+        "current_price": 35.84,
+        "distance": -3.01
+      },
+      "EREGL": {
+        "target_price": 26.11,
+        "current_price": 26.92,
+        "distance": -3.01
+      },
+      "KRDMD": {
+        "target_price": 25.01,
+        "current_price": 25.78,
+        "distance": -2.99
+      },
+      "TUPRS": {
+        "target_price": 140.06,
+        "current_price": 145.9,
+        "distance": -4.0
+      },
+      "ASELS": {
+        "target_price": 145.15,
+        "current_price": 151.2,
+        "distance": -4.0
+      },
+      "THYAO": {
+        "target_price": 276.24,
+        "current_price": 287.75,
+        "distance": -4.0
+      },
+      "TCELL": {
+        "target_price": 93.9,
+        "current_price": 96.8,
+        "distance": -3.0
+      },
+      "BIMAS": {
+        "target_price": 481.92,
+        "current_price": 502.0,
+        "distance": -4.0
+      },
+      "MGROS": {
+        "target_price": 476.16,
+        "current_price": 496.0,
+        "distance": -4.0
+      },
+      "ULKER": {
+        "target_price": 104.45,
+        "current_price": 108.8,
+        "distance": -4.0
+      },
+      "AKSEN": {
+        "target_price": 31.89,
+        "current_price": 32.88,
+        "distance": -3.01
+      },
+      "ENKAI": {
+        "target_price": 63.78,
+        "current_price": 65.75,
+        "distance": -3.0
+      },
+      "PETKM": {
+        "target_price": 16.76,
+        "current_price": 17.28,
+        "distance": -3.01
+      },
+      "KOZAL": {
+        "target_price": 23.22,
+        "current_price": 23.94,
+        "distance": -3.01
+      }
+    }
+  }
+}

@@ -2,7 +2,7 @@
   "name": "balanced",
   "initial_capital": 50000,
   "cash": 50000,
-  "created_date": "2025-07-07T05:50:00.942335",
+  "created_date": "2025-07-07T17:23:15.339830",
   "positions": {},
   "performance": {
     "portfolio_value": 50000,
@@ -20,6 +20,7 @@
   },
   "transaction_history": [],
   "daily_values": [
+    50000,
     50000,
     50000
   ]

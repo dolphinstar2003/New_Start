@@ -1,14 +1,14 @@
 {
   "name": "aggressive",
   "initial_capital": 50000,
-  "cash": 42576.38254983521,
-  "created_date": "2025-07-07T05:50:00.942567",
+  "cash": 39465.64009049683,
+  "created_date": "2025-07-07T17:23:15.340099",
   "positions": {
     "ASELS": {
       "symbol": "ASELS",
       "entry_price": 151.1999969482422,
-      "shares": 49,
-      "entry_date": "2025-07-07T05:50:02.390825",
+      "shares": 46,
+      "entry_date": "2025-07-07T09:39:42.135641",
       "strategy": "aggressive",
       "current_price": 151.1999969482422,
       "stop_loss": 143.63999710083007,
@@ -19,18 +19,18 @@
     }
   },
   "performance": {
-    "portfolio_value": 49985.182400299076,
-    "total_return": -0.029635199401847785,
+    "portfolio_value": 46420.83995011597,
+    "total_return": -7.158320099768055,
     "total_pnl": 0,
-    "cash": 42576.38254983521,
-    "positions_value": 7408.799850463867,
+    "cash": 39465.64009049683,
+    "positions_value": 6955.199859619141,
     "num_positions": 1,
     "total_trades": 0,
     "winning_trades": 0,
     "win_rate": 0,
-    "sharpe_ratio": 0,
-    "max_drawdown": 0.0,
-    "portfolio_heat": 0.7410996113939902
+    "sharpe_ratio": -11.224972160321824,
+    "max_drawdown": -7.130499300329585,
+    "portfolio_heat": 0.7491462742911623
   },
   "transaction_history": [
     {
@@ -42,10 +42,34 @@
       "cost": 7423.617450164795,
       "strategy": "aggressive",
       "portfolio_value": 49985.182400299076
+    },
+    {
+      "date": "2025-07-07T09:39:40.699004",
+      "type": "SELL",
+      "symbol": "ASELS",
+      "shares": 49,
+      "price": 78.9,
+      "proceeds": 3858.3678000000004,
+      "pnl": -3542.699850463867,
+      "pnl_pct": -47.81745926422965,
+      "reason": "stop_loss",
+      "hold_days": 0,
+      "portfolio_value": 50300.85034983521
+    },
+    {
+      "date": "2025-07-07T09:39:42.135641",
+      "type": "BUY",
+      "symbol": "ASELS",
+      "shares": 46,
+      "price": 151.1999969482422,
+      "cost": 6969.110259338379,
+      "strategy": "aggressive",
+      "portfolio_value": 46420.83995011597
     }
   ],
   "daily_values": [
     50000,
-    50000
+    50000,
+    46434.75034983521
   ]
 }

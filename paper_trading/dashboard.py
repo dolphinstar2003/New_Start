@@ -12,9 +12,12 @@ import json
 from pathlib import Path
 import sys
 
-sys.path.append(str(Path(__file__).parent))
+sys.path.append(str(Path(__file__).parent.parent))
 
-from paper_trading_module import PaperTradingModule
+from paper_trading.portfolio_manager import PortfolioManager
+from paper_trading.signal_generator import SignalGenerator
+from paper_trading.performance_tracker import PerformanceTracker
+from paper_trading.data_fetcher import DataFetcher
 from config.settings import SACRED_SYMBOLS, DATA_DIR
 
 # Page config
@@ -44,14 +47,19 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 # Initialize session state
-if 'paper_trader' not in st.session_state:
-    st.session_state.paper_trader = None
+if 'portfolio_managers' not in st.session_state:
+    st.session_state.portfolio_managers = {}
+    st.session_state.signal_generator = None
+    st.session_state.performance_tracker = None
+    st.session_state.data_fetcher = None
     st.session_state.is_initialized = False
     st.session_state.auto_refresh = True
     st.session_state.refresh_interval = 60  # seconds
+    st.session_state.last_update = None
 
 # Header
-st.title("🚀 Dynamic Portfolio Optimizer - Paper Trading Dashboard")
+st.title("🚀 Paper Trading Dashboard - AlgoLab Integration")
+st.markdown("Real-time monitoring of paper trading portfolios")
 st.markdown("---")
 
 # Sidebar controls
@@ -59,42 +67,41 @@ with st.sidebar:
     st.header("⚙️ Control Panel")
     
     if st.button("🔌 Initialize System", key="init_btn"):
-        with st.spinner("Initializing AlgoLab connections..."):
-            paper_trader = PaperTradingModule()
-            paper_trader.load_state()
-            
-            # Run async initialization
-            loop = asyncio.new_event_loop()
-            asyncio.set_event_loop(loop)
-            success = loop.run_until_complete(paper_trader.initialize())
-            
-            if success:
-                st.session_state.paper_trader = paper_trader
+        with st.spinner("Initializing paper trading system..."):
+            try:
+                # Initialize components
+                st.session_state.portfolio_managers = {
+                    'balanced': PortfolioManager('balanced'),
+                    'aggressive': PortfolioManager('aggressive'),
+                    'conservative': PortfolioManager('conservative')
+                }
+                st.session_state.signal_generator = SignalGenerator()
+                st.session_state.performance_tracker = PerformanceTracker()
+                st.session_state.data_fetcher = DataFetcher(use_algolab=True)
                 st.session_state.is_initialized = True
-                st.success("✅ System initialized successfully!")
-            else:
-                st.error("❌ Failed to initialize system")
+                st.success("✅ System initialized with AlgoLab!")
+            except Exception as e:
+                st.error(f"❌ Failed to initialize: {str(e)}")
     
     if st.session_state.is_initialized:
         st.markdown("---")
         
-        # Trading controls
-        col1, col2 = st.columns(2)
-        with col1:
-            if st.button("▶️ Start Trading", key="start_btn"):
-                st.session_state.paper_trader.auto_trade_enabled = True
-                st.success("Trading started!")
+        # Portfolio selection
+        selected_portfolio = st.selectbox(
+            "Select Portfolio",
+            options=['all', 'balanced', 'aggressive', 'conservative'],
+            index=0
+        )
         
-        with col2:
-            if st.button("⏸️ Stop Trading", key="stop_btn"):
-                st.session_state.paper_trader.auto_trade_enabled = False
-                st.warning("Trading stopped!")
-        
-        # Save/Load controls
-        st.markdown("---")
-        if st.button("💾 Save State", key="save_btn"):
-            st.session_state.paper_trader.save_state()
-            st.success("State saved!")
+        # Update data button
+        if st.button("🔄 Update Market Data", key="update_btn"):
+            with st.spinner("Fetching latest prices..."):
+                try:
+                    prices = st.session_state.data_fetcher.get_current_prices()
+                    st.session_state.last_update = datetime.now()
+                    st.success(f"Updated {len(prices)} prices")
+                except Exception as e:
+                    st.error(f"Failed to update: {str(e)}")
         
         # Auto refresh
         st.markdown("---")
@@ -116,52 +123,86 @@ with st.sidebar:
             st.rerun()
 
 # Main content
-if st.session_state.is_initialized and st.session_state.paper_trader:
-    paper_trader = st.session_state.paper_trader
+if st.session_state.is_initialized:
+    # Get latest prices
+    try:
+        current_prices = st.session_state.data_fetcher.get_current_prices()
+    except:
+        current_prices = {}
     
-    # Get current status
-    status = paper_trader.get_portfolio_status()
-    metrics = paper_trader.get_performance_metrics()
+    # Helper function to get portfolio data
+    def get_portfolio_data(portfolio_name):
+        pm = st.session_state.portfolio_managers.get(portfolio_name)
+        if not pm:
+            return None
+        
+        # Update current prices
+        for symbol, position in pm.positions.items():
+            if symbol in current_prices:
+                position['current_price'] = current_prices[symbol]
+        
+        return {
+            'value': pm.get_portfolio_value(current_prices),
+            'positions': pm.positions,
+            'cash': pm.cash,
+            'initial_capital': pm.initial_capital,
+            'trades': pm.trades_history
+        }
     
-    # Top metrics row
-    col1, col2, col3, col4, col5 = st.columns(5)
-    
-    with col1:
-        st.metric(
-            label="Portfolio Value",
-            value=f"${status['portfolio_value']:,.2f}",
-            delta=f"${status['total_return']:,.2f}"
-        )
-    
-    with col2:
-        return_color = "positive" if status['total_return_pct'] >= 0 else "negative"
-        st.metric(
-            label="Total Return",
-            value=f"{status['total_return_pct']:.2f}%",
-            delta=f"vs ${paper_trader.portfolio['initial_capital']:,.0f}"
-        )
-    
-    with col3:
-        st.metric(
-            label="Available Cash",
-            value=f"${status['cash']:,.2f}",
-            delta=f"{(status['cash']/status['portfolio_value']*100):.1f}% of portfolio"
-        )
-    
-    with col4:
-        st.metric(
-            label="Active Positions",
-            value=status['num_positions'],
-            delta=f"of {paper_trader.PORTFOLIO_PARAMS['max_positions']} max"
-        )
-    
-    with col5:
-        win_rate = metrics.get('win_rate', 0) if metrics else 0
-        st.metric(
-            label="Win Rate",
-            value=f"{win_rate:.1f}%",
-            delta=f"{status['total_trades']} trades"
-        )
+    # Show metrics based on selection
+    if selected_portfolio == 'all':
+        # Show all portfolios
+        cols = st.columns(3)
+        for i, (name, pm) in enumerate(st.session_state.portfolio_managers.items()):
+            with cols[i]:
+                data = get_portfolio_data(name)
+                if data:
+                    value = data['value']
+                    ret_pct = ((value - data['initial_capital']) / data['initial_capital']) * 100
+                    st.metric(
+                        label=f"{name.title()} Portfolio",
+                        value=f"₺{value:,.2f}",
+                        delta=f"{ret_pct:+.2f}%"
+                    )
+                    st.write(f"Positions: {len(data['positions'])}")
+                    st.write(f"Cash: ₺{data['cash']:,.2f}")
+    else:
+        # Show selected portfolio
+        data = get_portfolio_data(selected_portfolio)
+        if data:
+            col1, col2, col3, col4 = st.columns(4)
+            
+            value = data['value']
+            ret_amt = value - data['initial_capital']
+            ret_pct = (ret_amt / data['initial_capital']) * 100
+            
+            with col1:
+                st.metric(
+                    label="Portfolio Value",
+                    value=f"₺{value:,.2f}",
+                    delta=f"₺{ret_amt:,.2f}"
+                )
+            
+            with col2:
+                st.metric(
+                    label="Total Return",
+                    value=f"{ret_pct:.2f}%",
+                    delta=f"from ₺{data['initial_capital']:,.0f}"
+                )
+            
+            with col3:
+                st.metric(
+                    label="Available Cash",
+                    value=f"₺{data['cash']:,.2f}",
+                    delta=f"{(data['cash']/value*100):.1f}% of portfolio"
+                )
+            
+            with col4:
+                st.metric(
+                    label="Active Positions",
+                    value=len(data['positions']),
+                    delta=f"Win rate: {len([t for t in data['trades'] if t.get('profit', 0) > 0])/len(data['trades'])*100 if data['trades'] else 0:.1f}%"
+                )
     
     # Tabs for different views
     tab1, tab2, tab3, tab4, tab5 = st.tabs([

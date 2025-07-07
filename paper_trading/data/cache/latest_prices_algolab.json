@@ -1,0 +1,26 @@
+{
+  "timestamp": "2025-07-07T17:25:33.511423",
+  "prices": {
+    "GARAN": 136.7,
+    "AKBNK": 68.2,
+    "ISCTR": 13.88,
+    "YKBNK": 31.96,
+    "SAHOL": 90.8,
+    "KCHOL": 157.0,
+    "SISE": 35.84,
+    "EREGL": 26.92,
+    "KRDMD": 25.78,
+    "TUPRS": 145.8,
+    "ASELS": 151.1,
+    "THYAO": 288.25,
+    "TCELL": 96.85,
+    "BIMAS": 502.0,
+    "MGROS": 496.25,
+    "ULKER": 108.9,
+    "AKSEN": 32.9,
+    "ENKAI": 65.75,
+    "PETKM": 17.28,
+    "KOZAL": 23.96
+  },
+  "source": "algolab"
+}

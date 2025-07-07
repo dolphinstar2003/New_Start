@@ -33,6 +33,16 @@ class AlgoLabAuth:
         
         logger.info("AlgoLab Auth helper initialized")
     
+    def get_credentials(self) -> Optional[Dict[str, str]]:
+        """Get credentials dictionary"""
+        if self.check_credentials():
+            return {
+                'api_key': self.api_key,
+                'username': self.username,
+                'password': self.password
+            }
+        return None
+    
     def check_credentials(self) -> bool:
         """Check if credentials are available"""
         if not self.api_key:
