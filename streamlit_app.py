@@ -78,11 +78,31 @@ for symbol in SYMBOLS:
     else:
         target = round(price * (pullback + 0.005), 2)
     
-    # Calculate derived values
-    stop_loss = round(target * 0.97, 2)
-    tp1 = round(target * 1.03, 2)
-    tp2 = round(target * 1.05, 2)
-    tp3 = round(target * 1.08, 2)
+    # Calculate derived values based on strategy
+    if selected_strategy == "Aggressive":
+        stop_loss = round(target * 0.98, 2)      # 2% stop
+        tp1 = round(target * 1.025, 2)           # 2.5%
+        tp2 = round(target * 1.045, 2)           # 4.5%
+        tp3 = round(target * 1.07, 2)            # 7%
+        tp1_label = "TP1 (2.5%)"
+        tp2_label = "TP2 (4.5%)"
+        tp3_label = "TP3 (7%)"
+    elif selected_strategy == "Conservative":
+        stop_loss = round(target * 0.95, 2)      # 5% stop
+        tp1 = round(target * 1.04, 2)            # 4%
+        tp2 = round(target * 1.06, 2)            # 6%
+        tp3 = round(target * 1.10, 2)            # 10%
+        tp1_label = "TP1 (4%)"
+        tp2_label = "TP2 (6%)"
+        tp3_label = "TP3 (10%)"
+    else:  # Balanced
+        stop_loss = round(target * 0.97, 2)      # 3% stop
+        tp1 = round(target * 1.03, 2)            # 3%
+        tp2 = round(target * 1.05, 2)            # 5%
+        tp3 = round(target * 1.08, 2)            # 8%
+        tp1_label = "TP1 (3%)"
+        tp2_label = "TP2 (5%)"
+        tp3_label = "TP3 (8%)"
     
     distance = round((target - price) / price * 100, 2)
     status = "READY" if price <= target else "WAIT"
@@ -94,9 +114,9 @@ for symbol in SYMBOLS:
         'Target': f"₺{target:.2f}",
         'Distance': f"{distance:.1f}%",
         'Stop Loss': f"₺{stop_loss:.2f}",
-        'TP1 (3%)': f"₺{tp1:.2f}",
-        'TP2 (5%)': f"₺{tp2:.2f}",
-        'TP3 (8%)': f"₺{tp3:.2f}",
+        tp1_label: f"₺{tp1:.2f}",
+        tp2_label: f"₺{tp2:.2f}",
+        tp3_label: f"₺{tp3:.2f}",
         'Status': status
     })
 

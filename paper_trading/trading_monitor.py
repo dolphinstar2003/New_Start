@@ -94,19 +94,35 @@ if 'signal_generator' not in st.session_state:
     st.session_state.selected_strategy = 'balanced'
 
 # Helper functions
-def calculate_targets(price, signal_strength=1.0):
-    """Calculate stop loss and targets based on price"""
-    # Stop loss: 3%
-    stop_loss = price * 0.97
+def calculate_targets(price, strategy='balanced'):
+    """Calculate stop loss and targets based on price and strategy"""
     
-    # Take profit targets
-    tp1 = price * 1.03  # 3%
-    tp2 = price * 1.05  # 5%
-    tp3 = price * 1.08  # 8%
-    
-    # Trailing stop levels
-    trail1 = price * 1.02  # Activate at 2% profit
-    trail2 = price * 1.04  # Activate at 4% profit
+    if strategy == 'aggressive':
+        # Aggressive: Tighter stops, higher targets
+        stop_loss = price * 0.98      # 2% stop loss
+        tp1 = price * 1.025           # 2.5% profit
+        tp2 = price * 1.045           # 4.5% profit
+        tp3 = price * 1.07            # 7% profit
+        trail1 = price * 1.015        # Activate at 1.5% profit
+        trail2 = price * 1.03         # Activate at 3% profit
+        
+    elif strategy == 'conservative':
+        # Conservative: Wider stops, lower targets
+        stop_loss = price * 0.95      # 5% stop loss
+        tp1 = price * 1.04            # 4% profit
+        tp2 = price * 1.06            # 6% profit
+        tp3 = price * 1.10            # 10% profit
+        trail1 = price * 1.025        # Activate at 2.5% profit
+        trail2 = price * 1.05         # Activate at 5% profit
+        
+    else:  # balanced
+        # Balanced: Medium stops and targets
+        stop_loss = price * 0.97      # 3% stop loss
+        tp1 = price * 1.03            # 3% profit
+        tp2 = price * 1.05            # 5% profit
+        tp3 = price * 1.08            # 8% profit
+        trail1 = price * 1.02         # Activate at 2% profit
+        trail2 = price * 1.04         # Activate at 4% profit
     
     return {
         'stop_loss': stop_loss,
@@ -235,13 +251,27 @@ for symbol in SACRED_SYMBOLS:
         buy_target = target_data['target_price']
         
         # Calculate targets from the buy target price
-        targets = calculate_targets(buy_target)
+        targets = calculate_targets(buy_target, selected_strategy)
         
         # Calculate distance
         distance = ((buy_target - price) / price * 100)
         
         # Get daily change
         daily_change = daily_changes.get(symbol, 0)
+        
+        # Format TP labels based on strategy
+        if selected_strategy == 'aggressive':
+            tp1_label = 'TP1 (2.5%)'
+            tp2_label = 'TP2 (4.5%)'
+            tp3_label = 'TP3 (7%)'
+        elif selected_strategy == 'conservative':
+            tp1_label = 'TP1 (4%)'
+            tp2_label = 'TP2 (6%)'
+            tp3_label = 'TP3 (10%)'
+        else:  # balanced
+            tp1_label = 'TP1 (3%)'
+            tp2_label = 'TP2 (5%)'
+            tp3_label = 'TP3 (8%)'
         
         data_rows.append({
             'Symbol': symbol,
@@ -250,9 +280,9 @@ for symbol in SACRED_SYMBOLS:
             'Target Buy': buy_target,  # Fixed daily target
             'Distance': f"{distance:.1f}%",
             'Stop Loss': targets['stop_loss'],
-            'TP1 (3%)': targets['tp1'],
-            'TP2 (5%)': targets['tp2'],
-            'TP3 (8%)': targets['tp3'],
+            tp1_label: targets['tp1'],
+            tp2_label: targets['tp2'],
+            tp3_label: targets['tp3'],
             'Trail 1': targets['trail1'],
             'Trail 2': targets['trail2'],
             'Status': 'READY' if price <= buy_target else 'WAIT'
@@ -308,16 +338,20 @@ st.info(f"🎯 **Target Buy**: {selected_strategy.capitalize()} strateji için b
 st.caption("Status: WAIT = Fiyat hedefte değil | READY = Fiyat hedefte veya altında, alıma hazır")
 
 # Format the dataframe for display
-styled_df = display_df.style.format({
+format_dict = {
     'Current Price': '₺{:.2f}',
     'Target Buy': '₺{:.2f}',
     'Stop Loss': '₺{:.2f}',
-    'TP1 (3%)': '₺{:.2f}',
-    'TP2 (5%)': '₺{:.2f}',
-    'TP3 (8%)': '₺{:.2f}',
     'Trail 1': '₺{:.2f}',
     'Trail 2': '₺{:.2f}'
-})
+}
+
+# Add dynamic TP columns to format
+for col in display_df.columns:
+    if col.startswith('TP'):
+        format_dict[col] = '₺{:.2f}'
+
+styled_df = display_df.style.format(format_dict)
 
 # Apply color coding
 def color_daily_change(val):
@@ -380,10 +414,13 @@ with st.expander("💡 Trading Guidelines & Strategy Details"):
     
     with col1:
         st.markdown("""
-        ### 📊 Strategy Target Levels
-        - **Aggressive**: 1.5-2% pullback from current price
-        - **Balanced**: 2.5-3% pullback from current price
-        - **Conservative**: 3-4% pullback from current price
+        ### 📊 Strategy Differences
+        
+        | Strategy | Entry Pullback | Stop Loss | TP1 | TP2 | TP3 | Trail Activation |
+        |----------|---------------|-----------|-----|-----|-----|------------------|
+        | **Aggressive** | 1.5-2% | 2% | 2.5% | 4.5% | 7% | 1.5% / 3% |
+        | **Balanced** | 2.5-3% | 3% | 3% | 5% | 8% | 2% / 4% |
+        | **Conservative** | 3.5-4% | 5% | 4% | 6% | 10% | 2.5% / 5% |
         
         ### 🎯 How It Works
         1. Targets are calculated once at market open (10:00)
