@@ -66,11 +66,18 @@ data/predictions/*.csv
 !data/analysis/.gitkeep
 !data/predictions/.gitkeep
 
-# Cache
-data/cache/
+# Cache and Session Files
+**/data/cache/
+**/cache/
 *.pkl
 *.pickle
 *.cache
+**/algolab_session.pkl
+**/latest_prices_algolab.json
+
+# AlgoLab Credentials
+telegram_config.json
+algolab_config.json
 
 # Model Files
 ml_models/*.pkl
